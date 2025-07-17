@@ -3,6 +3,7 @@
 @theme {
   --color-primary: #00ba03;
   --color-primary2: #005e02;
+  --color-primary3: #008302;
 }
 
 :root {
@@ -40,6 +41,9 @@
 
 .constraint {
   max-width: 1300px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section {

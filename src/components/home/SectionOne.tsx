@@ -3,7 +3,7 @@ import Image from "next/image";
 const HomeSectionOne = () => {
   return (
     <section className="section bg-[url(/images/hero-bg.svg)] bg-bottom bg-no-repeat bg-cover">
-      <div className="constraint py-[143px] flex justify-center gap-24 mx-auto">
+      <div className="constraint py-[143px] flex justify-center gap-24 mx-auto items-center">
         <div className="">
           <div
             className="flex items-center gap-1 py-2.5 px-5 bg-[#C7FFD0] rounded-full
@@ -51,16 +51,16 @@ const HomeSectionOne = () => {
         </div>
 
         <div
-          className="grid grid-cols-2 gap-2.5 hero-border boxb
+          className="grid grid-cols-2 gap-2.5 hero-border
         p-2.5 rounded-sm"
         >
           {Stat.map((stat) => (
             <div
               key={stat.title}
               className={`text-center py-[49px] px-[43px] flex flex-col 
-                justify-center rounded-[6px] gap-2.5 z-10 ${stat.class}`}
+                justify-center rounded-[6px] gap-1.5 z-10 ${stat.class}`}
             >
-              <p className="font-semibold text-[50px]">{stat.title}</p>
+              <p className="font-semibold text-[50px]/[24px]">{stat.title}</p>
               <p className="font-medium text-[22px]">{stat.subject}</p>
             </div>
           ))}
@@ -76,7 +76,7 @@ const Stat = [
   {
     title: "500+",
     subject: "Contributors",
-    class: "bg-primary",
+    class: "bg-primary3",
   },
   {
     title: "20+",
@@ -91,6 +91,6 @@ const Stat = [
   {
     title: "100+",
     subject: "Contributors",
-    class: "bg-primary",
+    class: "bg-primary3",
   },
 ];
