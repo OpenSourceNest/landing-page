@@ -2,6 +2,11 @@
 
 @theme {
   --color-primary: #00ba03;
+  --color-primary2: #005e02;
+}
+
+:root {
+  /* cursor: url("/images/cursor.png"), auto; */
 }
 
 @layer base {
@@ -33,6 +38,72 @@
   }
 }
 
-:root {
-  cursor: url(/images/cursor.png);
+.constraint {
+  max-width: 1300px;
+}
+
+.section {
+  padding: 0 150px;
+}
+
+.hero-border {
+  --primary: #00ba03;
+  --local_white: rgb(255, 255, 255);
+  --border-width: 7px;
+
+  background: linear-gradient(
+      to right,
+      var(--local_white) 33%,
+      rgba(255, 0, 0, 0) 0%
+    ),
+    linear-gradient(to right, var(--local_white) 33%, rgba(255, 0, 0, 0) 0%),
+    linear-gradient(var(--local_white) 33%, rgba(255, 0, 0, 0) 0%),
+    linear-gradient(var(--local_white) 33%, rgba(255, 0, 0, 0) 0%);
+  background-position: top, bottom, left, right;
+  background-size: 30px var(--border-width), 30px var(--border-width),
+    var(--border-width) 30px, var(--border-width) 30px;
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  position: relative;
+  padding: 20px;
+  background: none;
+}
+
+.hero-border::before {
+  content: "";
+  --bg: rgba(0, 0, 0, 0);
+  --border-angle: 0deg;
+
+  width: 100%;
+  border-radius: 12px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+  animation: border-angle-rotate 7s infinite linear;
+  border: var(--border-width) solid transparent;
+  background: linear-gradient(black) padding-box,
+    conic-gradient(
+        from var(--border-angle),
+        black 0% 45%,
+        white 45% 50%,
+        black 50% 95%,
+        white 95% 100%
+      )
+      border-box;
+  z-index: 1;
+}
+
+@keyframes border-angle-rotate {
+  from {
+    --border-angle: 0deg;
+  }
+  to {
+    --border-angle: 360deg;
+  }
+}
+
+@property --border-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
 }
