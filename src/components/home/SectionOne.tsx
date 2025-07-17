@@ -57,8 +57,8 @@ const HomeSectionOne = () => {
           {Stat.map((stat) => (
             <div
               key={stat.title}
-              className={`text-center py-[49px] px-[43px] flex flex-col 
-                justify-center rounded-[6px] gap-1.5 z-10 ${stat.class}`}
+              className={`text-center py-[49px] px-[20px] flex flex-col 
+                justify-center rounded-[6px] gap-1.5 z-10 w-full ${stat.className}`}
             >
               <p className="font-semibold text-[50px]/[24px]">{stat.title}</p>
               <p className="font-medium text-[22px]">{stat.subject}</p>
@@ -76,21 +76,21 @@ const Stat = [
   {
     title: "500+",
     subject: "Contributors",
-    class: "bg-primary3",
+    className: "bg-primary3",
   },
   {
     title: "20+",
     subject: "Countries",
-    class: "bg-[#242424]",
+    className: "bg-[#242424]",
   },
   {
     title: "50+",
     subject: "Projects",
-    class: "bg-[#242424]",
+    className: "bg-[#242424]",
   },
   {
     title: "100+",
     subject: "Contributors",
-    class: "bg-primary3",
+    className: "bg-primary3",
   },
 ];
