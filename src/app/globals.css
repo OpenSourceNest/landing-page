@@ -4,6 +4,10 @@
   --color-primary: #00ba03;
   --color-primary2: #005e02;
   --color-primary3: #008302;
+  /*   
+  --breakpoint-xs: 30rem;
+  --breakpoint-2xl: 100rem;
+  --breakpoint-3xl: 120rem; */
 }
 
 :root {
@@ -47,7 +51,15 @@
 }
 
 .section {
-  padding: 0 150px;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+@media screen and (max-width: 1150px) {
+  .section {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 }
 
 .hero-border {

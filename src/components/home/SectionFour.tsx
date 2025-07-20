@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const HomeSectionFour = () => {
   return (
-    <section className="py-[81px] px-[70px]">
+    <section className="py-[81px] px-[70px] max-[1150px]:px-[50px]">
       <div
         className="bg-primary3 py-[80px] px-[32px] flex flex-col
       items-center justify-center text-center"
@@ -16,17 +16,18 @@ const HomeSectionFour = () => {
           making an impact today.
         </p>
 
-        <div className="flex items-center gap-2.5 flex-wrap">
+        <div className="flex items-center gap-2.5 justify-center flex-wrap-reverse">
           <button
             className="text-sm font-medium py-4 px-10 rounded-full bg-black
           border border-black"
           >
-            JOIN OUT COMMUNITY
+            JOIN OUR COMMUNITY
           </button>
 
           <Link
             href=""
-            className="text-sm font-medium py-4 px-10 rounded-full border border-white"
+            className="text-sm font-medium py-4 px-10 rounded-full border border-white
+            "
           >
             FOLLOW ON X
           </Link>

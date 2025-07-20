@@ -3,23 +3,26 @@ import SectionTitle from "./SectionTitle";
 
 const HomeSectionThree = () => {
   return (
-    <section className="p-[100px] w-full">
-      <div className="constraint flex flex-col items-center">
+    <section className="section py-[100px] w-full">
+      <div className="constraint flex flex-col">
         <SectionTitle title="EVENTS & CAMPAIGNS" />
 
-        <p className="font-semibold text-[40px] mt-5 mb-10">
+        <p className="font-semibold text-[40px] mt-5 mb-10 text-center">
           What&rsquo;s <span className="text-primary">Happening?</span>
         </p>
-      </div>
 
-      <div className="grid grid-cols-4 gap-2.5">
-        {Reasons.map((reason) => (
-          <HomeCard
-            key={reason.title}
-            data={reason}
-            className="px-5 py-[30px]"
-          />
-        ))}
+        <div
+          className="grid grid-cols-4 gap-2.5 max-[1000px]:grid-cols-2
+         max-[600px]:grid-cols-1"
+        >
+          {Reasons.map((reason) => (
+            <HomeCard
+              key={reason.title}
+              data={reason}
+              className="px-5 py-[30px]"
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
