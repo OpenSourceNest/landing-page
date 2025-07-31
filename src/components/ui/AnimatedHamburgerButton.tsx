@@ -1,6 +1,7 @@
 "use client";
 
 import { MotionConfig, motion } from "framer-motion";
+import { useEffect } from "react";
 
 interface IProp {
   active: boolean;
@@ -8,6 +9,21 @@ interface IProp {
 }
 
 const AnimatedHamburgerButton = ({ active, setActive }: IProp) => {
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 1100) {
+        setActive(false);
+      }
+    }
+
+    if (typeof window !== "undefined") {
+      handleResize();
+      window.addEventListener("resize", handleResize);
+
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
   return (
     <MotionConfig
       transition={{

@@ -6,7 +6,7 @@ import AnimatedHamburgerButton from "./ui/AnimatedHamburgerButton";
 import { useState } from "react";
 
 const NavBar = () => {
-  const [displaySidebar, setDisplaySidebar] = useState(true);
+  const [displaySidebar, setDisplaySidebar] = useState(false);
 
   const hideSideBar = () => {
     setDisplaySidebar(false);
@@ -14,17 +14,17 @@ const NavBar = () => {
 
   return (
     <div
-      className={
+      className={`z-[20] ${
         displaySidebar
-          ? `no-doc-scroll flex flex-col h-screen fixed w-full z-[12] mt-[20px] px-2 gap-4
+          ? `no-doc-scroll flex flex-col h-screen fixed w-full mt-[20px] px-2 gap-4
           pb-2`
           : "mt-[40px] sticky top-2.5"
-      }
+      }`}
     >
       <nav
         className="flex w-[1146px] items-center border rounded-full border-[#2A2A2A]
       justify-between gap-3 py-4 px-16 max-w-[95vw] mx-auto
-      z-20 backdrop-blur-lg bg-[#0000007b]"
+      z-10 backdrop-blur-lg bg-[#0000007b] max-[600px]:px-4"
       >
         <Image
           src="/images/logo-full.png"
@@ -58,9 +58,10 @@ const NavBar = () => {
       {/* -------------------------------------------------------------------------- */
       /*                                   SIDEBAR                                  */
       /* -------------------------------------------------------------------------- */}
+
       <div
         className={`block border border-[#2A2A2A] h-[calc(100%_-_110px)] rounded-3xl
-      bg-[#0000007b] backdrop-blur-2xl max-w-[95vw] mx-auto w-full p-5 justify-center
+      bg-[#0000007b] backdrop-blur-2xl max-w-[95vw] mx-auto w-full p-5 pt-20 justify-center
       overflow-y-auto min-[1100px]:hidden ${
         displaySidebar ? "flex" : "hidden"
       }`}

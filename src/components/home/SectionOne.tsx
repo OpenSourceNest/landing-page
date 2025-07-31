@@ -1,20 +1,23 @@
 import Image from "next/image";
 import { HTMLAttributes } from "react";
+import AnimatedNumber from "../ui/AnimatedNumber";
 
 const HomeSectionOne = () => {
   return (
-    <section className="section bg-[url(/images/hero-bg.svg)] bg-bottom bg-no-repeat bg-cover">
+    <section className="section bg-[url(/images/hero-bg2.svg)] bg-bottom bg-no-repeat bg-cover">
       <div
-        className="constraint py-[143px] flex justify-center gap-24 mx-auto items-center
+        className="constraint py-[143px] pt-[100px] flex justify-center gap-24 mx-auto items-center
       max-[1150px]:flex-wrap"
       >
         <div className="">
           <div
             className="flex items-center gap-1 py-2.5 px-5 bg-[#C7FFD0] rounded-full
-          text-primary2 w-fit "
+          text-primary2 w-fit max-[500px]:py-[5px] max-[500px]:px-2.5"
           >
             <Image src="/images/globe.svg" alt="" height={16} width={16} />
-            <p className="font-medium text-[10px]">Top Open Source Community</p>
+            <p className="font-medium text-[10px] max-[500px]:text-[8px]">
+              Top Open Source Community
+            </p>
           </div>
 
           <p
@@ -61,24 +64,25 @@ const HomeSectionOne = () => {
         <div
           className="grid grid-cols-2 gap-2.5 hero-border
         p-2.5 rounded-sm max-[1300px]:grid-cols-1 max-[1150px]:grid-cols-4
-        max-[845px]:grid-cols-2
+        max-[845px]:grid-cols-2 
         "
         >
           {Stat.map((stat) => (
             <div
               key={stat.title}
               className={`text-center py-[49px] px-[20px] flex flex-col 
-                justify-center rounded-[6px] gap-1.5 z-10 w-full ${stat.className}`}
+                justify-center rounded-[6px] gap-1.5 z-[3] w-fullmax-[380px]:py-[30px]
+                ${stat.className}`}
             >
               <p
                 className="font-semibold text-[50px]/[24px]
-              max-[500px]:text-[40px]/[24px]"
+              max-[500px]:text-[40px]/[24px] max-[380px]:text-[32px]/[24px]"
               >
-                {stat.title}
+                <AnimatedNumber value={stat.title} />+
               </p>
               <p
                 className="font-medium text-[22px]
-              max-[500px]:text-[18px]"
+              max-[500px]:text-[18px] max-[380px]:text-[16px] "
               >
                 {stat.subject}
               </p>
@@ -93,27 +97,27 @@ const HomeSectionOne = () => {
 export default HomeSectionOne;
 
 const Stat: {
-  title: string;
+  title: number;
   subject: string;
   className: HTMLAttributes<HTMLDivElement>["className"];
 }[] = [
   {
-    title: "500+",
+    title: 500,
     subject: "Contributors",
     className: "bg-primary3",
   },
   {
-    title: "20+",
+    title: 20,
     subject: "Countries",
     className: "bg-[#242424]",
   },
   {
-    title: "50+",
+    title: 50,
     subject: "Projects",
     className: "bg-[#242424] max-[1300px]:bg-primary3 max-[845px]:bg-[#242424]",
   },
   {
-    title: "100+",
+    title: 100,
     subject: "Contributors",
     className: "bg-primary3 max-[1300px]:bg-[#242424] max-[845px]:bg-primary3",
   },

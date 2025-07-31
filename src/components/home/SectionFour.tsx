@@ -2,7 +2,10 @@ import Link from "next/link";
 
 const HomeSectionFour = () => {
   return (
-    <section className="py-[81px] px-[70px] max-[1150px]:px-[50px]">
+    <section
+      className="py-[81px] px-[70px] max-[1150px]:px-[50px] max-[500px]:px-2.5
+    max-[500px]:py-[20px]"
+    >
       <div
         className="bg-primary3 py-[80px] px-[32px] flex flex-col
       items-center justify-center text-center"

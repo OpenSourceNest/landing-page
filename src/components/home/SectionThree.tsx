@@ -3,7 +3,7 @@ import SectionTitle from "./SectionTitle";
 
 const HomeSectionThree = () => {
   return (
-    <section className="section py-[100px] w-full">
+    <section className="section py-[100px] w-full max-[500px]:py-[50px]">
       <div className="constraint flex flex-col">
         <SectionTitle title="EVENTS & CAMPAIGNS" />
 
