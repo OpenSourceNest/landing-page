@@ -6,7 +6,7 @@ import OG from "./opengraph-image.png";
 export const metadata: Metadata = {
   title: "Open Source Nest",
   description:
-    "A beginner-friendly open source community promoting inclusion, collaboration, and digital empowerment through learning and advocacy.",
+    "A beginner-friendly open source initiative promoting inclusion, collaboration, and digital empowerment through learning and advocacy.",
   metadataBase: new URL("https://opensourcenest.org"),
   openGraph: {
     images: [

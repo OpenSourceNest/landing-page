@@ -35,7 +35,12 @@ const NavBar = () => {
 
         <div className="flex items-center gap-3 max-[1100px]:hidden">
           {NavLinks.map((nav) => (
-            <Link href={nav.url} key={nav.title} className="nav-link">
+            <Link
+              href={nav.url}
+              key={nav.title}
+              className="nav-link"
+              target={nav.newTab ? "_blank" : ""}
+            >
               <p className="font-medium mb-0.5">{nav.title}</p>
               <span className="block w-0 h-0.5 bg-primary mx-auto"></span>
             </Link>
@@ -73,6 +78,7 @@ const NavBar = () => {
               key={nav.title}
               className="nav-link"
               onClick={hideSideBar}
+              target={nav.newTab ? "_blank" : ""}
             >
               <p className="font-medium mb-0.5 text-[20px]">{nav.title}</p>
               <span className="block w-0 h-0.5 bg-primary mx-auto"></span>
@@ -97,7 +103,8 @@ export default NavBar;
 const NavLinks = [
   {
     title: "About Us",
-    url: "",
+    url: "https://docs.google.com/document/d/1IJxehnnRTp5WhD9iEuThm9nxXRgod_zABOK_nH5_nbs/",
+    newTab: true,
   },
   {
     title: "Projects",
@@ -105,14 +112,6 @@ const NavLinks = [
   },
   {
     title: "Events",
-    url: "",
-  },
-  {
-    title: "Community",
-    url: "",
-  },
-  {
-    title: "Resources",
     url: "",
   },
 ];

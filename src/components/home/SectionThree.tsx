@@ -38,12 +38,13 @@ const Reasons = [
   },
   {
     icon: "/images/hack-night.svg",
-    title: "Monthly Hack Nights",
-    subTitle: "Collaborative coding sessions every month",
+    title: "Monthly Workshops",
+    subTitle:
+      "Learn how to contribute to open source through design, community management, code, and technical writing. ",
   },
   {
     icon: "/images/house-flag.svg",
-    title: "Open Source Global Fest",
+    title: "Open Source In Person Events",
     subTitle: "Annual celebration of global open source",
   },
   {

@@ -15,7 +15,7 @@ const HomeSectionFour = () => {
         </h3>
 
         <p className="mt-4 mb-8 text-black text-base font-medium max-w-[511px]">
-          Join Africa&rsquo;s most vibrant open source community and start
+          Join Africa&rsquo;s most vibrant open source initiative and start
           making an impact today.
         </p>
 
@@ -28,11 +28,12 @@ const HomeSectionFour = () => {
           </button>
 
           <Link
-            href=""
+            href="mailto:info@opensourcenest.org"
             className="text-sm font-medium py-4 px-10 rounded-full border border-white
             "
+            title="Send a mail to info@opensourcenest.org"
           >
-            FOLLOW ON X
+            SEND US A MAIL
           </Link>
         </div>
       </div>

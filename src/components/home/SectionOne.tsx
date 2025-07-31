@@ -1,8 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import { HTMLAttributes } from "react";
 import AnimatedNumber from "../ui/AnimatedNumber";
 
 const HomeSectionOne = () => {
+  const handleExploreProjects = () => {
+    const url =
+      "https://www.canva.com/design/DAGsP4YkRbw/TEJak4HyqSCTzKNj6PTHZw/view?utm_content=DAGsP4YkRbw&utm_source=opensourcenest";
+
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+  };
+
   return (
     <section className="section bg-[url(/images/hero-bg2.svg)] bg-bottom bg-no-repeat bg-cover">
       <div
@@ -16,7 +26,7 @@ const HomeSectionOne = () => {
           >
             <Image src="/images/globe.svg" alt="" height={16} width={16} />
             <p className="font-medium text-[10px] max-[500px]:text-[8px]">
-              Top Open Source Community
+              Top Open Source Initiative
             </p>
           </div>
 
@@ -31,10 +41,8 @@ const HomeSectionOne = () => {
             Talent Thrives
           </p>
 
-          <p className="text-[18px] max-[500px]:text-[16px]">
-            Discover, connect, and contribute to the future of{" "}
-            <br className="max-[600px]:hidden" /> open source — from anywhere in
-            the world.
+          <p className="text-[18px] max-[500px]:text-[16px] max-w-[430px]">
+            Helping everyday people learn, use, and contribute to open source
           </p>
 
           <div className="flex gap-x-2.5 gap-y-5 mt-[50px] flex-wrap">
@@ -53,9 +61,10 @@ const HomeSectionOne = () => {
 
             <button
               className="bg-black py-4 px-10 gap-2.5 rounded-full flex 
-              font-semibold text-[12px] text-primary border-primary border"
+              font-semibold text-[12px] text-primary border-primary border cursor-pointer"
+              onClick={handleExploreProjects}
             >
-              <p>EXPLORE PROJECT</p>
+              <p>EXPLORE OUR PROJECT</p>
               <Image src="/images/code-tag.svg" alt="" height={16} width={16} />
             </button>
           </div>
@@ -64,13 +73,13 @@ const HomeSectionOne = () => {
         <div
           className="grid grid-cols-2 gap-2.5 hero-border
         p-2.5 rounded-sm max-[1300px]:grid-cols-1 max-[1150px]:grid-cols-4
-        max-[845px]:grid-cols-2 
+        max-[845px]:grid-cols-2 relative
         "
         >
           {Stat.map((stat) => (
             <div
               key={stat.title}
-              className={`text-center py-[49px] px-[20px] flex flex-col 
+              className={`text-center py-[49px] px-[15px] flex flex-col 
                 justify-center rounded-[6px] gap-1.5 z-[3] w-fullmax-[380px]:py-[30px]
                 ${stat.className}`}
             >
@@ -78,7 +87,8 @@ const HomeSectionOne = () => {
                 className="font-semibold text-[50px]/[24px]
               max-[500px]:text-[40px]/[24px] max-[380px]:text-[32px]/[24px]"
               >
-                <AnimatedNumber value={stat.title} />+
+                <AnimatedNumber value={stat.title} />
+                {stat.after}
               </p>
               <p
                 className="font-medium text-[22px]
@@ -88,6 +98,15 @@ const HomeSectionOne = () => {
               </p>
             </div>
           ))}
+
+          <div
+            className="flex items-center gap-1 bg-[#C7FFD0] rounded-full
+          text-primary2 w-fit px-2.5 py-1.5 
+          absolute z-10 top-1/2 left-1/2 translate-[-50%] -rotate-6"
+          >
+            {/* <Image src="/images/globe.svg" alt="" height={16} width={16} /> */}
+            <p className="font-medium text-[10px]">Targets for 2025</p>
+          </div>
         </div>
       </div>
     </section>
@@ -99,25 +118,30 @@ export default HomeSectionOne;
 const Stat: {
   title: number;
   subject: string;
+  after?: string;
   className: HTMLAttributes<HTMLDivElement>["className"];
 }[] = [
   {
-    title: 500,
-    subject: "Contributors",
+    title: 1,
+    after: "",
+    subject: "Mission",
     className: "bg-primary3",
   },
   {
-    title: 20,
-    subject: "Countries",
+    title: 4,
+    after: "",
+    subject: "Tracks",
     className: "bg-[#242424]",
   },
   {
-    title: 50,
+    title: 9,
+    after: "+",
     subject: "Projects",
     className: "bg-[#242424] max-[1300px]:bg-primary3 max-[845px]:bg-[#242424]",
   },
   {
-    title: 100,
+    title: 300,
+    after: "+",
     subject: "Contributors",
     className: "bg-primary3 max-[1300px]:bg-[#242424] max-[845px]:bg-primary3",
   },
