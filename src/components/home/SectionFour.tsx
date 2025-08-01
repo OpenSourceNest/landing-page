@@ -1,6 +1,14 @@
+"use client";
+
 import Link from "next/link";
+import { whatsappURL } from "../NavBar";
 
 const HomeSectionFour = () => {
+  const joinCommunity = () => {
+    const newWindow = window.open(whatsappURL, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+  };
+
   return (
     <section
       className="py-[81px] px-[70px] max-[1150px]:px-[50px] max-[500px]:px-2.5
@@ -8,7 +16,7 @@ const HomeSectionFour = () => {
     >
       <div
         className="bg-primary3 py-[80px] px-[32px] flex flex-col
-      items-center justify-center text-center"
+      items-center justify-center text-center rounded-[6px]"
       >
         <h3 className="font-semibold text-[40px]">
           Ready to Take Flight with <span className="text-black">OSN?</span>
@@ -22,7 +30,8 @@ const HomeSectionFour = () => {
         <div className="flex items-center gap-2.5 justify-center flex-wrap-reverse">
           <button
             className="text-sm font-medium py-4 px-10 rounded-full bg-black
-          border border-black"
+          border border-black cursor-pointer"
+            onClick={joinCommunity}
           >
             JOIN OUR COMMUNITY
           </button>

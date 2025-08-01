@@ -14,7 +14,7 @@ const HomeSectionOne = () => {
   };
 
   return (
-    <section className="section bg-[url(/images/hero-bg2.svg)] bg-bottom bg-no-repeat bg-cover">
+    <section className="section bg-[url(/images/hero-bg.svg)] bg-bottom bg-no-repeat bg-cover">
       <div
         className="constraint py-[143px] pt-[100px] flex justify-center gap-24 mx-auto items-center
       max-[1150px]:flex-wrap"
@@ -104,8 +104,7 @@ const HomeSectionOne = () => {
           text-primary2 w-fit px-2.5 py-1.5 
           absolute z-10 top-1/2 left-1/2 translate-[-50%] -rotate-6"
           >
-            {/* <Image src="/images/globe.svg" alt="" height={16} width={16} /> */}
-            <p className="font-medium text-[10px]">Targets for 2025</p>
+            <p className="font-semibold text-[10px]">Targets for 2025</p>
           </div>
         </div>
       </div>

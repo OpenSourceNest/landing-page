@@ -5,11 +5,20 @@ import Link from "next/link";
 import AnimatedHamburgerButton from "./ui/AnimatedHamburgerButton";
 import { useState } from "react";
 
+export const whatsappURL = "https://chat.whatsapp.com/CyCUKHBVHDLJXrUASXZ8u5";
+
 const NavBar = () => {
   const [displaySidebar, setDisplaySidebar] = useState(false);
 
   const hideSideBar = () => {
     setDisplaySidebar(false);
+  };
+
+  const joinCommunity = () => {
+    const newWindow = window.open(whatsappURL, "_blank", "noopener,noreferrer");
+    if (newWindow) newWindow.opener = null;
+
+    hideSideBar();
   };
 
   return (
@@ -48,7 +57,8 @@ const NavBar = () => {
 
           <button
             className="py-2.5 px-6 font-semibold text-primary border border-primary 
-          rounded-full ml-3"
+          rounded-full ml-3 cursor-pointer"
+            onClick={joinCommunity}
           >
             JOIN COMMUNITY
           </button>
@@ -87,8 +97,8 @@ const NavBar = () => {
 
           <button
             className="py-2.5 px-6 font-semibold text-primary border border-primary 
-          rounded-full ml-3"
-            onClick={hideSideBar}
+          rounded-full ml-3 cursor-pointer"
+            onClick={joinCommunity}
           >
             JOIN COMMUNITY
           </button>
