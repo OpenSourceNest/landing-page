@@ -121,4 +121,9 @@ const NavLinks = [
     url: "https://www.canva.com/design/DAGsP4YkRbw/TEJak4HyqSCTzKNj6PTHZw/view",
     newTab: true,
   },
+  {
+    title: "Volunteer",
+    url: "https://volunteer.opensourcenest.org",
+    newTab: true,
+  },
 ];
