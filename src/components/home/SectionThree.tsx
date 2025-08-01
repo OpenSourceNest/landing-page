@@ -33,8 +33,9 @@ export default HomeSectionThree;
 const Reasons = [
   {
     icon: "/images/contributor.svg",
-    title: "Contributor Onboarding Sessions",
-    subTitle: "Weekly sessions to help new contributors get started",
+    title: "Outreaches",
+    subTitle:
+      "We're reaching out to academics, beginners to professionals in tech, local communities, and anyone curious—bringing more people into open source.",
   },
   {
     icon: "/images/hack-night.svg",
@@ -45,11 +46,13 @@ const Reasons = [
   {
     icon: "/images/house-flag.svg",
     title: "Open Source In Person Events",
-    subTitle: "Annual celebration of global open source",
+    subTitle:
+      "Open source-focused events with speakers, learning, networking, and fun engaging community interactions.",
   },
   {
     icon: "/images/contributor-ama.svg",
     title: "Community AMAs",
-    subTitle: "Regular Q&A sessions with industry experts",
+    subTitle:
+      "Ask, learn, and connect with contributors and maintainers in open conversations.",
   },
 ];
