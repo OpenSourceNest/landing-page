@@ -3,12 +3,13 @@
 import Image from "next/image";
 import { HTMLAttributes } from "react";
 import AnimatedNumber from "../ui/AnimatedNumber";
+import { whatsappURL } from "../NavBar";
+
+const campaignURL =
+  "https://www.canva.com/design/DAGsP4YkRbw/TEJak4HyqSCTzKNj6PTHZw/view?utm_content=DAGsP4YkRbw&utm_source=opensourcenest";
 
 const HomeSectionOne = () => {
-  const handleExploreProjects = () => {
-    const url =
-      "https://www.canva.com/design/DAGsP4YkRbw/TEJak4HyqSCTzKNj6PTHZw/view?utm_content=DAGsP4YkRbw&utm_source=opensourcenest";
-
+  const handleHeroURL = (url: string) => {
     const newWindow = window.open(url, "_blank", "noopener,noreferrer");
     if (newWindow) newWindow.opener = null;
   };
@@ -48,7 +49,8 @@ const HomeSectionOne = () => {
           <div className="flex gap-x-2.5 gap-y-5 mt-[50px] flex-wrap">
             <button
               className="bg-primary py-4 px-10 gap-2.5 rounded-full
-            flex font-semibold text-[12px] border-primary border"
+            flex font-semibold text-[12px] border-primary border cursor-pointer"
+              onClick={() => handleHeroURL(whatsappURL)}
             >
               <p>START CONTRIBUTING</p>
               <Image
@@ -62,7 +64,7 @@ const HomeSectionOne = () => {
             <button
               className="bg-black py-4 px-10 gap-2.5 rounded-full flex 
               font-semibold text-[12px] text-primary border-primary border cursor-pointer"
-              onClick={handleExploreProjects}
+              onClick={() => handleHeroURL(campaignURL)}
             >
               <p>EXPLORE OUR PROJECT</p>
               <Image src="/images/code-tag.svg" alt="" height={16} width={16} />

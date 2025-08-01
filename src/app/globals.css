@@ -11,7 +11,13 @@
 }
 
 :root {
-  /* cursor: url("/images/cursor.png"), auto; */
+  cursor: url("/images/cursor.png"), auto;
+
+  a,
+  button,
+  [role="button"] {
+    cursor: url("/images/cursor-pointer.png"), pointer;
+  }
 }
 
 :root:has(.no-doc-scroll) {
