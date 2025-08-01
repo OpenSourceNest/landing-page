@@ -43,7 +43,8 @@ const HomeSectionOne = () => {
           </p>
 
           <p className="text-[18px] max-[500px]:text-[16px] max-w-[430px]">
-            Helping everyday people learn, use, and contribute to open source
+            We are here to help everyday people learn, use, and contribute to
+            open source
           </p>
 
           <div className="flex gap-x-2.5 gap-y-5 mt-[50px] flex-wrap">

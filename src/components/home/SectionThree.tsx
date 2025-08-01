@@ -45,7 +45,7 @@ const Reasons = [
   },
   {
     icon: "/images/house-flag.svg",
-    title: "Open Source In Person Events",
+    title: "Open Source In-Person Events",
     subTitle:
       "Open source-focused events with speakers, learning, networking, and fun engaging community interactions.",
   },
