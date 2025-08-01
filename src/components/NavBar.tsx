@@ -108,10 +108,7 @@ const NavLinks = [
   },
   {
     title: "Projects",
-    url: "",
-  },
-  {
-    title: "Events",
-    url: "",
+    url: "https://www.canva.com/design/DAGsP4YkRbw/TEJak4HyqSCTzKNj6PTHZw/view",
+    newTab: true,
   },
 ];
