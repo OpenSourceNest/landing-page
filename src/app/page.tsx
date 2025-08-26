@@ -1,3 +1,4 @@
+import GithubWorkshop from "@/components/events/GithubWorkshop";
 import Footer from "@/components/Footer";
 import HomeSectionFour from "@/components/home/SectionFour";
 import HomeSectionOne from "@/components/home/SectionOne";
@@ -10,6 +11,7 @@ export default function Home() {
     <div className="w-full">
       <NavBar />
       <HomeSectionOne />
+      <GithubWorkshop />
       <HomeSectionTwo />
       <HomeSectionThree />
       <HomeSectionFour />
