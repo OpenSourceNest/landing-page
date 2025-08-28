@@ -4,10 +4,11 @@ import { useEffect, useState } from "react";
 
 const GithubWorkshop = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const padding = 16;
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth > 752) {
+      if (window.innerWidth > 650) {
         setIsMobile(false);
       } else {
         setIsMobile(true);
@@ -23,17 +24,16 @@ const GithubWorkshop = () => {
   }, []);
 
   return (
-    <div className="section">
+    <div className="w-[100vw] mx-auto">
       <iframe
         src="https://lu.ma/embed/event/evt-nbgJ6NgfWGpdIjQ/simple"
         width="100%"
-        height={isMobile ? "800" : "430"}
+        height={isMobile ? 730 + padding : 420 + padding}
         frameBorder="0"
-        style={{ border: "1px solid white", borderRadius: 6 }}
         allow="fullscreen; payment"
         aria-hidden="false"
         tabIndex={0}
-        className="constraint"
+        className={`py-${padding}px`}
       ></iframe>
     </div>
   );

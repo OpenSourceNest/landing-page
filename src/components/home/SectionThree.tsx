@@ -1,12 +1,9 @@
 import HomeCard from "./HomeCard";
-import SectionTitle from "./SectionTitle";
 
 const HomeSectionThree = () => {
   return (
     <section className="section py-[100px] w-full max-[500px]:py-[50px]">
       <div className="constraint flex flex-col">
-        <SectionTitle title="EVENTS & CAMPAIGNS" />
-
         <p className="font-semibold text-[40px] mt-5 mb-10 text-center">
           What&rsquo;s <span className="text-primary">Happening?</span>
         </p>
