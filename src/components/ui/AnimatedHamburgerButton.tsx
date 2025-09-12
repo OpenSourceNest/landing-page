@@ -36,7 +36,7 @@ const AnimatedHamburgerButton = ({ active, setActive }: IProp) => {
         animate={active ? "open" : "closed"}
         onClick={() => setActive(!active)}
         className="relative h-8 w-8 rounded bg-white/0 transition-colors hover:bg-white/20 scale-125
-        min-[1100px]:hidden"
+        min-[1100px]:hidden max-[600px]:rounded-full"
       >
         <motion.span
           variants={VARIANTS.top}

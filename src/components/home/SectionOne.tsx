@@ -104,7 +104,7 @@ const HomeSectionOne = () => {
 
           <div
             className="flex items-center gap-1 bg-[#C7FFD0] rounded-full
-          text-primary2 w-fit px-2.5 py-1.5 
+          text-primary2 w-fit px-2 py-1 
           absolute z-10 top-1/2 left-1/2 translate-[-50%] -rotate-6"
           >
             <p className="font-semibold text-[10px]">Targets for 2025</p>
