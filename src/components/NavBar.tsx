@@ -32,7 +32,7 @@ const NavBar = () => {
     >
       <nav
         className="flex w-[1146px] items-center border rounded-full border-[#2A2A2A]
-      justify-between gap-3 py-4 px-16 max-w-[95vw] mx-auto
+      justify-between gap-3 py-4 px-10 max-w-[95vw] mx-auto
       z-10 backdrop-blur-lg bg-[#0000007b] max-[600px]:px-4 max-[600px]:py-2"
       >
         <Image
