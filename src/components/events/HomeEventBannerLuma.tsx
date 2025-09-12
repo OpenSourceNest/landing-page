@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from "react";
 
-const GithubWorkshop = () => {
+const HomeEventBannerLuma = () => {
   const [isMobile, setIsMobile] = useState(false);
   const padding = 16;
 
@@ -26,9 +26,9 @@ const GithubWorkshop = () => {
   return (
     <div className="w-[100vw] mx-auto">
       <iframe
-        src="https://lu.ma/embed/event/evt-nbgJ6NgfWGpdIjQ/simple"
+        src="https://lu.ma/embed/event/evt-BN71HCTj2nEu5QD/simple"
         width="100%"
-        height={isMobile ? 730 + padding : 420 + padding}
+        height={isMobile ? 730 + padding : 440 + padding}
         frameBorder="0"
         allow="fullscreen; payment"
         aria-hidden="false"
@@ -39,4 +39,4 @@ const GithubWorkshop = () => {
   );
 };
 
-export default GithubWorkshop;
+export default HomeEventBannerLuma;
