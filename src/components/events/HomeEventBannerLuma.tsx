@@ -26,9 +26,9 @@ const HomeEventBannerLuma = () => {
   return (
     <div className="w-[100vw] mx-auto">
       <iframe
-        src="https://lu.ma/embed/event/evt-BN71HCTj2nEu5QD/simple"
+        src="https://lu.ma/embed/event/evt-2JNFEWD7wLgQhrp/simple"
         width="100%"
-        height={isMobile ? 730 + padding : 440 + padding}
+        height={isMobile ? 730 + padding : 420 + padding}
         frameBorder="0"
         allow="fullscreen; payment"
         aria-hidden="false"
