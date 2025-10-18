@@ -25,22 +25,24 @@ const NavBar = () => {
     <div
       className={`z-[20] ${
         displaySidebar
-          ? `no-doc-scroll flex flex-col h-screen fixed w-full mt-[20px] px-2 gap-4
+          ? `no-doc-scroll flex flex-col h-screen fixed w-full mt-[10px] px-2 gap-4
           pb-2`
           : "mt-[40px] sticky top-2.5"
-      }`}
+      } w-full max-w-[1300px] mx-auto`}
     >
       <nav
-        className="flex w-[1146px] items-center border rounded-full border-[#2A2A2A]
+        className="flex w-full items-center border rounded-full border-[#2A2A2A]
       justify-between gap-3 py-4 px-10 max-w-[95vw] mx-auto
       z-10 backdrop-blur-lg bg-[#0000007b] max-[600px]:px-4 max-[600px]:py-2"
       >
-        <Image
-          src="/images/logo-full.png"
-          alt="OSN Logo"
-          height={52}
-          width={212}
-        />
+        <Link href="/" className="">
+          <Image
+            src="/images/logo-full.png"
+            alt="OpenSourceNest Logo"
+            height={52}
+            width={212}
+          />
+        </Link>
 
         <div className="flex items-center gap-3 max-[1100px]:hidden">
           {NavLinks.map((nav) => (

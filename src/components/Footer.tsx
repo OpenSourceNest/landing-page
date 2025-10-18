@@ -9,7 +9,7 @@ const Footer = () => {
       >
         <Image
           src="/images/logo-full.png"
-          alt="OSN Logo"
+          alt="OpenSourceNest Logo"
           height={52}
           width={212}
         />
