@@ -3,12 +3,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import AnimatedHamburgerButton from "./ui/AnimatedHamburgerButton";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export const whatsappURL = "https://chat.whatsapp.com/CyCUKHBVHDLJXrUASXZ8u5";
 
 const NavBar = () => {
   const [displaySidebar, setDisplaySidebar] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const hideSideBar = () => {
     setDisplaySidebar(false);
@@ -20,6 +21,23 @@ const NavBar = () => {
 
     hideSideBar();
   };
+
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 400) {
+        setIsMobile(false);
+      } else {
+        setIsMobile(true);
+      }
+    }
+
+    if (typeof window !== "undefined") {
+      handleResize();
+      window.addEventListener("resize", handleResize);
+
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
 
   return (
     <div
@@ -36,12 +54,21 @@ const NavBar = () => {
       z-10 backdrop-blur-lg bg-[#0000007b] max-[600px]:px-4 max-[600px]:py-2"
       >
         <Link href="/" className="">
-          <Image
-            src="/images/logo-full.png"
-            alt="OpenSourceNest Logo"
-            height={52}
-            width={212}
-          />
+          {isMobile ? (
+            <Image
+              src="/images/logo-short.png"
+              alt="OpenSourceNest Logo"
+              height={43}
+              width={43}
+            />
+          ) : (
+            <Image
+              src="/images/logo-full.png"
+              alt="OpenSourceNest Logo"
+              height={52}
+              width={212}
+            />
+          )}
         </Link>
 
         <div className="flex items-center gap-3 max-[1100px]:hidden">

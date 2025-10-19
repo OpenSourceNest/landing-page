@@ -16,20 +16,17 @@ export default function ProjectBanner(
     >
       <div
         className={`w-full h-[504px] p-2.5 rounded-[12px]
-        pb-[30px] relative`}
+        pb-[10px] relative flex`}
+        style={{
+          background: `url('${props.banner}'), white`,
+          backgroundSize: "contain, 10%",
+          backgroundRepeat: "no-repeat, repeat",
+          backgroundPosition: "center 20%",
+        }}
       >
-        <Image
-          alt={`Banner image for ${props.title}`}
-          src={props.banner || ""}
-          height={1616}
-          width={4320}
-          className="w-full min-h-[240px] rounded-[6px] 
-        object-cover mb-5 absolute top-0 left-0 opacity-30"
-        />
-
         <div
-          className="absolute bottom-0 left-0 p-10 m-0.5 rounded-2xl w-full
-        max-w-[700px]"
+          className=" bottom-0 left-0 p-10 m-0.5 rounded-2xl w-full
+        max-w-[700px] backdrop-blur py-4 mt-auto bg-black/80 "
         >
           <p
             className="font-semibold text-sm bg-primary3 w-fit rounded-md
@@ -38,7 +35,9 @@ export default function ProjectBanner(
             {props.type}
           </p>
 
-          <p className="mt-4 mb-6 font-semibold text-[36px]">{props.title}</p>
+          <p className="mt-4 mb-6 font-semibold text-[36px] text-shadow-lg">
+            {props.title}
+          </p>
 
           <div
             className="flex items-center text-sm text-secondary400 
