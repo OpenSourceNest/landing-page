@@ -1,16 +1,44 @@
 import { ProjectCardProps } from "@/components/projects/ProjectCard";
 
-const Projects: ProjectCardProps[] = [
-  {
-    image: "/images/Projects/temp.jpeg",
-    banner: "/images/Projects/long-temp.png",
-    title: "Introduction to Open Source Contribution",
+const Projects: Record<string, ProjectCardProps> = {
+  "itu-utu-2025": {
+    image: "/images/Projects/itu-utu-2025.png",
+    banner: "/images/Projects/itu-utu-2025-banner.png",
+    title: "Ịtụ Utụ",
+    type: "Event",
+    avatar: "",
+    author: {
+      displayText: "Christabel & Amarachi",
+      seoText: "Ezenwata Christabel and Nwoga Amarachi",
+    },
+    date: "11th Oct, 2025",
+    url: "/Projects/itu-utu-2025",
+  },
+
+  "how-to-contribute-as-a-writer-2025": {
+    image: "/images/Projects/writer-2025.png",
+    banner: "/images/Projects/writer-2025-banner.png",
+    title: "Contribute As A Writer",
     type: "Workshop",
     avatar: "",
-    author: { displayText: "Jane Doe", seoText: "jane-doe" },
-    date: "March 10, 2023",
-    url: "/Projects/introduction-to-open-source-contribution",
+    author: {
+      displayText: "Ibekwe O'brien ",
+      seoText: "Ibekwe chinedu O'Brien ",
+    },
+    date: "19th Sep, 2025",
+    url: "/Projects/how-to-contribute-as-a-writer-2025",
   },
-];
+
+  "github-workshop-2025": {
+    image: "/images/Projects/github-2025.png",
+    banner: "/images/Projects/github-2025-banner.png",
+    title: "Github Workshop",
+    type: "Workshop",
+    avatar: "",
+    author: { displayText: "Motunrayo Adeneye", seoText: "Motunrayo Adeneye" },
+    date: "1st Sep, 2025",
+    url: "/Projects/github-workshop-2025",
+  },
+};
 
 export default Projects;

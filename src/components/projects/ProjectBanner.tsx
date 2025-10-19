@@ -1,10 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ProjectCardProps } from "./ProjectCard";
+import { HTMLAttributes } from "react";
 
-export default function ProjectBanner(props: ProjectCardProps) {
+export default function ProjectBanner(
+  props: ProjectCardProps & {
+    className?: HTMLAttributes<HTMLDivElement>["className"];
+  }
+) {
   return (
-    <Link href={props.url} title={props.title}>
+    <Link
+      href={props.url}
+      title={props.title}
+      className={props.className || ""}
+    >
       <div
         className={`w-full h-[504px] p-2.5 rounded-[12px]
         pb-[30px] relative`}
@@ -47,7 +56,7 @@ export default function ProjectBanner(props: ProjectCardProps) {
               className="mr-[50px] ml-[6px] max-[600px]:mr-auto"
               title={props.author.seoText}
             >
-              {props.author.displayText || props.author.seoText}
+              {props.author.seoText}
             </p>
 
             <p className="">{props.date}</p>

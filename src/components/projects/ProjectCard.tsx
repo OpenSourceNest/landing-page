@@ -5,7 +5,7 @@ export interface ProjectCardProps {
   image: string;
   banner?: string;
   title: string;
-  type: "Workshop";
+  type: "Workshop" | "Event";
   avatar?: string;
   author: { displayText?: string; seoText: string };
   date: string;
@@ -14,15 +14,15 @@ export interface ProjectCardProps {
 
 export default function ProjectCard(props: ProjectCardProps) {
   return (
-    <Link href={props.url} title={props.title} className="w-fit flex">
+    <Link href={props.url} title={props.title} className="w-full flex mx-auto">
       <div
-        className="w-[352] min-h-[432px] p-2.5 gradient-border rounded-[8px]
+        className="w-full min-h-[432px] p-2.5 gradient-border rounded-[8px]
     "
       >
         <Image
           alt=""
           src={props.image}
-          className="w-full min-w-[332px] min-h-[240px] rounded-[6px] 
+          className="w-full aspect-square rounded-[6px] 
         object-cover mb-5"
           height={240}
           width={332}
@@ -34,19 +34,21 @@ export default function ProjectCard(props: ProjectCardProps) {
 
           <div
             className="flex items-center text-sm text-secondary400 
-          font-medium"
+          font-medium justify-between flex-wrap gap-3 "
           >
-            <Image
-              alt={`Avatar of ${props.author}`}
-              src={props.avatar || "/images/icons/avatar.png"}
-              className="w-[26px] aspect-square rounded-full"
-              width={30}
-              height={30}
-            />
+            <div className="flex items-center ">
+              <Image
+                alt={`Avatar of ${props.author}`}
+                src={props.avatar || "/images/icons/avatar.png"}
+                className="w-[26px] aspect-square rounded-full"
+                width={30}
+                height={30}
+              />
 
-            <p className="mr-auto ml-[6px]" title={props.author.seoText}>
-              {props.author.displayText || props.author.seoText}
-            </p>
+              <p className="mr-auto ml-[6px]" title={props.author.seoText}>
+                {props.author.displayText || props.author.seoText}
+              </p>
+            </div>
 
             <p className="">{props.date}</p>
           </div>
