@@ -4,9 +4,9 @@ import ClashDisplayFont from "@/font/ClashDisplay.font";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Programs - OpenSourceNest",
+  title: "Projects - OpenSourceNest",
   description:
-    "Our programs are designed to empower individuals with the skills \
+    "Our projects are designed to empower individuals with the skills \
     and knowledge needed to thrive in the open source ecosystem.",
 };
 

@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ProgramCardProps } from "./ProgramCard";
+import { ProjectCardProps } from "./ProjectCard";
 
-export default function ProgramBanner(props: ProgramCardProps) {
+export default function ProjectBanner(props: ProjectCardProps) {
   return (
     <Link href={props.url} title={props.title}>
       <div
@@ -43,7 +43,10 @@ export default function ProgramBanner(props: ProgramCardProps) {
               height={30}
             />
 
-            <p className="mr-[50px] ml-[6px]" title={props.author.seoText}>
+            <p
+              className="mr-[50px] ml-[6px] max-[600px]:mr-auto"
+              title={props.author.seoText}
+            >
               {props.author.displayText || props.author.seoText}
             </p>
 

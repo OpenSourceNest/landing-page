@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export interface ProgramCardProps {
+export interface ProjectCardProps {
   image: string;
   banner?: string;
   title: string;
@@ -12,9 +12,9 @@ export interface ProgramCardProps {
   url: string;
 }
 
-export default function ProgramCard(props: ProgramCardProps) {
+export default function ProjectCard(props: ProjectCardProps) {
   return (
-    <Link href={props.url} title={props.title} className="w-fit bg-amber-600">
+    <Link href={props.url} title={props.title} className="w-fit flex">
       <div
         className="w-[352] min-h-[432px] p-2.5 gradient-border rounded-[8px]
     "
