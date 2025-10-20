@@ -1,6 +1,6 @@
 import ReadyToTakeFlight from "@/components/home/SectionFour";
 import ProjectPostHeader from "@/components/projects/ProjectPostHeader";
-import SourceSerifPro from "@/font/SourceSerifPro-Regular.font";
+import { Break, Quote } from "@/components/ui/Projects";
 import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
@@ -83,20 +83,3 @@ export default function TemplatePage() {
     </section>
   );
 }
-
-export const Break = () => {
-  return <span className="block py-[15px]"></span>;
-};
-
-export const Quote = ({ text, center }: { text: string; center?: boolean }) => {
-  return (
-    <div
-      className={`${SourceSerifPro.className} antialiased italic text-2xl/[32px]
-        block rounded-xl p-8 bg-white text-black my-8 w-full ${
-          center ? "text-center" : ""
-        }`}
-    >
-      “ {text} ”
-    </div>
-  );
-};
