@@ -23,7 +23,7 @@ export default function ProjectPostHeader(props: ProjectPostHeaderProps) {
 
       <div
         className="flex items-center text-sm text-white 
-                  font-medium flex-wrap gap-3 w-full"
+                  font-medium flex-wrap gap-3 gap-y-2 w-full"
       >
         <Image
           alt={`Avatar of ${props.author}`}
@@ -33,13 +33,13 @@ export default function ProjectPostHeader(props: ProjectPostHeaderProps) {
           height={36}
         />
         <p
-          className="mr-[50px] ml-[6px] max-[600px]:mr-auto"
+          className="mr-auto ml-[6px] max-[600px]:mr-auto"
           title={props.author.seoText}
         >
           {props.author.seoText}
         </p>
 
-        <p className="ml-auto">{props.date}</p>
+        <p className="">{props.date}</p>
       </div>
     </div>
   );
