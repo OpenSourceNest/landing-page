@@ -2,13 +2,17 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import AnimatedHamburgerButton from "./ui/AnimatedHamburgerButton";
-import { useState } from "react";
+type value = number;
 
 export const whatsappURL = "https://chat.whatsapp.com/CyCUKHBVHDLJXrUASXZ8u5";
 
-const NavBar = () => {
+export default function NavBar() {
   const [displaySidebar, setDisplaySidebar] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const pathname = usePathname();
 
   const hideSideBar = () => {
     setDisplaySidebar(false);
@@ -21,38 +25,58 @@ const NavBar = () => {
     hideSideBar();
   };
 
+  useEffect(() => {
+    function handleResize() {
+      if (window.innerWidth > 400) {
+        setIsMobile(false);
+      } else {
+        setIsMobile(true);
+      }
+    }
+
+    if (typeof window !== "undefined") {
+      handleResize();
+      window.addEventListener("resize", handleResize);
+
+      return () => window.removeEventListener("resize", handleResize);
+    }
+  }, []);
+
   return (
     <div
       className={`z-[20] ${
         displaySidebar
-          ? `no-doc-scroll flex flex-col h-screen fixed w-full mt-[20px] px-2 gap-4
+          ? `no-doc-scroll flex flex-col h-screen fixed w-full mt-[10px] px-2 gap-4
           pb-2`
           : "mt-[40px] sticky top-2.5"
-      }`}
+      } w-full max-w-[1500px] mx-auto`}
     >
       <nav
-        className="flex w-[1146px] items-center border rounded-full border-[#2A2A2A]
+        className="flex w-full items-center border rounded-full border-[#2A2A2A]
       justify-between gap-3 py-4 px-10 max-w-[95vw] mx-auto
       z-10 backdrop-blur-lg bg-[#0000007b] max-[600px]:px-4 max-[600px]:py-2"
       >
-        <Image
-          src="/images/logo-full.png"
-          alt="OSN Logo"
-          height={52}
-          width={212}
-        />
+        <Link href="/" className="">
+          {isMobile ? (
+            <Image
+              src="/images/logo-short.png"
+              alt="OpenSourceNest Logo"
+              height={43}
+              width={43}
+            />
+          ) : (
+            <Image
+              src="/images/logo-full.png"
+              alt="OpenSourceNest Logo"
+              height={52}
+              width={212}
+            />
+          )}
+        </Link>
 
         <div className="flex items-center gap-3 max-[1100px]:hidden">
           {NavLinks.map((nav) => (
-            <Link
-              href={nav.url}
-              key={nav.title}
-              className="nav-link"
-              target={nav.newTab ? "_blank" : ""}
-            >
-              <p className="font-medium mb-0.5">{nav.title}</p>
-              <span className="block w-0 h-0.5 bg-primary mx-auto"></span>
-            </Link>
+            <NavLink key={nav.title} nav={nav} hideSideBar={hideSideBar} />
           ))}
 
           <button
@@ -83,16 +107,12 @@ const NavBar = () => {
       >
         <div className="gap-5 flex flex-col items-center mb-[350px]">
           {NavLinks.map((nav) => (
-            <Link
-              href={nav.url}
+            <NavLink
               key={nav.title}
-              className="nav-link"
-              onClick={hideSideBar}
-              target={nav.newTab ? "_blank" : ""}
-            >
-              <p className="font-medium mb-0.5 text-[20px]">{nav.title}</p>
-              <span className="block w-0 h-0.5 bg-primary mx-auto"></span>
-            </Link>
+              nav={nav}
+              hideSideBar={hideSideBar}
+              fontSize="20px"
+            />
           ))}
 
           <button
@@ -106,9 +126,40 @@ const NavBar = () => {
       </div>
     </div>
   );
-};
+}
 
-export default NavBar;
+const NavLink = ({
+  nav,
+  hideSideBar,
+  fontSize,
+}: {
+  nav: (typeof NavLinks)[number];
+  hideSideBar: () => void;
+  fontSize?: `${value}px`;
+}) => {
+  const pathname = usePathname();
+  const isActive = pathname === nav.url;
+
+  return (
+    <Link
+      href={nav.url}
+      key={nav.title}
+      className="nav-link"
+      onClick={hideSideBar}
+      target={nav.newTab ? "_blank" : ""}
+    >
+      <p
+        className={`font-medium mb-0.5 ${fontSize ? `text-[${fontSize}]` : ""}`}
+      >
+        {nav.title}
+      </p>
+      <span
+        className="block w-0 h-0.5 bg-primary mx-auto"
+        style={{ width: isActive ? "100%" : "" }}
+      ></span>
+    </Link>
+  );
+};
 
 const NavLinks = [
   {
@@ -118,8 +169,8 @@ const NavLinks = [
   },
   {
     title: "Projects",
-    url: "https://www.canva.com/design/DAGsP4YkRbw/TEJak4HyqSCTzKNj6PTHZw/view",
-    newTab: true,
+    url: "/projects",
+    newTab: false,
   },
   {
     title: "Volunteer",

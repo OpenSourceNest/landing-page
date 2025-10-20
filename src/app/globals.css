@@ -4,6 +4,8 @@
   --color-primary: #00ba03;
   --color-primary2: #005e02;
   --color-primary3: #008302;
+
+  --color-secondary400: #97989f;
   /*   
   --breakpoint-xs: 30rem;
   --breakpoint-2xl: 100rem;
@@ -61,12 +63,12 @@
 }
 
 .section {
-  padding-left: 150px;
-  padding-right: 150px;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
 @media screen and (max-width: 1150px) {
-  .section {
+  .section:not(.no-padding) {
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -139,4 +141,53 @@
   syntax: "<angle>";
   initial-value: 0deg;
   inherits: false;
+}
+
+.gradient-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-border::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: inherit;
+  background: linear-gradient(#ffffff 10%, #50b461 50%, #7e7e7e);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                PROJECT BLOG                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.project-blog {
+  p {
+    font-size: 20px;
+    color: white;
+    line-height: 32px;
+    font-weight: 500;
+  }
+
+  a {
+    color: #a4ffb3;
+    text-decoration: underline;
+    text-decoration-color: #a4ffb3;
+  }
+
+  .sub-title {
+    color: var(--color-primary);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
 }
