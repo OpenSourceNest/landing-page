@@ -16,7 +16,7 @@ export default function TemplatePage() {
     <section
       className="pt-[50px] no-padding px-10 max-[500px]:px-5"
       style={{
-        background: `linear-gradient(black, #2b2b2b 60vw, #2b2b2b 90%, black)`,
+        background: `linear-gradient(black, #1a1a1a 60vw, #1a1a1a 90%, black)`,
       }}
     >
       <article className="constraint project-blog min-h-screen mt-[120px]">
