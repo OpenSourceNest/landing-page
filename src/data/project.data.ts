@@ -11,7 +11,7 @@ const Projects: Record<string, ProjectCardProps> = {
       displayText: "Christabel & Amarachi",
       seoText: "Ezenwata Christabel and Nwoga Amarachi",
     },
-    date: "11th Oct, 2025",
+    date: "October 11th, 2025",
     url: "/Projects/itu-utu-2025",
   },
 
@@ -25,7 +25,7 @@ const Projects: Record<string, ProjectCardProps> = {
       displayText: "Ibekwe O'brien ",
       seoText: "Ibekwe chinedu O'Brien ",
     },
-    date: "19th Sep, 2025",
+    date: "September 19th, 2025",
     url: "/Projects/how-to-contribute-as-a-writer-2025",
   },
 
@@ -36,7 +36,7 @@ const Projects: Record<string, ProjectCardProps> = {
     type: "Workshop",
     avatar: "",
     author: { displayText: "Motunrayo Adeneye", seoText: "Motunrayo Adeneye" },
-    date: "1st Sep, 2025",
+    date: "September 1st, 2025",
     url: "/Projects/github-workshop-2025",
   },
 };

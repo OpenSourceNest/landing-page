@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { whatsappURL } from "../NavBar";
 
-const HomeSectionFour = () => {
+const ReadyToTakeFlight = () => {
   const joinCommunity = () => {
     const newWindow = window.open(whatsappURL, "_blank", "noopener,noreferrer");
     if (newWindow) newWindow.opener = null;
@@ -11,12 +11,12 @@ const HomeSectionFour = () => {
 
   return (
     <section
-      className="py-[81px] px-[70px] max-[1150px]:px-[50px] max-[500px]:px-2.5
-    max-[500px]:py-[20px]"
+      className="py-[81px] max-w-[90vw] mx-auto
+    max-[500px]:py-[20px] "
     >
       <div
         className="bg-primary3 py-[80px] px-[32px] flex flex-col
-      items-center justify-center text-center rounded-[6px]"
+      items-center justify-center text-center rounded-[6px] w-full"
       >
         <h3 className="font-semibold text-[40px]">
           Ready to Take Flight with <span className="text-black">OSN?</span>
@@ -50,4 +50,4 @@ const HomeSectionFour = () => {
   );
 };
 
-export default HomeSectionFour;
+export default ReadyToTakeFlight;

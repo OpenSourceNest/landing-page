@@ -68,7 +68,7 @@
 }
 
 @media screen and (max-width: 1150px) {
-  .section {
+  .section:not(.no-padding) {
     padding-left: 50px;
     padding-right: 50px;
   }
@@ -158,4 +158,36 @@
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                PROJECT BLOG                                */
+/* -------------------------------------------------------------------------- */
+/* -------------------------------------------------------------------------- */
+/*                                      -                                     */
+/* -------------------------------------------------------------------------- */
+
+.project-blog {
+  p {
+    font-size: 20px;
+    color: white;
+    line-height: 32px;
+    font-weight: 500;
+  }
+
+  a {
+    color: #a4ffb3;
+    text-decoration: underline;
+    text-decoration-color: #a4ffb3;
+  }
+
+  .sub-title {
+    color: var(--color-primary);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
 }

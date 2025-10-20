@@ -14,7 +14,11 @@ export interface ProjectCardProps {
 
 export default function ProjectCard(props: ProjectCardProps) {
   return (
-    <Link href={props.url} title={props.title} className="w-full flex mx-auto">
+    <Link
+      href={"/projects/template"}
+      title={props.title}
+      className="w-full flex mx-auto bg-black"
+    >
       <div
         className="w-full min-h-[432px] p-2.5 gradient-border rounded-[8px]
     "
@@ -41,8 +45,8 @@ export default function ProjectCard(props: ProjectCardProps) {
                 alt={`Avatar of ${props.author}`}
                 src={props.avatar || "/images/icons/avatar.png"}
                 className="w-[26px] aspect-square rounded-full"
-                width={30}
-                height={30}
+                width={26}
+                height={26}
               />
 
               <p className="mr-auto ml-[6px]" title={props.author.seoText}>

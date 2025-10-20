@@ -1,4 +1,4 @@
-import HomeSectionFour from "@/components/home/SectionFour";
+import ReadyToTakeFlight from "@/components/home/SectionFour";
 import ProjectBanner from "@/components/projects/ProjectBanner";
 import ProjectCard from "@/components/projects/ProjectCard";
 import Projects from "@/data/project.data";
@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="section pt-[110px]">
+      <section className="section pt-[110px] bg-[url(/images/hero-bg3.svg)] bg-top bg-no-repeat bg-cover">
         <div className="constraint w-full">
           <ProjectBanner {...projects[0]} className=" max-[600px]:hidden" />
 
@@ -23,7 +23,7 @@ export default function Home() {
         </div>
       </section>
 
-      <HomeSectionFour />
+      <ReadyToTakeFlight />
     </>
   );
 }

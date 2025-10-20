@@ -26,7 +26,7 @@ export default function ProjectBanner(
       >
         <div
           className=" bottom-0 left-0 p-10 m-0.5 rounded-2xl w-full
-        max-w-[700px] backdrop-blur py-4 mt-auto bg-black/80 "
+        max-w-[700px] backdrop-blur py-4 mt-auto bg-black/90 "
         >
           <p
             className="font-semibold text-sm bg-primary3 w-fit rounded-md
@@ -40,15 +40,15 @@ export default function ProjectBanner(
           </p>
 
           <div
-            className="flex items-center text-sm text-secondary400 
+            className="flex items-center text-sm text-white 
           font-medium"
           >
             <Image
               alt={`Avatar of ${props.author}`}
               src={props.avatar || "/images/icons/avatar.png"}
               className="w-[26px] aspect-square rounded-full"
-              width={30}
-              height={30}
+              width={26}
+              height={26}
             />
 
             <p

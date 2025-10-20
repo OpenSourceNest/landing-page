@@ -1,6 +1,5 @@
 import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
-import ClashDisplayFont from "@/font/ClashDisplay.font";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -16,12 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${ClashDisplayFont.className} antialiased`}>
-        <NavBar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <>
+      <NavBar />
+      {children}
+      <Footer />
+    </>
   );
 }
