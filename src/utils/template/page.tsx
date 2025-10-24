@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: "Template - OpenSourceNest",
   description: "Write a description of the project here",
   authors: [{ name: "Author Name" }],
+  keywords: ["Template", "Project", "OpenSourceNest"],
 };
 
 export default function TemplatePage() {
