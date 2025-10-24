@@ -8,7 +8,7 @@ import Image from "next/image";
 export const metadata: Metadata = {
   title: "How to Contribute as a Writer - OpenSourceNest",
   description:
-    "Learn how to contribute to OpenSourceNest as a writer and make an impact in the open source community.",
+    "Learn how to contribute to open source as a writer and make an impact in the open source community.",
   authors: [{ name: "Ibekwe O'brien" }],
   keywords: [
     "Writer",
