@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,14 +11,24 @@ export interface ProjectCardProps {
   author: { displayText?: string; seoText: string };
   date: string;
   url: string;
+  blank?: boolean;
 }
 
 export default function ProjectCard(props: ProjectCardProps) {
+  const handleLinkClick = (
+    e: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    if (props.blank) {
+      e.preventDefault();
+    }
+  };
+
   return (
     <Link
-      href={"/projects/template"}
+      href={props.blank ? "" : props.url}
       title={props.title}
       className="w-full flex mx-auto bg-black"
+      onClick={handleLinkClick}
     >
       <div
         className="w-full min-h-[432px] p-2.5 gradient-border rounded-[8px]

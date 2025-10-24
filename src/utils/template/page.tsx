@@ -9,11 +9,17 @@ export const metadata: Metadata = {
   title: "Template - OpenSourceNest",
   description: "Write a description of the project here",
   authors: [{ name: "Author Name" }],
+  keywords: ["Template", "Project", "OpenSourceNest"],
 };
 
 export default function TemplatePage() {
   return (
-    <section className="section">
+    <section
+      className="pt-[50px] no-padding px-10 max-[500px]:px-5"
+      style={{
+        background: `linear-gradient(black, #1a1a1a 60vw, #1a1a1a 90%, black)`,
+      }}
+    >
       <article className="constraint project-blog min-h-screen mt-[120px]">
         <ProjectPostHeader
           title="Project Title"
@@ -24,9 +30,9 @@ export default function TemplatePage() {
         />
         <Image
           alt=""
-          src="/images/projects/template.png"
-          className="w-full my-8 rounded-b-xl"
-          height={462}
+          src="/images/projects/itu-utu-2025/itu-utu-2025-web.png"
+          className="w-full my-8 rounded-xl overflow-hidden"
+          height={350}
           width={800}
         />
         <p className="">
