@@ -12,7 +12,6 @@ export const whatsappURL = "https://chat.whatsapp.com/CyCUKHBVHDLJXrUASXZ8u5";
 export default function NavBar() {
   const [displaySidebar, setDisplaySidebar] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const pathname = usePathname();
 
   const hideSideBar = () => {
     setDisplaySidebar(false);
@@ -57,21 +56,21 @@ export default function NavBar() {
       z-10 backdrop-blur-lg bg-[#0000007b] max-[600px]:px-4 max-[600px]:py-2"
       >
         <Link href="/" className="">
-          {isMobile ? (
-            <Image
-              src="/images/logo-short.png"
-              alt="OpenSourceNest Logo"
-              height={43}
-              width={43}
-            />
-          ) : (
-            <Image
-              src="/images/logo-full.png"
-              alt="OpenSourceNest Logo"
-              height={52}
-              width={212}
-            />
-          )}
+          <Image
+            src="/images/logo-short.png"
+            alt="OpenSourceNest Logo"
+            height={43}
+            width={43}
+            className="max-[400px]:block hidden"
+          />
+
+          <Image
+            src="/images/logo-full.png"
+            alt="OpenSourceNest Logo"
+            height={52}
+            width={212}
+            className="max-[400px]:hidden block"
+          />
         </Link>
 
         <div className="flex items-center gap-3 max-[1100px]:hidden">

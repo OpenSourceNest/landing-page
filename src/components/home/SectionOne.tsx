@@ -49,7 +49,7 @@ const HomeSectionOne = () => {
 
           <div className="flex gap-x-2.5 gap-y-5 mt-[50px] flex-wrap">
             <button
-              className="bg-primary py-4 px-10 gap-2.5 rounded-full
+              className="bg-primary py-4 px-10 gap-2.5 rounded-full max-[400px]:px-5
             flex font-semibold text-[12px] border-primary border cursor-pointer"
               onClick={() => handleHeroURL(whatsappURL)}
             >
@@ -63,7 +63,7 @@ const HomeSectionOne = () => {
             </button>
 
             <button
-              className="bg-black py-4 px-10 gap-2.5 rounded-full flex 
+              className="bg-black py-4 px-10 gap-2.5 rounded-full flex max-[400px]:px-5
               font-semibold text-[12px] text-primary border-primary border cursor-pointer"
               onClick={() => handleHeroURL(campaignURL)}
             >
@@ -76,7 +76,7 @@ const HomeSectionOne = () => {
         <div
           className="grid grid-cols-2 gap-2.5 hero-border
         p-2.5 rounded-sm max-[1300px]:grid-cols-1 max-[1150px]:grid-cols-4
-        max-[845px]:grid-cols-2 relative
+        max-[845px]:grid-cols-2 relative bg-amber-500
         "
         >
           {Stat.map((stat) => (

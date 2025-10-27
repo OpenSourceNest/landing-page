@@ -12,7 +12,7 @@ export default function ProjectPostHeader(props: ProjectPostHeaderProps) {
     <div className={props.className || ""}>
       <p
         className="font-semibold text-sm bg-primary3 w-fit rounded-md
-                  py-1 px-2.5"
+                  py-1 px-2.5 max-[400px]:text-xs"
       >
         {props.type}
       </p>
