@@ -4,12 +4,14 @@ import { Break, Quote } from "@/components/ui/Projects";
 import Projects from "@/data/project.data";
 import { Metadata } from "next";
 import Image from "next/image";
+import OG from "../../../../public/images/og/writer-2025-og.png";
 
 export const metadata: Metadata = {
   title: "How to Contribute as a Writer - OpenSourceNest",
   description:
     "Learn how to contribute to open source as a writer and make an impact in the open source community.",
   authors: [{ name: "Ibekwe O'brien" }],
+
   keywords: [
     "Writer",
     "Contribution",
@@ -21,7 +23,26 @@ export const metadata: Metadata = {
     "Technical Writing",
     "Content Creation",
     "Documentation",
+    "Open Source Nest",
   ],
+  openGraph: {
+    images: [
+      {
+        url: OG.src,
+        width: OG.width,
+        height: OG.height,
+      },
+    ],
+  },
+  twitter: {
+    images: [
+      {
+        url: OG.src,
+        width: OG.width,
+        height: OG.height,
+      },
+    ],
+  },
 };
 
 const ProjectInfo = Projects["how-to-contribute-as-a-writer-2025"];
@@ -34,7 +55,7 @@ export default function TemplatePage() {
         background: `linear-gradient(black, #1a1a1a 60vw, #1a1a1a 90%, black)`,
       }}
     >
-      <article className="constraint project-blog min-h-screen mt-[120px]">
+      <article className="constraint project-blog min-h-screen mt-[120px] max-[500px]:mt-[60px]">
         <ProjectPostHeader
           title={ProjectInfo.title}
           type={ProjectInfo.type}

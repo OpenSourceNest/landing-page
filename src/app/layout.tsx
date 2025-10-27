@@ -1,7 +1,7 @@
 import ClashDisplayFont from "@/font/ClashDisplay.font";
 import type { Metadata } from "next";
 import "./globals.css";
-import OG from "../../public/images/og/opengraph-image.png";
+import OG from "../../public/images/og/main-opengraph-image.png";
 
 export const metadata: Metadata = {
   title: "Open Source Nest",
