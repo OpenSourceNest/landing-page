@@ -26,7 +26,7 @@ export default function TemplatePage() {
           type="Workshop"
           avatar="/images/icons/avatar.png"
           author={{ displayText: "Author Name", seoText: "Author SEO Text" }}
-          date="January 1st, 2025"
+          date={{ displayText: "January 1st, 2025", seoDate: "2025-01-01" }}
         />
         <Image
           alt=""

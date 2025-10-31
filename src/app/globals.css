@@ -177,13 +177,24 @@
 /* -------------------------------------------------------------------------- */
 
 .project-blog {
-  p {
+  p,
+  li,
+  td {
     font-size: 20px;
     color: white;
     line-height: 32px;
     font-weight: 400;
     word-spacing: 4px;
     letter-spacing: 1px;
+  }
+
+  li::marker {
+    content: "※ ";
+    color: var(--color-primary);
+  }
+
+  li {
+    margin: 0 0 10px 25px;
   }
 
   a {
@@ -200,5 +211,41 @@
     margin-bottom: 10px;
     word-spacing: 4px;
     letter-spacing: 1px;
+    clear: both;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: system-ui, sans-serif;
+    font-size: 0.95rem;
+    background-color: #222222;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  }
+
+  table th,
+  table td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+    text-wrap: nowrap;
+  }
+
+  table thead {
+    background: linear-gradient(to right, #005201);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+  }
+
+  table tbody tr {
+    border-bottom: 1px solid #e5e7eb;
+    transition: background-color 0.2s ease;
+  }
+
+  table tbody tr:hover {
+    background-color: #3c3c3c;
   }
 }

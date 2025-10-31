@@ -58,7 +58,11 @@ export default function ProjectBanner(
               {props.author.seoText}
             </p>
 
-            <p className="">{props.date}</p>
+            <p className="">
+              <time dateTime={props.date.seoDate}>
+                {props.date.displayText}
+              </time>
+            </p>
           </div>
         </div>
       </div>
