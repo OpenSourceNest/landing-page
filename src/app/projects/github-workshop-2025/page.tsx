@@ -9,7 +9,7 @@ import OG from "../../../../public/images/og/github-2025-og.png";
 export const metadata: Metadata = {
   title: "Github Workshop - OpenSourceNest",
   description:
-    "A comprehensive workshop on how to contribute as a writer in the open source and Web3 space, hosted by OpenSourceNest.",
+    "A comprehensive workshop on how to contribute to open source projects on GitHub, hosted by OpenSourceNest.",
   authors: [{ name: "Motunrayo Adeneye" }],
 
   keywords: [
