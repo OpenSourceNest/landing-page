@@ -9,7 +9,7 @@ export interface ProjectCardProps {
   type: "Workshop" | "Event";
   avatar?: string;
   author: { displayText?: string; seoText: string };
-  date: string;
+  date: { displayText: string; seoDate: string };
   url: string;
   blank?: boolean;
 }
@@ -65,7 +65,11 @@ export default function ProjectCard(props: ProjectCardProps) {
               </p>
             </div>
 
-            <p className="">{props.date}</p>
+            <p className="">
+              <time dateTime={props.date.seoDate}>
+                {props.date.displayText}
+              </time>
+            </p>
           </div>
         </div>
       </div>
