@@ -126,7 +126,7 @@ export default function TemplatePage() {
         <h3 className="sub-title">Team and Stakeholders Project team</h3>
         <ul>
           <li>Victoria Ofuasia - Co founder, OpenSourceNest</li>
-          <li>Francis Onukwu - Founder, OpenSourceNest</li>
+          <li>Francis Onukwu - Co founder, OpenSourceNest</li>
           <li>Motunrayo Adeneye - Program Manager, OpenSourceNest</li>
         </ul>
 
