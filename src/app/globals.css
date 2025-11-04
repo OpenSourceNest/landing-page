@@ -15,10 +15,8 @@
 :root {
   cursor: url("/images/cursor.png"), auto;
 
-  p,
-  span,
-  .text-block {
-    cursor: url("/images/cursor-text.png") 4 12, text !important;
+  :where(p, h1, h2, h3, li, span, .text-block):not(a *):not(button *) {
+    cursor: url("/images/cursor-text.png") 4 12, text;
   }
 
   a,
@@ -30,6 +28,11 @@
 
 :root:has(.no-doc-scroll) {
   overflow: hidden;
+}
+
+::selection {
+  background-color: #5cc05d;
+  color: #fff;
 }
 
 @layer base {
