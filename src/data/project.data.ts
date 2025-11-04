@@ -37,7 +37,7 @@ const Projects: Record<string, ProjectCardProps> = {
     type: "Workshop",
     avatar: "",
     author: { displayText: "Motunrayo Adeneye", seoText: "Motunrayo Adeneye" },
-    date: { displayText: "September 1st, 2025", seoDate: "2025-09-01" },
+    date: { displayText: "September 6th, 2025", seoDate: "2025-09-06" },
     url: "/projects/github-workshop-2025",
   },
 };

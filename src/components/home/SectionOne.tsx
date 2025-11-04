@@ -4,6 +4,7 @@ import Image from "next/image";
 import { HTMLAttributes } from "react";
 import AnimatedNumber from "../ui/AnimatedNumber";
 import { whatsappURL } from "../NavBar";
+import Link from "next/link";
 
 const campaignURL =
   "https://www.canva.com/design/DAGsP4YkRbw/TEJak4HyqSCTzKNj6PTHZw/view?utm_content=DAGsP4YkRbw&utm_source=opensourcenest";
@@ -62,14 +63,14 @@ const HomeSectionOne = () => {
               />
             </button>
 
-            <button
+            <Link
+              href={"/projects"}
               className="bg-black py-4 px-10 gap-2.5 rounded-full flex max-[400px]:px-5
               font-semibold text-[12px] text-primary border-primary border cursor-pointer"
-              onClick={() => handleHeroURL(campaignURL)}
             >
               <p>EXPLORE OUR PROJECT</p>
               <Image src="/images/code-tag.svg" alt="" height={16} width={16} />
-            </button>
+            </Link>
           </div>
         </div>
 
