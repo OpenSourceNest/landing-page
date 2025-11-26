@@ -1,5 +1,5 @@
 import { ICampaignTimelineDataTopic } from "@/data/campaignTimeline.data";
-import Divider from "./Divider";
+import Divider from "../ui/Divider";
 
 export default function CampaignTimelineCard({
   title,

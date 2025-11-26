@@ -3,10 +3,9 @@ import NavBar from "@/components/NavBar";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Projects - OpenSourceNest",
+  title: "Campaign - OpenSourceNest",
   description:
-    "Our projects are designed to empower individuals with the skills \
-    and knowledge needed to thrive in the open source ecosystem.",
+    "Join our campaign to contribute to open source projects and make a difference in the developer community.",
 };
 
 export default function RootLayout({
