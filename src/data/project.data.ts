@@ -1,6 +1,20 @@
 import { ProjectCardProps } from "@/components/projects/ProjectCard";
 
 const Projects: Record<string, ProjectCardProps> = {
+  "code-contribution-workshop-2025": {
+    image:
+      "/images/Projects/code-contribution-workshop-2025/code-contribution-workshop-2025.png",
+    banner:
+      "/images/Projects/code-contribution-workshop-2025/code-contribution-workshop-2025-banner.png",
+    title: "Code Contribution",
+    type: "Workshop",
+    avatar: "",
+    author: { displayText: "Motunrayo Adeneye", seoText: "Motunrayo Adeneye" },
+    date: { displayText: "November 28th, 2025", seoDate: "2025-11-28" },
+    url: "/projects/code-contribution-workshop-2025",
+    blank: true,
+  },
+
   "itu-utu-2025": {
     image: "/images/Projects/itu-utu-2025/itu-utu-2025.png",
     banner: "/images/Projects/itu-utu-2025/itu-utu-2025-banner.png",

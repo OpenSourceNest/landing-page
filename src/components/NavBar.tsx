@@ -162,6 +162,11 @@ const NavLink = ({
 
 const NavLinks = [
   {
+    title: "Campaign",
+    url: "/campaign",
+    newTab: false,
+  },
+  {
     title: "About Us",
     url: "https://docs.google.com/document/d/1IJxehnnRTp5WhD9iEuThm9nxXRgod_zABOK_nH5_nbs/",
     newTab: true,
@@ -170,10 +175,5 @@ const NavLinks = [
     title: "Projects",
     url: "/projects",
     newTab: false,
-  },
-  {
-    title: "Volunteer",
-    url: "https://volunteer.opensourcenest.org",
-    newTab: true,
   },
 ];
