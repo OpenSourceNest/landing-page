@@ -85,21 +85,21 @@ export const campaignTimelineData: ICampaignTimelineData[] = [
         description:
           "Focus on contributing through code with tracks of Software Development, Cloud, and AI/ML.",
         featuring: "Featuring: Chukwuebuka Ezeokeke, Amber Adamson, and others",
-        isActive: true,
       },
-
       {
         date: "5th December, 2025",
-        title: "How to Contribute as Designer Workshop",
-        description: "Focus on contributing through design",
-        featuring: "",
-      },
-      {
-        date: "12th December, 2025",
         title: "How to Contribute as Community Manager Workshop",
         description: "Focus on contributing through community management",
         featuring: "",
       },
+      {
+        date: "12th December, 2025",
+        title: "How to Contribute as Designer Workshop",
+        description: "Focus on contributing through design",
+        featuring: "",
+        isActive: true,
+      },
+
       {
         date: "30th January, 2026",
         title: "Takeoff by OSN",
