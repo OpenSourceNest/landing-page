@@ -1,6 +1,19 @@
 import { ProjectCardProps } from "@/components/projects/ProjectCard";
 
 const Projects: Record<string, ProjectCardProps> = {
+  "how-to-contribute-as-a-designer-2025": {
+    image: "/images/Projects/designer-2025/designer-2025.png",
+    banner: "/images/Projects/designer-2025/designer-2025-banner.png",
+    bannerBackgroundColor: "#0a2904",
+    title: "Contribute As A Designer",
+    type: "Workshop",
+    avatar: "",
+    author: { displayText: "Gloria Madubueze", seoText: "Gloria Madubueze" },
+    date: { displayText: "December 19th, 2025", seoDate: "2025-12-19" },
+    url: "/projects/how-to-contribute-as-a-designer-2025",
+    blank: true,
+  },
+
   "code-contribution-workshop-2025": {
     image:
       "/images/Projects/code-contribution-workshop-2025/code-contribution-workshop-2025.png",

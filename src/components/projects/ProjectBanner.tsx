@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ProjectCardProps } from "./ProjectCard";
 import { HTMLAttributes } from "react";
+import { ProjectCardProps } from "./ProjectCard";
 
 export default function ProjectBanner(
   props: ProjectCardProps & {
@@ -10,7 +10,7 @@ export default function ProjectBanner(
 ) {
   return (
     <Link
-      href={props.url}
+      href={props.blank ? "" : props.url}
       title={props.title}
       className={props.className || ""}
     >
@@ -18,15 +18,17 @@ export default function ProjectBanner(
         className={`w-full h-[504px] p-2.5 rounded-[12px]
         pb-[10px] relative flex`}
         style={{
-          background: `url('${props.banner}'), white`,
+          background: `url('${props.banner}'), ${
+            props.bannerBackgroundColor || "white"
+          }`,
           backgroundSize: "contain, 10%",
           backgroundRepeat: "no-repeat, repeat",
           backgroundPosition: "center 20%",
         }}
       >
         <div
-          className=" bottom-0 left-0 p-10 m-0.5 rounded-2xl w-full
-        max-w-[700px] backdrop-blur py-4 mt-auto bg-black/90 "
+          className=" bottom-0 left-0 p-10 m-0.5 rounded-2xl w-fit
+        max-w-[700px] backdrop-blur py-6 mt-auto bg-black/90 "
         >
           <p
             className="font-semibold text-sm bg-primary3 w-fit rounded-md
@@ -50,13 +52,14 @@ export default function ProjectBanner(
               width={26}
               height={26}
             />
-
             <p
-              className="mr-[50px] ml-[6px] max-[600px]:mr-auto"
+              className="mr-[0px] ml-[6px] max-[600px]:mr-auto"
               title={props.author.seoText}
             >
               {props.author.seoText}
             </p>
+
+            <span className="block aspect-square h-[3px] bg-white mx-[15px] rounded-full"></span>
 
             <p className="">
               <time dateTime={props.date.seoDate}>

@@ -93,13 +93,12 @@ export const campaignTimelineData: ICampaignTimelineData[] = [
         featuring: "",
       },
       {
-        date: "12th December, 2025",
+        date: "19th December, 2025",
         title: "How to Contribute as Designer Workshop",
         description: "Focus on contributing through design",
         featuring: "",
         isActive: true,
       },
-
       {
         date: "30th January, 2026",
         title: "Takeoff by OSN",
