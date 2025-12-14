@@ -1,36 +1,101 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<p align="center">
+    <img src="./public/images/logo-full.png" height="100px" alt="Open Source Nest logo"/>
+</p>
 
-## Getting Started
+<br/>
 
-First, run the development server:
+Welcome to the official landing page for **OpenSourceNest** — a beginner-friendly open source initiative promoting inclusion, collaboration, and digital empowerment through learning and advocacy.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Overview
+
+OpenSourceNest is dedicated to helping everyday people learn, use, and contribute to open source. Our platform showcases community-led projects, campaigns, workshops, and events designed to empower individuals with the skills and knowledge needed to thrive in the open source ecosystem.
+
+## 🌟 Features
+
+- **Campaign Timeline:** Stay updated with our ongoing and upcoming open source campaigns and workshops.
+- **Projects Showcase:** Explore a variety of community-driven projects and learn how you can contribute.
+- **Events & Workshops:** Participate in monthly workshops, in-person events, and AMAs.
+- **Community Engagement:** Join Africa’s most vibrant open source community via WhatsApp, Discord, and more.
+- **Responsive Design:** Fully responsive and accessible across devices.
+- **Modern Stack:** Built with Next.js, React 19, Tailwind CSS, and Framer Motion for smooth animations.
+
+## 🖥️ Tech Stack
+
+- [Next.js](https://nextjs.org/) (App Router)
+- [React 19](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Framer Motion](https://www.framer.com/motion/)
+- [TypeScript](https://www.typescriptlang.org/)
+
+## 📦 Getting Started
+
+### Prerequisites
+
+- Node.js (v18+ recommended)
+- npm or yarn
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```sh
+   git clone https://github.com/your-username/open-source-nest-landing-page.git
+   cd open-source-nest-landing-page
+   ```
+
+2. **Install dependencies:**
+
+   ```sh
+   npm install
+   # or
+   yarn install
+   ```
+
+3. **Run the development server:**
+
+   ```sh
+   npm run dev
+   # or
+   yarn dev
+   ```
+
+4. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+### Building for Production
+
+```sh
+npm run build
+npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🗂️ Project Structure
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+src/
+  app/                # Next.js app directory (pages, layouts)
+  components/         # Reusable React components
+  data/               # Static data (projects, campaigns)
+  font/               # Custom font definitions
+  utils/              # Utility functions and templates
+public/               # Static assets (images, fonts)
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## ✨ Contributing
 
-## Learn More
+We welcome contributions of all kinds! Please read our [CONTRIBUTING.MD](./CONTRIBUTING.MD) for guidelines on how to get started.
 
-To learn more about Next.js, take a look at the following resources:
+## 📄 License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is open source and available under the [MIT License](./LICENCE.md) (add a LICENSE file if not present).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 📬 Contact
 
-## Deploy on Vercel
+- Email: [info@opensourcenest.org](mailto:info@opensourcenest.org)
+- [LinkedIn](https://www.linkedin.com/company/opensourcenest)
+- [X (Twitter)](https://x.com/opensourcenest)
+- [Discord](https://bit.ly/osn-discord)
+- [WhatsApp](https://bit.ly/osn-whatsapp)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Join us and start making an impact today!**
