@@ -5,6 +5,7 @@ import Link from "next/link";
 export interface ProjectCardProps {
   image: string;
   banner?: string;
+  bannerBackgroundColor?: string;
   title: string;
   type: "Workshop" | "Event";
   avatar?: string;
