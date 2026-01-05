@@ -1,6 +1,6 @@
 "use client";
 
-import { HTMLInputTypeAttribute, useEffect, useState } from "react";
+import { HTMLInputTypeAttribute, useState } from "react";
 
 interface IFormInputProps<T = string> {
   name: string;

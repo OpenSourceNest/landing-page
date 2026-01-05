@@ -176,4 +176,9 @@ const NavLinks = [
     url: "/projects",
     newTab: false,
   },
+  {
+    title: "Contact Us",
+    url: "/contact",
+    newTab: false,
+  },
 ];

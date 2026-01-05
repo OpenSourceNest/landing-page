@@ -1,4 +1,4 @@
-import HomeEventBannerLuma from "@/components/events/HomeEventBannerLuma";
+// import HomeEventBannerLuma from "@/components/events/HomeEventBannerLuma";
 import Footer from "@/components/Footer";
 import ReadyToTakeFlight from "@/components/home/SectionFour";
 import HomeSectionOne from "@/components/home/SectionOne";
@@ -11,7 +11,7 @@ export default function Home() {
     <div className="w-full">
       <NavBar />
       <HomeSectionOne />
-      <HomeEventBannerLuma />
+      {/* <HomeEventBannerLuma /> */}
       <HomeSectionTwo />
       <HomeSectionThree />
       <ReadyToTakeFlight />
