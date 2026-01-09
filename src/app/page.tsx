@@ -1,6 +1,6 @@
 // import HomeEventBannerLuma from "@/components/events/HomeEventBannerLuma";
 import Footer from "@/components/Footer";
-import ReadyToTakeFlight from "@/components/home/SectionFour";
+import ReadyToTakeFlight from "@/components/home/ReadyToTakeFlight";
 import HomeSectionOne from "@/components/home/SectionOne";
 import HomeSectionThree from "@/components/home/SectionThree";
 import HomeSectionTwo from "@/components/home/SectionTwo";

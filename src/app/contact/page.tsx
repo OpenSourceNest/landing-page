@@ -1,5 +1,5 @@
 import ContactForm from "@/components/contact/ContactForm";
-import ReadyToTakeFlight from "@/components/home/SectionFour";
+import ReadyToTakeFlight from "@/components/home/ReadyToTakeFlight";
 import Image from "next/image";
 import Link from "next/link";
 

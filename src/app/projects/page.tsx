@@ -1,4 +1,4 @@
-import ReadyToTakeFlight from "@/components/home/SectionFour";
+import ReadyToTakeFlight from "@/components/home/ReadyToTakeFlight";
 import ProjectBanner from "@/components/projects/ProjectBanner";
 import ProjectCard from "@/components/projects/ProjectCard";
 import Projects from "@/data/project.data";

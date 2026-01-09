@@ -1,4 +1,4 @@
-import ReadyToTakeFlight from "@/components/home/SectionFour";
+import ReadyToTakeFlight from "@/components/home/ReadyToTakeFlight";
 import ProjectPostHeader from "@/components/projects/ProjectPostHeader";
 import { Break, Quote } from "@/components/ui/Projects";
 import Projects from "@/data/project.data";

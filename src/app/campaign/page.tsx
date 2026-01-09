@@ -1,5 +1,5 @@
 import CampaignTimeline from "@/components/campaign/CampaignTimeline";
-import ReadyToTakeFlight from "@/components/home/SectionFour";
+import ReadyToTakeFlight from "@/components/home/ReadyToTakeFlight";
 import { campaignTimelineData } from "@/data/campaignTimeline.data";
 
 export default function Home() {
