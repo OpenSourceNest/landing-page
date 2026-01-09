@@ -3,9 +3,9 @@ import SectionTitle from "./SectionTitle";
 
 const HomeSectionTwo = () => {
   return (
-    <section className="section py-[100px] w-full">
+    <section className="section py-[50px] w-full">
       <div className="constraint flex flex-col items-center">
-        <SectionTitle title="ABOUT OSN" />
+        <SectionTitle title="WHY OSN" />
 
         <p className="font-semibold text-[40px] mt-5 mb-10 text-center">
           Why Join <span className="text-primary">the Nest?</span>
