@@ -24,17 +24,17 @@ const HomeSectionOne = () => {
         <div className="">
           <div
             className="flex items-center gap-1 py-2.5 px-5 bg-[#C7FFD0] rounded-full
-          text-primary2 w-fit max-[500px]:py-[5px] max-[500px]:px-2.5"
+          text-primary2 w-fit max-[512px]:py-[5px] max-[512px]:px-2.5"
           >
             <Image src="/images/globe.svg" alt="" height={16} width={16} />
-            <p className="font-medium text-[10px] max-[500px]:text-[8px]">
+            <p className="font-medium text-[10px] max-[512px]:text-[8px]">
               Top Open Source Initiative
             </p>
           </div>
 
           <p
             className="font-semibold text-[80px]/[80px] my-4
-          max-[500px]:text-[60px]/[60px]"
+          max-[512px]:text-[60px]/[60px]"
           >
             Where
             <br />
@@ -43,7 +43,7 @@ const HomeSectionOne = () => {
             Talent Thrives
           </p>
 
-          <p className="text-[18px] max-[500px]:text-[16px] max-w-[430px]">
+          <p className="text-[18px] max-[512px]:text-[16px] max-w-[430px]">
             We are here to help everyday people learn, use, and contribute to
             open source
           </p>
@@ -83,20 +83,20 @@ const HomeSectionOne = () => {
           {Stat.map((stat) => (
             <div
               key={stat.title}
-              className={`text-center py-[49px] px-[15px] flex flex-col 
-                justify-center rounded-[6px] gap-1.5 z-[3] w-fullmax-[380px]:py-[30px]
+              className={`text-center py-[49px] px-[12px] flex flex-col
+                justify-center rounded-[6px] gap-1.5 z-[3] w-full max-[380px]:py-[30px]
                 ${stat.className}`}
             >
               <p
                 className="font-semibold text-[50px]/[24px]
-              max-[500px]:text-[40px]/[24px] max-[380px]:text-[32px]/[24px]"
+              max-[512px]:text-[40px]/[24px] max-[380px]:text-[32px]/[24px]"
               >
                 <AnimatedNumber value={stat.title} />
                 {stat.after}
               </p>
               <p
                 className="font-medium text-[22px]
-              max-[500px]:text-[18px] max-[380px]:text-[16px] "
+              max-[512px]:text-[18px] max-[380px]:text-[16px] "
               >
                 {stat.subject}
               </p>

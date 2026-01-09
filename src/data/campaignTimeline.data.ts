@@ -33,7 +33,6 @@ export const campaignTimelineData: ICampaignTimelineData[] = [
         date: "1st August, 2025",
         title: "Speak during other Tech Events",
         description: "Brief intro to Open Source at external tech events.",
-        isActive: true,
         featuring:
           "Featuring: Eth Enugu, Web3Conf Enugu, Code and Create Bootcamp, DevFest Enugu, Limitless, Buildathon, and more.",
       },
@@ -97,14 +96,14 @@ export const campaignTimelineData: ICampaignTimelineData[] = [
         title: "How to Contribute as Designer Workshop",
         description: "Focus on contributing through design",
         featuring: "",
-        isActive: true,
       },
       {
-        date: "30th January, 2026",
+        date: "31st January, 2026",
         title: "Takeoff by OSN",
         description:
           "Wrap-up event to reinforce open source involvement, inspire open source growth & showcase impact",
         featuring: "",
+        isActive: true,
       },
     ],
   },

@@ -9,10 +9,14 @@ const ReadyToTakeFlight = () => {
     if (newWindow) newWindow.opener = null;
   };
 
+  const handleScrollToTop = () => {
+    window?.scrollTo?.({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <section
       className="py-[81px] max-w-[90vw] mx-auto
-    max-[500px]:py-[20px] "
+    max-[500px]:py-[20px] flex flex-col"
     >
       <div
         className="bg-primary3 py-[80px] px-[32px] flex flex-col
@@ -46,6 +50,14 @@ const ReadyToTakeFlight = () => {
           </Link>
         </div>
       </div>
+
+      <button
+        className="py-3 px-6 rounded-full border-2 border-primary3 font-semibold text-[14px]
+      mt-5 ml-auto text-primary3"
+        onClick={handleScrollToTop}
+      >
+        GO TO TOP
+      </button>
     </section>
   );
 };
