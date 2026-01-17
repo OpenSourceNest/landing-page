@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import FormInput from "./FormInput";
 
 export default function ContactForm() {
@@ -8,26 +8,27 @@ export default function ContactForm() {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [formError, setFormError] = useState("");
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const SUPPORT_EMAIL = "info@opensourcenest.org";
 
   const checkFormValidity = () => {
     if (name.trim().length === 0) {
-      setFormError("Name cannot be empty.");
-      return;
+      setFormError("Name should not be empty.");
+      return false;
     }
 
-    if (!emailRegex.test(email)) {
+    if (!EMAIL_REGEX.test(email)) {
       setFormError("Please enter a valid email address.");
-      return;
+      return false;
     }
 
     if (message.trim().length === 0) {
-      setFormError("Message cannot be empty.");
-      return;
+      setFormError("Message should not be empty.");
+      return false;
     }
 
-    return setFormError("");
+    return true;
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -38,14 +39,16 @@ export default function ContactForm() {
     const encodedSubject = encodeURIComponent(`Contact from ${name}`);
     const mailtoLink = `mailto:${encodedEmail}?subject=${encodedSubject}&body=${encodedMessage}`;
 
-    checkFormValidity();
-
-    setFormError("");
-    setEmail("");
-    setMessage("");
-    setName("");
-    window.open(mailtoLink, "_blank");
+    if (checkFormValidity()) {
+      window.open(mailtoLink, "_blank");
+    }
   };
+
+  useEffect(() => {
+    return () => {
+      setFormError("");
+    };
+  }, [name, email, message]);
 
   return (
     <div
@@ -57,8 +60,9 @@ export default function ContactForm() {
       </h2>
 
       <p className="font-medium text-[18px]/[24px] mt-2.5 mb-[20px]">
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus
-        cupiditate praesentium pariatur, quo aspernatur id.
+        Whether you’re curious about our programs, want to collaborate, or just
+        say hello, reach out to us. OpenSourceNest is built with and for the
+        community.
       </p>
 
       <div className="h-[28px]">
@@ -78,7 +82,6 @@ export default function ContactForm() {
           type="text"
           value={name}
           onChange={(e) => setName(e.target.value)}
-          onKeyUp={checkFormValidity}
         />
 
         <FormInput
@@ -86,7 +89,6 @@ export default function ContactForm() {
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          onKeyUp={checkFormValidity}
         />
 
         <FormInput
@@ -94,7 +96,6 @@ export default function ContactForm() {
           type="text"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          onKeyUp={checkFormValidity}
         />
 
         <button
