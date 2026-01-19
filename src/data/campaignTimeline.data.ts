@@ -98,7 +98,7 @@ export const campaignTimelineData: ICampaignTimelineData[] = [
         featuring: "",
       },
       {
-        date: "31st January, 2026",
+        date: "7th January, 2026",
         title: "Takeoff by OSN",
         description:
           "Wrap-up event to reinforce open source involvement, inspire open source growth & showcase impact",
