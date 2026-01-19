@@ -1,6 +1,19 @@
 import { ProjectCardProps } from "@/components/projects/ProjectCard";
 
 const Projects: Record<string, ProjectCardProps> = {
+  "takeoff-2026": {
+    image: "/images/Projects/takeoff-2026/takeoff-2026.png",
+    banner: "/images/Projects/takeoff-2026/takeoff-2026-banner.png",
+    bannerBackgroundColor: "#4C301B",
+    title: "Takeoff 2026",
+    type: "Event",
+    avatar: "",
+    author: { displayText: "Francis Onukwu", seoText: "Francis Onukwu" },
+    date: { displayText: "February 7th, 2026", seoDate: "2026-02-07" },
+    url: "/projects/takeoff-2026",
+    blank: true,
+  },
+
   "how-to-contribute-as-a-designer-2025": {
     image: "/images/Projects/designer-2025/designer-2025.png",
     banner: "/images/Projects/designer-2025/designer-2025-banner.png",
