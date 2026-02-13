@@ -9,7 +9,7 @@ const Projects: Record<string, ProjectCardProps> = {
     type: "Event",
     avatar: "",
     author: { displayText: "Francis Onukwu", seoText: "Francis Onukwu" },
-    date: { displayText: "February 7th, 2026", seoDate: "2026-02-07" },
+    date: { displayText: "March 21st, 2026", seoDate: "2026-03-21" },
     url: "/projects/takeoff-2026",
     blank: true,
   },

@@ -83,7 +83,8 @@ export const campaignTimelineData: ICampaignTimelineData[] = [
         title: "OSS Code Contribution Workshop",
         description:
           "Focus on contributing through code with tracks of Software Development, Cloud, and AI/ML.",
-        featuring: "Featuring: Chukwuebuka Ezeokeke, Amber Adamson, and others",
+        featuring:
+          "Featuring: Chukwuebuka Ezeokeke, Amber Adamson, and Ayo Kayode",
       },
       {
         date: "5th December, 2025",
@@ -95,10 +96,10 @@ export const campaignTimelineData: ICampaignTimelineData[] = [
         date: "19th December, 2025",
         title: "How to Contribute as Designer Workshop",
         description: "Focus on contributing through design",
-        featuring: "",
+        featuring: "Featuring: Onyeabor Darlington, and Eriol Fox",
       },
       {
-        date: "28th February, 2026",
+        date: "21st March, 2026",
         title: "Takeoff by OSN",
         description:
           "Wrap-up event to reinforce open source involvement, inspire open source growth & showcase impact",
