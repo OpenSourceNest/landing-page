@@ -99,7 +99,7 @@ export const campaignTimelineData: ICampaignTimelineData[] = [
         featuring: "Featuring: Onyeabor Darlington, and Eriol Fox",
       },
       {
-        date: "21st March, 2026",
+        date: "11th April, 2026",
         title: "Takeoff by OSN",
         description:
           "Wrap-up event to reinforce open source involvement, inspire open source growth & showcase impact",
