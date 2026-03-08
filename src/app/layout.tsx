@@ -2,6 +2,7 @@ import ClashDisplayFont from "@/font/ClashDisplay.font";
 import type { Metadata } from "next";
 import "./globals.css";
 import OG from "../../public/images/og/main-opengraph-image.png";
+import { orgJsonLd } from "@/schema/orgSchema";
 
 export const metadata: Metadata = {
   title: "Open Source Nest",
@@ -56,6 +57,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${ClashDisplayFont.className} antialiased`}>
+        <script
+          id="event-json-ld"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(orgJsonLd).replace(/</g, "\\u003c"),
+          }}
+        />
         {children}
       </body>
     </html>
