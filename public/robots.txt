@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://opensourcenest.org
+
+# Sitemaps
+Sitemap: https://opensourcenest.org/sitemap.xml
