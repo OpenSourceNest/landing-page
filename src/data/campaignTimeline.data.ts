@@ -104,7 +104,6 @@ export const campaignTimelineData: ICampaignTimelineData[] = [
         description:
           "Wrap-up event to reinforce open source involvement, inspire open source growth & showcase impact",
         featuring: "",
-        isActive: true,
       },
     ],
   },
