@@ -2,8 +2,8 @@ import { ProjectCardProps } from "@/components/projects/ProjectCard";
 
 const Projects: Record<string, ProjectCardProps> = {
   "takeoff-2026": {
-    image: "/images/Projects/takeoff-2026/takeoff-2026.png",
-    banner: "/images/Projects/takeoff-2026/takeoff-2026-banner.png",
+    image: "/images/Projects/takeoff-2026/takeoff-2026-2.png",
+    banner: "/images/Projects/takeoff-2026/takeoff-2026-banner-2.png",
     bannerBackgroundColor: "#4C301B",
     title: "Takeoff 2026",
     type: "Event",
