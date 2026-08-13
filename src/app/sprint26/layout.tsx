@@ -1,4 +1,3 @@
-import Footer from "@/components/Footer";
 import NavBar from "@/components/NavBar";
 import { Metadata } from "next";
 
@@ -17,7 +16,6 @@ export default function Sprint26Layout({
     <>
       <NavBar />
       {children}
-      <Footer />
     </>
   );
 }

@@ -1,4 +1,5 @@
 import Sprint26Benefits from "@/components/sprint26/Sprint26Benefits";
+import Sprint26Footer from "@/components/sprint26/Sprint26Footer";
 import Sprint26Hero from "@/components/sprint26/Sprint26Hero";
 import Sprint26HowToJoin from "@/components/sprint26/Sprint26HowToJoin";
 import Sprint26Partners from "@/components/sprint26/Sprint26Partners";
@@ -16,6 +17,7 @@ export default function Sprint26() {
       <Sprint26Benefits />
       <Sprint26Share />
       <Sprint26Partners />
+      <Sprint26Footer />
     </>
   );
 }

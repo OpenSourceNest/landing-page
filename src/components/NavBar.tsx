@@ -172,6 +172,11 @@ const NavLinks = [
     newTab: true,
   },
   {
+    title: "Sprint 26",
+    url: "/sprint26",
+    newTab: false,
+  },
+  {
     title: "Projects",
     url: "/projects",
     newTab: false,

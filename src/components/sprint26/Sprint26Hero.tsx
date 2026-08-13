@@ -39,13 +39,24 @@ const Sprint26Hero = () => {
                 contribution event.
               </p>
 
-              <div className="flex items-center gap-4 pt-6">
-                <Link
-                  href="#how-to-join"
-                  className="bg-white text-black font-semibold px-8 py-4 border border-black"
-                >
-                  Get Started
-                </Link>
+              <div className="flex items-center gap-4 pt-10">
+                <Image
+                  src="/images/sprint26/arrow-frame.svg"
+                  alt=""
+                  width={50}
+                  height={50}
+                  aria-hidden
+                  className="rotate-90 shrink-0"
+                />
+
+                <div className="bg-black/50 relative h-[74px] w-[290px] max-[512px]:w-[240px]">
+                  <Link
+                    href="#how-to-join"
+                    className="absolute -top-2 right-1 bg-white text-black font-semibold px-8 py-5 border-2 border-black whitespace-nowrap"
+                  >
+                    Get Started
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
