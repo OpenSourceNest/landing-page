@@ -13,7 +13,7 @@ const Sprint26Hero = () => {
         </p>
 
         <div className="flex items-center justify-between gap-10 w-full max-[1150px]:flex-col">
-          <div className="bg-white border border-[#242424] text-black flex flex-col gap-3 max-w-[560px] flex-1 min-w-[320px]">
+          <div className="bg-white border border-[#242424] text-black flex flex-col gap-3 max-w-[560px] flex-1 min-w-[320px] max-[1150px]:order-last max-[400px]:min-w-0">
             <div className="bg-gradient-to-b from-[#10af4b] from-[46%] to-[#0e975d] flex flex-col gap-3 px-10 py-8 text-white">
               <div className="flex flex-col gap-2">
                 <p className="font-semibold text-[24px] leading-tight max-[512px]:text-[20px]">
@@ -67,7 +67,7 @@ const Sprint26Hero = () => {
             width={782}
             height={568}
             priority
-            className="w-full max-w-[560px] flex-1 min-w-[320px] h-auto object-contain"
+            className="w-full max-w-[560px] flex-1 min-w-[320px] h-auto object-contain max-[1150px]:order-first max-[400px]:min-w-0"
           />
         </div>
       </div>

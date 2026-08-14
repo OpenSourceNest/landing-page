@@ -54,7 +54,7 @@ const Sprint26Footer = () => {
             <span className="bg-primary text-black font-semibold rounded-full px-6 py-3.5 w-fit">
               Contact
             </span>
-            <p className="font-semibold text-[32px] text-white leading-tight">
+            <p className="font-semibold text-[32px] max-[512px]:text-[22px] text-white leading-tight break-words">
               hello@opensourcenest.dev
               <br />
               <span className="font-normal underline">
@@ -85,8 +85,16 @@ const Sprint26Footer = () => {
           </div>
         </div>
 
-        <p className="text-center font-bold text-white text-[80px] leading-none tracking-[8px] whitespace-nowrap overflow-hidden translate-y-[35%] max-[845px]:text-[48px]">
+        <p className="hidden min-[651px]:block text-center font-bold text-white text-[80px] leading-none tracking-[8px] whitespace-nowrap overflow-hidden translate-y-[35%] max-[845px]:text-[48px]">
           opensourcenest
+        </p>
+
+        <p className="block min-[651px]:hidden text-center font-bold text-white text-[48px] leading-[1.1] tracking-[4px] overflow-hidden translate-y-[20%]">
+          open
+          <br />
+          source
+          <br />
+          nest
         </p>
       </div>
     </section>

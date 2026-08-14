@@ -5,13 +5,19 @@ import {
 } from "@/data/sprint26.data";
 
 const StepRow = ({ step }: { step: Sprint26Step }) => (
-  <div className="border-b border-[#282828] first:border-t flex gap-6 items-start py-4">
-    <div className="bg-black border border-primary3 flex items-center justify-center p-5 w-20 shrink-0">
-      <p className="text-primary font-bold text-[24px]">{step.number}</p>
+  <div className="border-b border-[#282828] first:border-t flex gap-6 max-[512px]:gap-3 items-start py-4">
+    <div className="bg-black border border-primary3 flex items-center justify-center p-5 max-[512px]:p-3 w-20 max-[512px]:w-14 shrink-0">
+      <p className="text-primary font-bold text-[24px] max-[512px]:text-[18px]">
+        {step.number}
+      </p>
     </div>
     <div className="flex flex-col gap-2.5">
-      <p className="font-semibold text-[24px] text-white">{step.title}</p>
-      <p className="text-[#828282] text-[20px]">{step.description}</p>
+      <p className="font-semibold text-[24px] max-[512px]:text-[18px] text-white">
+        {step.title}
+      </p>
+      <p className="text-[#828282] text-[20px] max-[512px]:text-[15px]">
+        {step.description}
+      </p>
     </div>
   </div>
 );
@@ -37,12 +43,12 @@ const Sprint26HowToJoin = () => {
         </div>
 
         <div className="flex gap-5 items-stretch max-[1000px]:flex-col">
-          <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex-1 flex flex-col gap-3 p-10">
+          <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex-1 flex flex-col gap-3 p-10 max-[512px]:p-6">
             <div className="flex items-center justify-between gap-2.5 pb-10">
-              <p className="font-bold text-[28px] text-white">
+              <p className="font-bold text-[28px] max-[512px]:text-[20px] text-white">
                 JOIN AS A MAINTAINER
               </p>
-              <span className="bg-primary text-black text-[14px] font-medium px-3 py-1.5">
+              <span className="bg-primary text-black text-[14px] max-[512px]:text-[11px] font-medium px-3 py-1.5 max-[512px]:px-2 whitespace-nowrap">
                 Repo owners
               </span>
             </div>
@@ -60,12 +66,12 @@ const Sprint26HowToJoin = () => {
             </button>
           </div>
 
-          <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex-1 flex flex-col gap-3 p-10">
+          <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex-1 flex flex-col gap-3 p-10 max-[512px]:p-6">
             <div className="flex items-center justify-between gap-2.5 pb-10">
-              <p className="font-bold text-[28px] text-white">
+              <p className="font-bold text-[28px] max-[512px]:text-[20px] text-white">
                 JOIN AS A CONTRIBUTOR
               </p>
-              <span className="bg-black border border-primary text-white text-[14px] font-medium px-3 py-1.5">
+              <span className="bg-black border border-primary text-white text-[14px] max-[512px]:text-[11px] font-medium px-3 py-1.5 max-[512px]:px-2 whitespace-nowrap">
                 Developers
               </span>
             </div>
