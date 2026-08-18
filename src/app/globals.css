@@ -12,13 +12,18 @@
   --breakpoint-xs: 30rem;
   --breakpoint-2xl: 100rem;
   --breakpoint-3xl: 120rem; */
+
+  --shadow-one: 2px 3px 0px 1px rgba(0, 0, 0, 1);
+  --shadow-two: -9px 9px 0px -3px rgba(0, 0, 0, 1);
 }
 
 :root {
   cursor: url("/images/cursor.png"), auto;
 
   :where(p, h1, h2, h3, li, span, .text-block):not(a *):not(button *) {
-    cursor: url("/images/cursor-text.png") 4 12, text;
+    cursor:
+      url("/images/cursor-text.png") 4 12,
+      text;
   }
 
   a,
@@ -97,17 +102,17 @@
   --local_white: rgb(255, 255, 255);
   --border-width: 7px;
 
-  background: linear-gradient(
-      to right,
-      var(--local_white) 33%,
-      rgba(255, 0, 0, 0) 0%
-    ),
+  background:
+    linear-gradient(to right, var(--local_white) 33%, rgba(255, 0, 0, 0) 0%),
     linear-gradient(to right, var(--local_white) 33%, rgba(255, 0, 0, 0) 0%),
     linear-gradient(var(--local_white) 33%, rgba(255, 0, 0, 0) 0%),
     linear-gradient(var(--local_white) 33%, rgba(255, 0, 0, 0) 0%);
   background-position: top, bottom, left, right;
-  background-size: 30px var(--border-width), 30px var(--border-width),
-    var(--border-width) 30px, var(--border-width) 30px;
+  background-size:
+    30px var(--border-width),
+    30px var(--border-width),
+    var(--border-width) 30px,
+    var(--border-width) 30px;
   background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
   position: relative;
   padding: 20px;
@@ -127,7 +132,8 @@
   margin: auto 0;
   animation: border-angle-rotate 7s infinite linear;
   border: var(--border-width) solid transparent;
-  background: linear-gradient(black) padding-box,
+  background:
+    linear-gradient(black) padding-box,
     conic-gradient(
         from var(--border-angle),
         black 0% 45%,
@@ -166,7 +172,9 @@
   padding: 1px;
   border-radius: inherit;
   background: linear-gradient(#ffffff 10%, #50b461 50%, #7e7e7e);
-  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
 }

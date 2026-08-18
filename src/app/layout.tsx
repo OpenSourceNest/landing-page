@@ -1,5 +1,5 @@
 import ClashDisplayFont from "@/font/ClashDisplay.font";
-import PixelifySansFont from "@/font/PixelifySans.font";
+import PixelDigivolveFont from "@/font/PixelDigivolve.font";
 import type { Metadata } from "next";
 import "./globals.css";
 import OG from "../../public/images/og/main-opengraph-image.png";
@@ -56,9 +56,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={PixelifySansFont.variable}>
-      <body className={`${ClashDisplayFont.className} antialiased`}
-      >
+    <html lang="en" className={PixelDigivolveFont.variable}>
+      <body className={`${ClashDisplayFont.className} antialiased`}>
         <script
           id="event-json-ld"
           type="application/ld+json"

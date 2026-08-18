@@ -1,6 +1,15 @@
-import { sprint26Projects } from "@/data/sprint26.data";
+import {
+  FetchProjectsURL,
+  IGithubProjectResponse,
+  SearchQuery,
+} from "@/lib/github";
+import Link from "next/link";
 
-const Sprint26Projects = () => {
+const Sprint26Projects = ({
+  projects,
+}: {
+  projects: IGithubProjectResponse[];
+}) => {
   return (
     <section className="section bg-black">
       <div className="constraint flex flex-col gap-[30px]">
@@ -13,14 +22,21 @@ const Sprint26Projects = () => {
               PROJECTS TAKING PRs
             </p>
           </div>
-          <p className="text-primary text-[22px] whitespace-nowrap">
-            View all 68 repositories →
-          </p>
+
+          <Link
+            href={`https://github.com/search?q=${SearchQuery}&sort=updated&order=desc&type=repositories`}
+            target="_blank"
+            className="text-primary text-[22px] whitespace-nowrap p-1.5"
+          >
+            View all {projects.length ? projects.length : ""} repositories →
+          </Link>
         </div>
 
         <div className="grid grid-cols-3 gap-5 max-[1000px]:grid-cols-2 max-[650px]:grid-cols-1">
-          {sprint26Projects.map((project) => (
-            <div
+          {projects.slice(0, 10).map((project) => (
+            <Link
+              href={project.url.replace("api.github.com/repos/", "github.com/")}
+              target="_blank"
               key={project.name}
               className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col gap-3 p-10"
             >
@@ -29,21 +45,25 @@ const Sprint26Projects = () => {
                   <p className="font-pixel! uppercase font-bold text-[20px] text-white">
                     {project.name}
                   </p>
-                  <span className="bg-primary size-4 shrink-0 mt-1" />
+                  <span className="bg-primary px-1.5 font-semibold rounded-xs">
+                    {project.open_issues}
+                  </span>
                 </div>
                 <p className="text-[#828282] text-[16px]">
                   {project.description}
                 </p>
               </div>
-              <div className="flex gap-3 flex-wrap">
-                <span className="bg-black border border-[#828282] text-white text-[16px] px-3 py-1.5">
-                  {project.language}
-                </span>
-                <span className="bg-black border border-[#828282] text-white text-[16px] px-3 py-1.5">
-                  {project.openIssues}
-                </span>
+              <div className="flex gap-1.5 flex-wrap">
+                {project.all_languages.map((language) => (
+                  <span
+                    key={language}
+                    className="bg-black border border-[#828282] text-white text-[11px] px-3 py-1.5"
+                  >
+                    {language}
+                  </span>
+                ))}
               </div>
-            </div>
+            </Link>
           ))}
 
           <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col items-center justify-center text-center gap-3 p-10">

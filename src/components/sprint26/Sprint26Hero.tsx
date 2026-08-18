@@ -1,20 +1,33 @@
 import Image from "next/image";
 import Link from "next/link";
+import DissolveGridParent from "../ui/DissolveGrid";
 
 const Sprint26Hero = () => {
   return (
     <section className="section bg-black bg-[url(/images/sprint26/boxes-bg-1.svg)] bg-center bg-no-repeat bg-cover relative overflow-hidden">
       <div className="constraint flex flex-col items-center gap-[60px] py-[70px]">
-        <p className="font-pixel! text-center font-bold text-[80px] leading-none tracking-tight max-[845px]:text-[56px] max-[512px]:text-[40px]">
-          Sprint{" "}
-          <span className="bg-gradient-to-r from-[#01ff05] to-[#0e945f] bg-clip-text text-transparent">
-            26
-          </span>
-        </p>
+        <div className="relative w-full">
+          <p
+            className="font-pixel! text-center font-bold leading-none tracking-tight max-[845px]:text-[56px] max-[512px]:text-[40px]"
+            style={{
+              fontSize: `clamp(50px, 13vw, 200px)`,
+            }}
+          >
+            Sprint{" "}
+            <span className="bg-gradient-to-r from-[#01ff05] to-[#0e945f] bg-clip-text text-transparent">
+              26
+            </span>
+          </p>
 
-        <div className="flex items-center justify-between gap-10 w-full max-[1150px]:flex-col">
+          <DissolveGridParent />
+        </div>
+
+        <div className="flex items-center justify-center gap-5 w-full max-[1150px]:flex-col">
           <div className="bg-white border border-[#242424] text-black flex flex-col gap-3 max-w-[560px] flex-1 min-w-[320px] max-[1150px]:order-last max-[400px]:min-w-0">
-            <div className="bg-gradient-to-b from-[#10af4b] from-[46%] to-[#0e975d] flex flex-col gap-3 px-10 py-8 text-white">
+            <div
+              className="bg-gradient-to-b from-[#10af4b] from-[46%] to-[#0e975d] flex flex-col gap-3 px-10 py-8 text-white
+            shadow-two shadow-white"
+            >
               <div className="flex flex-col gap-2">
                 <p className="font-semibold text-[24px] leading-tight max-[512px]:text-[20px]">
                   {">_"}Clear Your Issue Backlog. Zero Spam.
@@ -33,30 +46,29 @@ const Sprint26Hero = () => {
               />
 
               <p className="text-[18px] max-[512px]:text-[16px]">
-                Got good first issue tickets gathering dust? Let our
-                community knock them out. We are matching eager developers
-                with open-source repositories for a massive 5-Week
-                contribution event.
+                Got good first issue tickets gathering dust? Let our community
+                knock them out. We are matching eager developers with
+                open-source repositories for a massive 5-Week contribution
+                event.
               </p>
 
-              <div className="flex items-center gap-4 pt-10">
+              <div className="flex items-center gap-2 pt-10">
                 <Image
                   src="/images/sprint26/arrow-frame.svg"
                   alt=""
-                  width={50}
-                  height={50}
+                  width={35}
+                  height={35}
                   aria-hidden
                   className="rotate-90 shrink-0"
                 />
 
-                <div className="bg-black/50 relative h-[74px] w-[290px] max-[512px]:w-[240px]">
-                  <Link
-                    href="#how-to-join"
-                    className="font-pixel! absolute -top-2 right-1 bg-white text-black font-semibold px-8 py-5 border-2 border-black whitespace-nowrap"
-                  >
-                    Get Started
-                  </Link>
-                </div>
+                <Link
+                  href="#how-to-join"
+                  className="font-pixel! bg-white text-black font-semibold px-8 py-3 border-2 border-black whitespace-nowrap
+                  shadow-one"
+                >
+                  Get Started
+                </Link>
               </div>
             </div>
           </div>

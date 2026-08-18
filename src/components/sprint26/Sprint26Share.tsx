@@ -1,6 +1,6 @@
 const Sprint26Share = () => {
   return (
-    <section className="section bg-black">
+    <section className="section bg-black py-5">
       <div className="constraint bg-[#0d0d0d] border-2 border-white flex gap-10 p-10 max-[1000px]:flex-col max-[512px]:p-6">
         <div className="flex-1 flex flex-col gap-5">
           <div className="flex flex-col gap-3">
