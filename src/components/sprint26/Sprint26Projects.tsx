@@ -6,8 +6,10 @@ const Sprint26Projects = () => {
       <div className="constraint flex flex-col gap-[30px]">
         <div className="flex items-end justify-between gap-6 pb-5 pt-10 border-b border-primary max-[845px]:flex-col max-[845px]:items-start">
           <div className="flex flex-col gap-3">
-            <p className="text-primary text-[20px]">{">_ON THE BOARD"}</p>
-            <p className="font-bold text-[48px] text-white leading-tight max-[512px]:text-[32px]">
+            <p className="font-pixel! text-primary text-[20px]">
+              {">_ON THE BOARD"}
+            </p>
+            <p className="font-pixel! font-bold text-[48px] text-white leading-tight max-[512px]:text-[32px]">
               PROJECTS TAKING PRs
             </p>
           </div>
@@ -24,7 +26,7 @@ const Sprint26Projects = () => {
             >
               <div className="flex flex-col gap-3 pb-5">
                 <div className="flex items-start justify-between gap-2.5">
-                  <p className="font-bold text-[20px] text-white">
+                  <p className="font-pixel! uppercase font-bold text-[20px] text-white">
                     {project.name}
                   </p>
                   <span className="bg-primary size-4 shrink-0 mt-1" />
@@ -45,7 +47,9 @@ const Sprint26Projects = () => {
           ))}
 
           <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col items-center justify-center text-center gap-3 p-10">
-            <p className="text-primary font-bold text-[20px]">+ YOUR REPO</p>
+            <p className="font-pixel! text-primary font-bold text-[20px]">
+              + YOUR REPO
+            </p>
             <p className="text-[#828282] text-[16px]">
               Applications close two weeks before kickoff.
             </p>

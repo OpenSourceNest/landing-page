@@ -5,7 +5,7 @@ const Sprint26Hero = () => {
   return (
     <section className="section bg-black bg-[url(/images/sprint26/boxes-bg-1.svg)] bg-center bg-no-repeat bg-cover relative overflow-hidden">
       <div className="constraint flex flex-col items-center gap-[60px] py-[70px]">
-        <p className="text-center font-bold text-[80px] leading-none tracking-tight max-[845px]:text-[56px] max-[512px]:text-[40px]">
+        <p className="font-pixel! text-center font-bold text-[80px] leading-none tracking-tight max-[845px]:text-[56px] max-[512px]:text-[40px]">
           Sprint{" "}
           <span className="bg-gradient-to-r from-[#01ff05] to-[#0e945f] bg-clip-text text-transparent">
             26
@@ -52,7 +52,7 @@ const Sprint26Hero = () => {
                 <div className="bg-black/50 relative h-[74px] w-[290px] max-[512px]:w-[240px]">
                   <Link
                     href="#how-to-join"
-                    className="absolute -top-2 right-1 bg-white text-black font-semibold px-8 py-5 border-2 border-black whitespace-nowrap"
+                    className="font-pixel! absolute -top-2 right-1 bg-white text-black font-semibold px-8 py-5 border-2 border-black whitespace-nowrap"
                   >
                     Get Started
                   </Link>

@@ -5,8 +5,10 @@ const Sprint26Partners = () => {
     <section className="section bg-black pb-[100px]">
       <div className="constraint flex flex-col gap-[30px]">
         <div className="flex flex-col gap-3 py-10">
-          <p className="text-primary text-[20px]">{">_PARTNER WITH US"}</p>
-          <p className="font-bold text-[48px] text-white leading-tight max-[512px]:text-[32px]">
+          <p className="font-pixel! text-primary text-[20px]">
+            {">_PARTNER WITH US"}
+          </p>
+          <p className="font-pixel! font-bold text-[48px] text-white leading-tight max-[512px]:text-[32px]">
             BRING YOUR PEOPLE IN
           </p>
         </div>
@@ -28,7 +30,7 @@ const Sprint26Partners = () => {
                       partner.highlighted ? "bg-white" : "bg-primary"
                     }`}
                   />
-                  <p className="font-bold text-[22px] text-white">
+                  <p className="font-pixel! uppercase font-bold text-[22px] text-white">
                     {partner.audience}
                   </p>
                 </div>
@@ -44,7 +46,7 @@ const Sprint26Partners = () => {
                 </ul>
               </div>
               <button
-                className={`font-semibold px-6 py-4 w-fit cursor-pointer ${
+                className={`font-pixel! uppercase font-semibold px-6 py-4 w-fit cursor-pointer ${
                   partner.highlighted
                     ? "bg-primary text-black"
                     : "bg-black border border-[#828282] text-white"

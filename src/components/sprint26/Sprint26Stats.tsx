@@ -13,7 +13,7 @@ const Sprint26Stats = () => {
                 : ""
             }`}
           >
-            <p className="text-primary font-bold text-[50px] leading-none max-[650px]:text-[40px]">
+            <p className="font-pixel! text-primary font-bold text-[50px] leading-none max-[650px]:text-[40px]">
               {stat.value}
             </p>
             <p className="text-[#828282] text-[20px] tracking-wide">
