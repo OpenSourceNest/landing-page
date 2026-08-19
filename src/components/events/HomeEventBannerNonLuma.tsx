@@ -2,10 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 
 const HomeEventBannerNonLuma = () => {
-  const bannerImage = "/images/Projects/takeoff-2026/takeoff-2026-banner.png";
-  const regularImage = "/images/Projects/takeoff-2026/takeoff-2026.png";
-  const bannerBackgroundColor = "#4C301B";
-  const bannerTitle = "Takeoff 2026";
+  const bannerImage = "/images/Projects/sprint26/sprint26-banner.png";
+  const regularImage = "/images/Projects/sprint26/sprint26.png";
+  const bannerBackgroundColor = "white";
+  const bannerTitle = "Sprint26";
 
   return (
     <section
@@ -17,9 +17,9 @@ const HomeEventBannerNonLuma = () => {
       </p>
 
       <Link
-        href={"https://takeoff.opensourcenest.org"}
+        href={"/sprint26"}
         title={bannerTitle}
-        target="_blank"
+        // target="_blank"
         className=""
       >
         <Image

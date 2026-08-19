@@ -15,11 +15,11 @@ const ReadyToTakeFlight = () => {
 
   return (
     <section
-      className="py-[81px] max-w-[90vw] mx-auto
+      className="py-[40px] max-w-[90vw] mx-auto
     max-[500px]:py-[20px] flex flex-col"
     >
       <div
-        className="bg-primary3 py-[80px] px-[32px] flex flex-col
+        className="bg-primary3/70 py-[80px] px-[32px] flex flex-col
       items-center justify-center text-center rounded-[6px] w-full"
       >
         <h3 className="font-semibold text-[40px]">

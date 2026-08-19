@@ -1,5 +1,5 @@
 // import HomeEventBannerLuma from "@/components/events/HomeEventBannerLuma";
-// import HomeEventBannerNonLuma from "@/components/events/HomeEventBannerNonLuma";
+import HomeEventBannerNonLuma from "@/components/events/HomeEventBannerNonLuma";
 
 import Footer from "@/components/Footer";
 import ReadyToTakeFlight from "@/components/home/ReadyToTakeFlight";
@@ -16,7 +16,7 @@ export default function Home() {
       <HomeSectionOne />
 
       {/* <HomeEventBannerLuma /> */}
-      {/* <HomeEventBannerNonLuma /> */}
+      <HomeEventBannerNonLuma />
       <WhatIsOSN />
       <HomeSectionTwo />
       <HomeSectionThree />

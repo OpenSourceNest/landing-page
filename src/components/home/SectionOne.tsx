@@ -108,7 +108,7 @@ const HomeSectionOne = () => {
           text-primary2 w-fit px-2 py-1 
           absolute z-10 top-1/2 left-1/2 translate-[-50%] -rotate-6"
           >
-            <p className="font-semibold text-[10px]">Targets for 2025</p>
+            <p className="font-semibold text-[10px]">Targets</p>
           </div>
         </div>
       </div>
@@ -143,7 +143,7 @@ const Stat: {
     className: "bg-[#242424] max-[1300px]:bg-primary3 max-[845px]:bg-[#242424]",
   },
   {
-    title: 300,
+    title: 500,
     after: "+",
     subject: "Contributors",
     className: "bg-primary3 max-[1300px]:bg-[#242424] max-[845px]:bg-primary3",
