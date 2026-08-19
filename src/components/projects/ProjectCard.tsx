@@ -7,7 +7,7 @@ export interface ProjectCardProps {
   banner?: string;
   bannerBackgroundColor?: string;
   title: string;
-  type: "Workshop" | "Event";
+  type: "Workshop" | "Event" | "Community";
   avatar?: string;
   author: { displayText?: string; seoText: string };
   date: { displayText: string; seoDate: string };
