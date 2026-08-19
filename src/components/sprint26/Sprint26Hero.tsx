@@ -38,7 +38,7 @@ const Sprint26Hero = () => {
                   {">_"}Clear Your Issue Backlog. Zero Spam.
                 </p>
                 <p className="font-semibold text-[24px] leading-tight max-[512px]:text-[20px]">
-                  Join the 5-Week Open Source Contribution Sprint.
+                  Join the 4-Week Open Source Contribution Sprint.
                 </p>
               </div>
 
@@ -54,6 +54,11 @@ const Sprint26Hero = () => {
                 The 4-week open-source sprint where developers level up, and
                 maintainers clear their backlogs (completely spam-free). We
                 provide the mentorship, you provide the code.
+              </p>
+
+              <p className="text-[16px] font-semibold max-[512px]:text-[14px]">
+                <time dateTime="2026-08-31">August 31</time> –{" "}
+                <time dateTime="2026-09-28">September 28, 2026</time>
               </p>
 
               <div className="flex items-center gap-2 pt-10">

@@ -88,7 +88,7 @@ const Sprint26HowToJoin = () => {
             </div>
             <p className="text-[#828282] text-[20px] pb-6">
               No prior open source needed. Bring one language you are
-              comfortable in and five weeks of attention.
+              comfortable in and four weeks of attention.
             </p>
             <div className="flex flex-col">
               {sprint26ContributorSteps.map((step) => (

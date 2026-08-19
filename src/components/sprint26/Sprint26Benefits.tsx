@@ -105,7 +105,7 @@ const Sprint26Benefits = () => {
                 </p>
                 <p className="text-white/80 text-[16px]">
                   Merged PRs, mentor notes, and review turnaround, exported as
-                  one shareable page at the end of week five.
+                  one shareable page at the end of week four.
                 </p>
               </div>
 
