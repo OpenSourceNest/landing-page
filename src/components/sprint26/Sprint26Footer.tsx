@@ -33,7 +33,7 @@ const exploreLinks = [
 
 const Sprint26Footer = () => {
   return (
-    <section className="section bg-black pt-10 pb-10 flex flex-col items-center relative overflow-hidden p-0">
+    <footer className="section bg-black pt-10 pb-10 flex flex-col items-center relative overflow-hidden p-0">
       <div
         className="w-full bg-sprint26/10 bg-[url(/images/footer-boxes-bg.svg)] bg-center bg-no-repeat bg-cover rounded-[20px] relative
       overflow-hidden pt-[80px] px-10 max-[845px]:px-6 flex justify-center pb-[100px]"
@@ -114,7 +114,7 @@ const Sprint26Footer = () => {
       >
         opensourcenest
       </p>
-    </section>
+    </footer>
   );
 };
 
