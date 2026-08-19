@@ -14,7 +14,7 @@ export default async function Sprint26() {
   return (
     <>
       <Sprint26Hero />
-      <Sprint26Stats />
+      <Sprint26Stats NumberOfProjects={projects.length} />
       <Sprint26HowToJoin />
       <Sprint26Projects projects={projects} />
       <Sprint26Benefits />

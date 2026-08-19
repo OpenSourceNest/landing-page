@@ -16,7 +16,7 @@ const Sprint26Projects = ({
         <div className="flex items-end justify-between gap-6 pb-5 pt-10 border-b border-primary max-[845px]:flex-col max-[845px]:items-start">
           <div className="flex flex-col gap-3">
             <p className="font-pixel! text-primary text-[20px]">
-              {">_ON THE BOARD"}
+              {">_ ON THE BOARD"}
             </p>
             <p className="font-pixel! font-bold text-[48px] text-white leading-tight max-[512px]:text-[32px]">
               PROJECTS TAKING PRs

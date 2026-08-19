@@ -4,14 +4,14 @@ import { useState } from "react";
 
 const SPRINT26_URL = "https://opensourcenest.org/sprint26";
 const SHARE_TEXT =
-  "Sprint 26 is live — 5 weeks, 68 repos, zero spam PRs. Join as a maintainer or contributor:";
+  "Sprint 26 is live — 5 weeks, multiple repos, zero spam PRs. Join as a maintainer or contributor:";
 
 const Sprint26Share = () => {
   const [copied, setCopied] = useState(false);
 
   const shareOnX = () => {
     const url = `https://x.com/intent/tweet?text=${encodeURIComponent(
-      SHARE_TEXT
+      SHARE_TEXT,
     )}&url=${encodeURIComponent(SPRINT26_URL)}`;
     window.open(url, "_blank", "noopener,noreferrer");
   };
@@ -31,24 +31,29 @@ const Sprint26Share = () => {
               {">_SHARE THE WORD"}
             </p>
             <p className="font-pixel! font-bold text-[36px] text-white leading-tight max-[512px]:text-[28px]">
-              ONE REPOST FILLS
-              <br />A MAINTAINER&apos;S QUEUE
+              AMPLIFY THE SPRINT
             </p>
           </div>
           <p className="text-white/80 text-[20px]">
-            Sprint 26 runs on word of mouth. Post the link, tag a maintainer
-            sitting on a backlog, or drop it in your team channel.
+            Know a maintainer drowning in{" "}
+            <span className="bg-primary/50 font-semibold px-1 text-nowrap rounded-sm">
+              help wanted
+            </span>{" "}
+            tickets? Share this event and let our community take the load off
+            their shoulders.
           </p>
+
           <div className="flex gap-3">
             <button
               onClick={shareOnX}
-              className="font-pixel! uppercase bg-primary text-black font-semibold px-8 py-5 cursor-pointer max-[512px]:flex-1 max-[512px]:px-4"
+              className="font-pixel! uppercase bg-primary text-black font-semibold px-5 py-2 cursor-pointer max-[512px]:flex-1 max-[512px]:px-4"
             >
               Share on X
             </button>
+
             <button
               onClick={copyLink}
-              className="font-pixel! uppercase bg-black border border-[#a7ffc9] text-white font-semibold px-8 py-5 cursor-pointer max-[512px]:flex-1 max-[512px]:px-4"
+              className="font-pixel! uppercase bg-black border border-[#a7ffc9] text-white font-semibold px-5 py-2 cursor-pointer max-[512px]:flex-1 max-[512px]:px-4"
             >
               {copied ? "Copied ✓" : "Copy Link"}
             </button>

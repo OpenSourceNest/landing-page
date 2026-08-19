@@ -29,7 +29,7 @@ const Sprint26HowToJoin = () => {
         <div className="flex items-center justify-between gap-10 max-[845px]:flex-col max-[845px]:items-start">
           <div className="flex flex-col gap-3 py-10">
             <p className="font-pixel! text-primary text-[20px]">
-              {">_HOW TO JOIN"}
+              {">_ HOW TO JOIN"}
             </p>
             <p className="font-pixel! font-bold text-[48px] text-white leading-tight max-[512px]:text-[36px]">
               TWO DOORS,
@@ -38,9 +38,9 @@ const Sprint26HowToJoin = () => {
             </p>
           </div>
           <p className="text-white/80 text-[22px] max-w-[440px] text-right max-[845px]:text-left">
-            Pick the lane that fits. Maintainers bring the backlog,
-            contributors bring the pull requests. Onboarding for both closes
-            the day the sprint starts.
+            Pick the lane that fits. Maintainers bring the backlog, contributors
+            bring the pull requests. Onboarding for both closes the day the
+            sprint starts.
           </p>
         </div>
 

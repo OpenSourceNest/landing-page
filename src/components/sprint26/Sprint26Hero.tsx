@@ -4,7 +4,12 @@ import DissolveGridParent from "../ui/DissolveGrid";
 
 const Sprint26Hero = () => {
   return (
-    <section className="section bg-black bg-[url(/images/sprint26/boxes-bg-1.svg)] bg-center bg-no-repeat bg-cover relative overflow-hidden">
+    <section
+      className="section bg-black bg-[url(/images/hero-bg.svg)] bg-no-repeat bg-cover relative overflow-hidden"
+      style={{
+        backgroundPositionY: `-30px`,
+      }}
+    >
       <div className="constraint flex flex-col items-center gap-[60px] py-[70px]">
         <div className="relative w-full">
           <p
@@ -46,10 +51,9 @@ const Sprint26Hero = () => {
               />
 
               <p className="text-[18px] max-[512px]:text-[16px]">
-                Got good first issue tickets gathering dust? Let our community
-                knock them out. We are matching eager developers with
-                open-source repositories for a massive 5-Week contribution
-                event.
+                The 5-week open-source sprint where developers level up, and
+                maintainers clear their backlogs (completely spam-free). We
+                provide the mentorship, you provide the code.
               </p>
 
               <div className="flex items-center gap-2 pt-10">
@@ -67,7 +71,7 @@ const Sprint26Hero = () => {
                   className="font-pixel! bg-white text-black font-semibold px-8 py-3 border-2 border-black whitespace-nowrap
                   shadow-one"
                 >
-                  Get Started
+                  Join The Sprint
                 </Link>
               </div>
             </div>

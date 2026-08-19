@@ -7,7 +7,7 @@ const Sprint26Partners = () => {
       <div className="constraint flex flex-col gap-[30px]">
         <div className="flex flex-col gap-3 py-10">
           <p className="font-pixel! text-primary text-[20px]">
-            {">_PARTNER WITH US"}
+            {">_ PARTNER WITH US"}
           </p>
           <p className="font-pixel! font-bold text-[48px] text-white leading-tight max-[512px]:text-[32px]">
             BRING YOUR PEOPLE IN
@@ -48,7 +48,7 @@ const Sprint26Partners = () => {
               </div>
               <Link
                 href={`mailto:hello@opensourcenest.dev?subject=${encodeURIComponent(
-                  `Partnering with OSN — ${partner.audience}`
+                  `Partnering with OSN — ${partner.audience}`,
                 )}`}
                 className={`font-pixel! uppercase font-semibold px-6 py-4 w-fit ${
                   partner.highlighted

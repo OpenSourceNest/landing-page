@@ -161,8 +161,6 @@ function DissolveGrid({
   );
 }
 
-const PALETTE = ["#E4B565", "#C97B84", "#7FA88F", "#7B93B5", "#B5A48C"];
-
 export default function DissolveGridParent() {
   const [runId, setRunId] = useState(0);
   const cells = Array.from({ length: 500 }, (_, i) => i);
@@ -190,7 +188,7 @@ export default function DissolveGridParent() {
           columns="repeat(auto-fill, minmax(40px, 1fr))"
           gap={0}
           startDelay={0}
-          randomWindow={5000}
+          randomWindow={2500}
           fadeDuration={0}
           onDissolved={() => setHidden(true)}
         >

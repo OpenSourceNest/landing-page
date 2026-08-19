@@ -1,13 +1,13 @@
 export type Sprint26Stat = {
-  value: string;
+  value: number;
   label: string;
 };
 
-export const sprint26Stats: Sprint26Stat[] = [
-  { value: "5", label: "WEEKS OF SPRINT" },
-  { value: "1.2K", label: "CONTRIBUTORS WAITING" },
-  { value: "68", label: "REPOS ON BOARD" },
-  { value: "0", label: "SPAM PRs TOLERATED" },
+export const sprint26Stats = (NumberOfProjects: number): Sprint26Stat[] => [
+  { value: 5, label: "WEEKS OF SPRINT" },
+  { value: 500, label: "EAGER CONTRIBUTORS" },
+  { value: 20, label: "ACTIVE MENTORS" },
+  { value: NumberOfProjects, label: "MERGED PRs" },
 ];
 
 export type Sprint26Step = {
@@ -119,22 +119,25 @@ export const sprint26Partners: Sprint26Partner[] = [
   {
     audience: "COMMUNITIES",
     description:
-      "Dev circles, campus clubs, and meetups run the sprint as a local chapter with our board, mentors, and materials.",
+      "Are you running a developer community, bootcamp, or university club? Bring your members to Sprint 26 and let's build together.",
     perks: [
-      "A chapter page and leaderboard for your members",
-      "Kickoff and demo-day run of show, ready to use",
-      "Two mentor slots reserved per 50 members",
+      "Co-Branded Certificates & Digital Badges",
+      "Exclusive Masterclasses & AMAs",
+      "Organizer Swag & Recognition",
+      "Community Leaderboard & Bragging Rights",
     ],
-    cta: "Apply as a chapter",
+    cta: "Become a partner",
   },
   {
     audience: "ORGANISATIONS",
     description:
-      "Sponsor a track, put your maintainers on the board, or give your engineers paid sprint hours on the repos you depend on.",
+      "Support the open-source ecosystem while getting your platform, tooling, or APIs in front of thousands of active, engaged developers.",
     perks: [
-      "Sponsored track with your name on the sprint board",
-      "Hiring signal from real merged contributions",
+      "Dedicated Challenge / Tooling Track",
+      "Pre-Vetted Hiring Pipeline",
+      "Live Product Demo / Workshop Slot",
       "End-of-sprint impact report for your OSS program",
+      "Maintainer Grant Funding Attribution",
     ],
     cta: "Talk to us",
     highlighted: true,
