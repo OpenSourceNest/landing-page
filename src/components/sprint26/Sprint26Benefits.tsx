@@ -48,7 +48,7 @@ const Sprint26Benefits = () => {
               <div className="flex gap-5 max-[650px]:flex-col">
                 <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex-1 flex flex-col gap-3 p-10">
                   <p className="font-pixel! text-sprint26 font-bold text-[16px]">
-                    5 Weeks of Focus
+                    4 Weeks of Focus
                   </p>
                   <p className="text-white/80 text-[16px]">
                     A structured timeline to keep momentum high and ship

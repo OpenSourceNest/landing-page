@@ -1,6 +1,8 @@
 import { IGithubProjectResponse, SearchQuery } from "@/lib/github";
 import Link from "next/link";
 
+const MAINTAINER_APPLICATION_URL = "https://forms.gle/i4qYyxYQRg8Q7MFG7";
+
 const Sprint26Projects = ({
   projects,
 }: {
@@ -34,7 +36,7 @@ const Sprint26Projects = ({
               href={project.url.replace("api.github.com/repos/", "github.com/")}
               target="_blank"
               key={project.name}
-              className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col gap-3 p-10"
+              className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col gap-3 p-8"
             >
               <div className="flex flex-col gap-3 pb-5">
                 <div className="flex items-start justify-between gap-2.5">
@@ -62,14 +64,19 @@ const Sprint26Projects = ({
             </Link>
           ))}
 
-          <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col items-center justify-center text-center gap-3 p-10">
+          <Link
+            href={MAINTAINER_APPLICATION_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col items-center justify-center text-center gap-3 p-10"
+          >
             <p className="font-pixel! text-sprint26 font-bold text-[20px]">
               + YOUR REPO
             </p>
             <p className="text-[#828282] text-[16px]">
-              Applications close two weeks before kickoff.
+              Applications close before kickoff.
             </p>
-          </div>
+          </Link>
         </div>
       </div>
     </section>

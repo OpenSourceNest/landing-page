@@ -4,7 +4,7 @@ import { useState } from "react";
 
 const SPRINT26_URL = "https://opensourcenest.org/sprint26";
 const SHARE_TEXT =
-  "Sprint 26 is live — 5 weeks, multiple repos, zero spam PRs. Join as a maintainer or contributor:";
+  "Sprint 26 is live — 4 weeks, multiple repos, zero spam PRs. Join as a maintainer or contributor:";
 
 const Sprint26Share = () => {
   const [copied, setCopied] = useState(false);
@@ -63,7 +63,7 @@ const Sprint26Share = () => {
         <div className="font-pixel! uppercase flex-1 bg-black border border-[#282828] p-8 max-[512px]:p-5 text-[16px] flex flex-col justify-center">
           <p className="text-[#828282]">$ npx sprint26 --share</p>
           <p className="text-[#a9ffb7]">{">"} copying invite…</p>
-          <p className="text-[#a9ffb7]">{">"} 5 weeks. 68 repos.</p>
+          <p className="text-[#a9ffb7]">{">"} 4 weeks. multiple repos.</p>
           <p className="text-[#a9ffb7]">{">"} zero spam PRs.</p>
           <p className="text-[#a9ffb7]">{">"} link copied ✓</p>
         </div>

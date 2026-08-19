@@ -51,7 +51,7 @@ const Sprint26Hero = () => {
               />
 
               <p className="text-[18px] max-[512px]:text-[16px]">
-                The 5-week open-source sprint where developers level up, and
+                The 4-week open-source sprint where developers level up, and
                 maintainers clear their backlogs (completely spam-free). We
                 provide the mentorship, you provide the code.
               </p>

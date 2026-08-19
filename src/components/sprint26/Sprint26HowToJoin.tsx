@@ -3,6 +3,9 @@ import {
   sprint26MaintainerSteps,
   Sprint26Step,
 } from "@/data/sprint26.data";
+import Link from "next/link";
+
+const MAINTAINER_APPLICATION_URL = "https://forms.gle/i4qYyxYQRg8Q7MFG7";
 
 const StepRow = ({ step }: { step: Sprint26Step }) => (
   <div className="border-b border-[#282828] first:border-t flex gap-6 max-[512px]:gap-3 items-start py-4">
@@ -26,7 +29,7 @@ const Sprint26HowToJoin = () => {
   return (
     <section id="how-to-join" className="section bg-black">
       <div className="constraint flex flex-col gap-[30px]">
-        <div className="flex items-center justify-between gap-10 max-[845px]:flex-col max-[845px]:items-start">
+        <div className="flex items-center justify-between gap-x-10 gap-y-0 max-[845px]:flex-col max-[845px]:items-start">
           <div className="flex flex-col gap-3 py-10">
             <p className="font-pixel! text-sprint26 text-[20px]">
               {">_ HOW TO JOIN"}
@@ -37,6 +40,7 @@ const Sprint26HowToJoin = () => {
               ONE SPRINT
             </p>
           </div>
+
           <p className="text-white/80 text-[22px] max-w-[440px] text-right max-[845px]:text-left">
             Pick the lane that fits. Maintainers bring the backlog, contributors
             bring the pull requests. Onboarding for both closes the day the
@@ -63,9 +67,14 @@ const Sprint26HowToJoin = () => {
                 <StepRow key={step.number} step={step} />
               ))}
             </div>
-            <button className="font-pixel! uppercase bg-sprint26 text-black font-semibold px-8 py-5 mt-8 w-fit cursor-pointer">
+            <Link
+              href={MAINTAINER_APPLICATION_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-pixel! uppercase bg-sprint26 text-black font-semibold px-8 py-5 mt-8 w-fit"
+            >
               List My Repo
-            </button>
+            </Link>
           </div>
 
           <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex-1 flex flex-col gap-3 p-10 max-[512px]:p-6">
