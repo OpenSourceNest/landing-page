@@ -65,7 +65,10 @@ const Sprint26Share = () => {
           <p className="text-[#a9ffb7]">{">"} copying invite…</p>
           <p className="text-[#a9ffb7]">{">"} 4 weeks. multiple repos.</p>
           <p className="text-[#a9ffb7]">{">"} zero spam PRs.</p>
-          <p className="text-[#a9ffb7]">{">"} link copied ✓</p>
+          <p className="text-[#a9ffb7]">
+            {">"} link copied
+            <span>✓</span>
+          </p>
         </div>
       </div>
     </section>

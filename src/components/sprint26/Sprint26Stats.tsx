@@ -1,3 +1,4 @@
+import AnimatedNumber from "@/components/ui/AnimatedNumber";
 import { sprint26Stats } from "@/data/sprint26.data";
 
 const Sprint26Stats = ({ NumberOfProjects }: { NumberOfProjects: number }) => {
@@ -16,7 +17,7 @@ const Sprint26Stats = ({ NumberOfProjects }: { NumberOfProjects: number }) => {
             }`}
           >
             <p className="font-pixel! text-sprint26 font-bold text-[40px] leading-none max-[650px]:text-[40px] text-center">
-              {stat.value}
+              <AnimatedNumber value={stat.value} />
             </p>
 
             <p className="text-[#828282] text-[18px] tracking-wide text-center">
