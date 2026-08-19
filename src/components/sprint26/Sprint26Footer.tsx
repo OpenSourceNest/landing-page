@@ -35,12 +35,12 @@ const Sprint26Footer = () => {
   return (
     <section className="section bg-black pt-10 pb-10 flex flex-col items-center relative overflow-hidden p-0">
       <div
-        className="w-full bg-primary3/10 bg-[url(/images/footer-boxes-bg.svg)] bg-center bg-no-repeat bg-cover rounded-[20px] relative
+        className="w-full bg-sprint26/10 bg-[url(/images/footer-boxes-bg.svg)] bg-center bg-no-repeat bg-cover rounded-[20px] relative
       overflow-hidden pt-[80px] px-10 max-[845px]:px-6 flex justify-center pb-[100px]"
       >
         <div className="flex gap-10 max-[1150px]:flex-col justify-center">
           <div className=" flex flex-col gap-5 pb-10 min-w-[260px]">
-            <span className="font-pixel! uppercase bg-primary text-black font-semibold rounded-full px-4 py-2.5 w-fit text-[14px]">
+            <span className="font-pixel! uppercase bg-sprint26 text-black font-semibold rounded-full px-4 py-2.5 w-fit text-[14px]">
               Who we are
             </span>
             <p className="font-semibold text-[28px] text-white leading-tight">
@@ -54,7 +54,7 @@ const Sprint26Footer = () => {
           </div>
 
           <div className="flex flex-col gap-5 pb-10 max-[845px]:pl-0 shrink-0 items-stretch">
-            <span className="font-pixel! uppercase bg-primary text-black font-semibold rounded-full px-4 py-2.5 w-fit text-[14px]">
+            <span className="font-pixel! uppercase bg-sprint26 text-black font-semibold rounded-full px-4 py-2.5 w-fit text-[14px]">
               Explore
             </span>
 
@@ -70,7 +70,7 @@ const Sprint26Footer = () => {
           </div>
 
           <div className="flex-1 flex flex-col gap-5 pb-10 min-w-[260px]">
-            <span className="font-pixel! uppercase bg-primary text-black font-semibold rounded-full px-4 py-2.5 w-fit text-[14px]">
+            <span className="font-pixel! uppercase bg-sprint26 text-black font-semibold rounded-full px-4 py-2.5 w-fit text-[14px]">
               Contact
             </span>
             <p className="font-semibold text-[28px] max-[512px]:text-[22px] text-white leading-tight break-words">
@@ -95,7 +95,7 @@ const Sprint26Footer = () => {
                   key={icon.alt}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="bg-primary3/20 flex items-center p-4 rounded-lg"
+                  className="bg-sprint26/20 flex items-center p-4 rounded-lg"
                 >
                   <Image src={icon.src} alt={icon.alt} width={36} height={36} />
                 </Link>

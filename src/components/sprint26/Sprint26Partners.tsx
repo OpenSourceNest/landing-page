@@ -6,7 +6,7 @@ const Sprint26Partners = () => {
     <section className="section bg-black pb-[100px]">
       <div className="constraint flex flex-col gap-[30px]">
         <div className="flex flex-col gap-3 py-10">
-          <p className="font-pixel! text-primary text-[20px]">
+          <p className="font-pixel! text-sprint26 text-[20px]">
             {">_ PARTNER WITH US"}
           </p>
           <p className="font-pixel! font-bold text-[48px] text-white leading-tight max-[512px]:text-[32px]">
@@ -20,7 +20,7 @@ const Sprint26Partners = () => {
               key={partner.audience}
               className={`flex-1 rounded-[20px] flex flex-col gap-3 p-12 ${
                 partner.highlighted
-                  ? "bg-primary3/10 border border-primary3"
+                  ? "bg-sprint26/10 border border-sprint26"
                   : "bg-[#0d0d0d] border border-[#282828]"
               }`}
             >
@@ -28,7 +28,7 @@ const Sprint26Partners = () => {
                 <div className="flex items-center gap-2.5">
                   <span
                     className={`size-4 shrink-0 ${
-                      partner.highlighted ? "bg-white" : "bg-primary"
+                      partner.highlighted ? "bg-white" : "bg-sprint26"
                     }`}
                   />
                   <p className="font-pixel! uppercase font-bold text-[22px] text-white">
@@ -52,7 +52,7 @@ const Sprint26Partners = () => {
                 )}`}
                 className={`font-pixel! uppercase font-semibold px-6 py-4 w-fit ${
                   partner.highlighted
-                    ? "bg-primary text-black"
+                    ? "bg-sprint26 text-black"
                     : "bg-black border border-[#828282] text-white"
                 }`}
               >

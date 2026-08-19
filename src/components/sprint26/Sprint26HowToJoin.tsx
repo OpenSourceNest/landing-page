@@ -6,8 +6,8 @@ import {
 
 const StepRow = ({ step }: { step: Sprint26Step }) => (
   <div className="border-b border-[#282828] first:border-t flex gap-6 max-[512px]:gap-3 items-start py-4">
-    <div className="bg-black border border-primary3 flex items-center justify-center p-3 max-[512px]:p-2 w-14 max-[512px]:w-10 shrink-0">
-      <p className="font-pixel! text-primary font-bold text-[18px] max-[512px]:text-[16px]">
+    <div className="bg-black border border-sprint263 flex items-center justify-center p-3 max-[512px]:p-2 w-14 max-[512px]:w-10 shrink-0">
+      <p className="font-pixel! text-sprint26 font-bold text-[18px] max-[512px]:text-[16px]">
         {step.number}
       </p>
     </div>
@@ -28,7 +28,7 @@ const Sprint26HowToJoin = () => {
       <div className="constraint flex flex-col gap-[30px]">
         <div className="flex items-center justify-between gap-10 max-[845px]:flex-col max-[845px]:items-start">
           <div className="flex flex-col gap-3 py-10">
-            <p className="font-pixel! text-primary text-[20px]">
+            <p className="font-pixel! text-sprint26 text-[20px]">
               {">_ HOW TO JOIN"}
             </p>
             <p className="font-pixel! font-bold text-[48px] text-white leading-tight max-[512px]:text-[36px]">
@@ -50,7 +50,7 @@ const Sprint26HowToJoin = () => {
               <p className="font-pixel! font-bold text-[28px] max-[512px]:text-[20px] text-white">
                 JOIN AS A MAINTAINER
               </p>
-              <span className="font-pixel! uppercase bg-primary text-black text-[14px] max-[512px]:text-[11px] font-medium px-3 py-1.5 max-[512px]:px-2 whitespace-nowrap">
+              <span className="font-pixel! uppercase bg-sprint26 text-black text-[14px] max-[512px]:text-[11px] font-medium px-3 py-1.5 max-[512px]:px-2 whitespace-nowrap">
                 Repo owners
               </span>
             </div>
@@ -63,7 +63,7 @@ const Sprint26HowToJoin = () => {
                 <StepRow key={step.number} step={step} />
               ))}
             </div>
-            <button className="font-pixel! uppercase bg-primary text-black font-semibold px-8 py-5 mt-8 w-fit cursor-pointer">
+            <button className="font-pixel! uppercase bg-sprint26 text-black font-semibold px-8 py-5 mt-8 w-fit cursor-pointer">
               List My Repo
             </button>
           </div>
@@ -73,7 +73,7 @@ const Sprint26HowToJoin = () => {
               <p className="font-pixel! font-bold text-[28px] max-[512px]:text-[20px] text-white">
                 JOIN AS A CONTRIBUTOR
               </p>
-              <span className="font-pixel! uppercase bg-black border border-primary text-white text-[14px] max-[512px]:text-[11px] font-medium px-3 py-1.5 max-[512px]:px-2 whitespace-nowrap">
+              <span className="font-pixel! uppercase bg-black border border-sprint26 text-white text-[14px] max-[512px]:text-[11px] font-medium px-3 py-1.5 max-[512px]:px-2 whitespace-nowrap">
                 Developers
               </span>
             </div>

@@ -3,7 +3,7 @@ const Sprint26Benefits = () => {
     <section className="section bg-black">
       <div className="constraint flex flex-col gap-[30px]">
         <div className="flex flex-col gap-3 py-10">
-          <p className="font-pixel! text-primary text-[20px]">
+          <p className="font-pixel! text-sprint26 text-[20px]">
             {">_ WHAT YOU WALK AWAY WITH"}
           </p>
           <p className="font-pixel! font-bold text-[48px] text-white leading-tight max-[512px]:text-[32px]">
@@ -33,7 +33,7 @@ const Sprint26Benefits = () => {
 
             <div className="flex-1 flex flex-col gap-5">
               <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col gap-3 p-10">
-                <p className="text-primary text-[16px] font-medium">
+                <p className="text-sprint26 text-[16px] font-medium">
                   FOR MAINTAINERS
                 </p>
                 <p className="font-bold text-[22px] text-white">
@@ -47,7 +47,7 @@ const Sprint26Benefits = () => {
 
               <div className="flex gap-5 max-[650px]:flex-col">
                 <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex-1 flex flex-col gap-3 p-10">
-                  <p className="font-pixel! text-primary font-bold text-[16px]">
+                  <p className="font-pixel! text-sprint26 font-bold text-[16px]">
                     5 Weeks of Focus
                   </p>
                   <p className="text-white/80 text-[16px]">
@@ -57,7 +57,7 @@ const Sprint26Benefits = () => {
                 </div>
 
                 {/* <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex-1 flex flex-col gap-3 p-10">
-                  <p className="font-pixel! uppercase text-primary text-[16px] font-medium">
+                  <p className="font-pixel! uppercase text-sprint26 text-[16px] font-medium">
                     Shared
                   </p>
                   <p className="text-white/80 text-[16px]">
@@ -69,7 +69,7 @@ const Sprint26Benefits = () => {
           </div>
 
           <div className="flex gap-5 max-[1000px]:flex-col">
-            <div className="bg-primary3/10 border-4 border-primary3 rounded-[20px] flex-1 flex flex-col gap-3 justify-center px-10 py-12">
+            <div className="bg-sprint26/10 border-4 border-sprint26 rounded-[20px] flex-1 flex flex-col gap-3 justify-center px-10 py-12">
               <p className="font-pixel! text-white text-[16px] font-medium">
                 FOR CONTRIBUTORS
               </p>
@@ -87,7 +87,7 @@ const Sprint26Benefits = () => {
                 {["CODE REVIEW", "MENTORSHIP", "PUBLIC RECORD"].map((tag) => (
                   <span
                     key={tag}
-                    className="font-pixel! border border-primary3 text-white text-[16px] px-3 py-1.5"
+                    className="font-pixel! border border-sprint263 text-white text-[16px] px-3 py-1.5"
                   >
                     {tag}
                   </span>
@@ -97,7 +97,7 @@ const Sprint26Benefits = () => {
 
             <div className="flex-1 flex flex-col gap-5">
               <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col gap-3 p-10">
-                <p className="text-primary text-[16px] font-medium">
+                <p className="text-sprint26 text-[16px] font-medium">
                   FOR CONTRIBUTORS
                 </p>
                 <p className="font-bold text-[22px] text-white">
@@ -111,7 +111,7 @@ const Sprint26Benefits = () => {
 
               <div className="flex gap-5 max-[650px]:flex-col">
                 {/* <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex-1 flex flex-col gap-3 p-10">
-                  <p className="font-pixel! text-primary font-bold text-[36px]">
+                  <p className="font-pixel! text-sprint26 font-bold text-[36px]">
                     2
                   </p>
                   <p className="text-white/80 text-[16px]">
@@ -120,7 +120,7 @@ const Sprint26Benefits = () => {
                 </div> */}
 
                 <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex-1 flex flex-col gap-3 p-10">
-                  <p className="font-pixel! uppercase text-primary text-[16px] font-medium">
+                  <p className="font-pixel! uppercase text-sprint26 text-[16px] font-medium">
                     Growth
                   </p>
                   <p className="text-white/80 text-[16px]">

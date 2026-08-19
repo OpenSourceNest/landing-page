@@ -83,7 +83,7 @@ const Sprint26Hero = () => {
             width={782}
             height={568}
             priority
-            className="w-full max-w-[560px] flex-1 min-w-[320px] h-auto object-contain max-[1150px]:order-first max-[400px]:min-w-0"
+            className="w-full max-w-[500px] flex-1 min-w-[320px] h-auto object-contain max-[1150px]:order-first max-[400px]:min-w-0"
           />
         </div>
       </div>

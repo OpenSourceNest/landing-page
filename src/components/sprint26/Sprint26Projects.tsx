@@ -9,9 +9,9 @@ const Sprint26Projects = ({
   return (
     <section className="section bg-black">
       <div className="constraint flex flex-col gap-[30px]">
-        <div className="flex items-end justify-between gap-6 pb-5 pt-10 border-b border-primary max-[845px]:flex-col max-[845px]:items-start">
+        <div className="flex items-end justify-between gap-6 pb-5 pt-10 border-b border-sprint26 max-[845px]:flex-col max-[845px]:items-start">
           <div className="flex flex-col gap-3">
-            <p className="font-pixel! text-primary text-[20px]">
+            <p className="font-pixel! text-sprint26 text-[20px]">
               {">_ ON THE BOARD"}
             </p>
             <p className="font-pixel! font-bold text-[48px] text-white leading-tight max-[512px]:text-[32px]">
@@ -22,7 +22,7 @@ const Sprint26Projects = ({
           <Link
             href={`https://github.com/search?q=${SearchQuery}&sort=updated&order=desc&type=repositories`}
             target="_blank"
-            className="text-primary text-[22px] whitespace-nowrap p-1.5"
+            className="text-sprint26 text-[22px] whitespace-nowrap p-1.5"
           >
             View all {projects.length ? projects.length : ""} repositories →
           </Link>
@@ -41,7 +41,7 @@ const Sprint26Projects = ({
                   <p className="font-pixel! uppercase font-bold text-[20px] text-white">
                     {project.name}
                   </p>
-                  <span className="bg-primary px-1.5 font-semibold rounded-xs">
+                  <span className="bg-sprint26 px-1.5 font-semibold rounded-xs text-black">
                     {project.open_issues}
                   </span>
                 </div>
@@ -63,7 +63,7 @@ const Sprint26Projects = ({
           ))}
 
           <div className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col items-center justify-center text-center gap-3 p-10">
-            <p className="font-pixel! text-primary font-bold text-[20px]">
+            <p className="font-pixel! text-sprint26 font-bold text-[20px]">
               + YOUR REPO
             </p>
             <p className="text-[#828282] text-[16px]">

@@ -13,7 +13,7 @@ const Sprint26Stats = ({ NumberOfProjects }: { NumberOfProjects: number }) => {
                 : ""
             }`}
           >
-            <p className="font-pixel! text-primary font-bold text-[40px] leading-none max-[650px]:text-[40px] text-center">
+            <p className="font-pixel! text-sprint26 font-bold text-[40px] leading-none max-[650px]:text-[40px] text-center">
               {stat.value}
             </p>
 

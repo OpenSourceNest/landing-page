@@ -27,7 +27,7 @@ const Sprint26Share = () => {
       <div className="constraint bg-[#0d0d0d] border-2 border-white flex gap-10 p-10 max-[1000px]:flex-col max-[512px]:p-6">
         <div className="flex-1 flex flex-col gap-5">
           <div className="flex flex-col gap-3">
-            <p className="font-pixel! text-primary text-[20px]">
+            <p className="font-pixel! text-sprint26 text-[20px]">
               {">_SHARE THE WORD"}
             </p>
             <p className="font-pixel! font-bold text-[36px] text-white leading-tight max-[512px]:text-[28px]">
@@ -36,7 +36,7 @@ const Sprint26Share = () => {
           </div>
           <p className="text-white/80 text-[20px]">
             Know a maintainer drowning in{" "}
-            <span className="bg-primary/50 font-semibold px-1 text-nowrap rounded-sm">
+            <span className="bg-sprint26/50 font-semibold px-1 text-nowrap rounded-sm">
               help wanted
             </span>{" "}
             tickets? Share this event and let our community take the load off
@@ -46,7 +46,7 @@ const Sprint26Share = () => {
           <div className="flex gap-3">
             <button
               onClick={shareOnX}
-              className="font-pixel! uppercase bg-primary text-black font-semibold px-5 py-2 cursor-pointer max-[512px]:flex-1 max-[512px]:px-4"
+              className="font-pixel! uppercase bg-sprint26 text-black font-semibold px-5 py-2 cursor-pointer max-[512px]:flex-1 max-[512px]:px-4"
             >
               Share on X
             </button>
