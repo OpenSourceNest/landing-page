@@ -1,4 +1,27 @@
+"use client";
+
+import { useState } from "react";
+
+const SPRINT26_URL = "https://opensourcenest.org/sprint26";
+const SHARE_TEXT =
+  "Sprint 26 is live — 5 weeks, 68 repos, zero spam PRs. Join as a maintainer or contributor:";
+
 const Sprint26Share = () => {
+  const [copied, setCopied] = useState(false);
+
+  const shareOnX = () => {
+    const url = `https://x.com/intent/tweet?text=${encodeURIComponent(
+      SHARE_TEXT
+    )}&url=${encodeURIComponent(SPRINT26_URL)}`;
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
+  const copyLink = async () => {
+    await navigator.clipboard.writeText(SPRINT26_URL);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
     <section className="section bg-black py-5">
       <div className="constraint bg-[#0d0d0d] border-2 border-white flex gap-10 p-10 max-[1000px]:flex-col max-[512px]:p-6">
@@ -17,11 +40,17 @@ const Sprint26Share = () => {
             sitting on a backlog, or drop it in your team channel.
           </p>
           <div className="flex gap-3">
-            <button className="font-pixel! uppercase bg-primary text-black font-semibold px-8 py-5 cursor-pointer max-[512px]:flex-1 max-[512px]:px-4">
+            <button
+              onClick={shareOnX}
+              className="font-pixel! uppercase bg-primary text-black font-semibold px-8 py-5 cursor-pointer max-[512px]:flex-1 max-[512px]:px-4"
+            >
               Share on X
             </button>
-            <button className="font-pixel! uppercase bg-black border border-[#a7ffc9] text-white font-semibold px-8 py-5 cursor-pointer max-[512px]:flex-1 max-[512px]:px-4">
-              Copy Link
+            <button
+              onClick={copyLink}
+              className="font-pixel! uppercase bg-black border border-[#a7ffc9] text-white font-semibold px-8 py-5 cursor-pointer max-[512px]:flex-1 max-[512px]:px-4"
+            >
+              {copied ? "Copied ✓" : "Copy Link"}
             </button>
           </div>
         </div>

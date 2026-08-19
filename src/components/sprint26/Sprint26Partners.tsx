@@ -1,4 +1,5 @@
 import { sprint26Partners } from "@/data/sprint26.data";
+import Link from "next/link";
 
 const Sprint26Partners = () => {
   return (
@@ -45,15 +46,18 @@ const Sprint26Partners = () => {
                   ))}
                 </ul>
               </div>
-              <button
-                className={`font-pixel! uppercase font-semibold px-6 py-4 w-fit cursor-pointer ${
+              <Link
+                href={`mailto:hello@opensourcenest.dev?subject=${encodeURIComponent(
+                  `Partnering with OSN — ${partner.audience}`
+                )}`}
+                className={`font-pixel! uppercase font-semibold px-6 py-4 w-fit ${
                   partner.highlighted
                     ? "bg-primary text-black"
                     : "bg-black border border-[#828282] text-white"
                 }`}
               >
                 {partner.cta}
-              </button>
+              </Link>
             </div>
           ))}
         </div>

@@ -162,6 +162,11 @@ const NavLink = ({
 
 const NavLinks = [
   {
+    title: "Sprint 26",
+    url: "/sprint26",
+    newTab: false,
+  },
+  {
     title: "Campaign",
     url: "/campaign",
     newTab: false,
@@ -171,11 +176,7 @@ const NavLinks = [
     url: "https://docs.google.com/document/d/1IJxehnnRTp5WhD9iEuThm9nxXRgod_zABOK_nH5_nbs/",
     newTab: true,
   },
-  {
-    title: "Sprint 26",
-    url: "/sprint26",
-    newTab: false,
-  },
+
   {
     title: "Projects",
     url: "/projects",

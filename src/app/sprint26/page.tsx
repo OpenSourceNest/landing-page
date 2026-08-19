@@ -11,8 +11,6 @@ import { getSprintProjects } from "@/lib/github";
 export default async function Sprint26() {
   const projects = await getSprintProjects();
 
-  console.log({ projects });
-
   return (
     <>
       <Sprint26Hero />
