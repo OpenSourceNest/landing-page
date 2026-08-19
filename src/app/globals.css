@@ -17,6 +17,16 @@
   --shadow-two: -9px 9px 0px -3px rgba(0, 0, 0, 1);
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 :root {
   cursor: url("/images/cursor.png"), auto;
 

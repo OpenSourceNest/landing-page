@@ -1,8 +1,4 @@
-import {
-  FetchProjectsURL,
-  IGithubProjectResponse,
-  SearchQuery,
-} from "@/lib/github";
+import { IGithubProjectResponse, SearchQuery } from "@/lib/github";
 import Link from "next/link";
 
 const Sprint26Projects = ({

@@ -6,8 +6,8 @@ import {
 
 const StepRow = ({ step }: { step: Sprint26Step }) => (
   <div className="border-b border-[#282828] first:border-t flex gap-6 max-[512px]:gap-3 items-start py-4">
-    <div className="bg-black border border-primary3 flex items-center justify-center p-5 max-[512px]:p-3 w-20 max-[512px]:w-14 shrink-0">
-      <p className="font-pixel! text-primary font-bold text-[24px] max-[512px]:text-[18px]">
+    <div className="bg-black border border-primary3 flex items-center justify-center p-3 max-[512px]:p-2 w-14 max-[512px]:w-10 shrink-0">
+      <p className="font-pixel! text-primary font-bold text-[18px] max-[512px]:text-[16px]">
         {step.number}
       </p>
     </div>

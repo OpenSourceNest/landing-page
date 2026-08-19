@@ -20,45 +20,52 @@ export const sprint26MaintainerSteps: Sprint26Step[] = [
   {
     number: "01",
     title: "Submit your repository",
-    description: "Public repo, an OSS licence, and a readable README.",
+    description: "Fill out our quick form with a link to your project.",
   },
   {
     number: "02",
-    title: "Label 5+ good first issues",
-    description: "Scope, acceptance criteria, and a rough time estimate each.",
+    title: "Check Your Docs",
+    description:
+      "Ensure your repository has a CONTRIBUTING.md file at its root. Our system requires this to list your project, as it sets the ground rules for our community.",
   },
   {
     number: "03",
-    title: "Sign the review pledge",
-    description: "First response within 72 hours during the five weeks.",
+    title: "Tag Your Issues",
+    description:
+      "Go through your issue tracker and apply the osn-sprint-26 label to any tasks you want our contributors to tackle (e.g., bug fixes, UI tweaks, or documentation updates).",
   },
   {
     number: "04",
-    title: "Go live on the board",
-    description: "Your repo lands in the sprint board with a mentor slot.",
+    title: "Let the Shield Work",
+    description:
+      "Sit back and relax. Our mentors will triage all incoming Pull Requests. We ensure the code meets your formatting guidelines and passes tests before we request your final review.",
   },
 ];
 
 export const sprint26ContributorSteps: Sprint26Step[] = [
   {
     number: "01",
-    title: "Create your sprint profile",
-    description: "Languages, timezone, and hours you can actually commit.",
+    title: "Find Your Project",
+    description:
+      "Browse the Sprint 26 project board and pick a repository that excites you.",
   },
   {
     number: "02",
-    title: "Get matched to two repos",
-    description: "Matching runs weekly. You can swap once, no penalty.",
+    title: "Read and Claim",
+    description:
+      "Before you write a single line of code, read the project's CONTRIBUTING.md file. Find an open issue tagged with osn-sprint-26 and leave a comment asking to be assigned. Do not open a Pull Request for an unassigned issue.",
   },
   {
     number: "03",
-    title: "Claim an issue, ship a PR",
-    description: "One issue at a time. Claims expire after seven quiet days.",
+    title: "Build and Connect",
+    description:
+      "Fork the repository, create a new branch, and start coding! If you get stuck, jump into the OpenSourceNest Whatsapp/Discord to ask our mentors for help instead of pinging the maintainer directly.",
   },
   {
     number: "04",
-    title: "Collect your sprint record",
-    description: "Merged PRs, mentor notes, and a referral-ready profile.",
+    title: "Submit for Review",
+    description:
+      "Open your Pull Request. An OSN mentor will review your code to make sure it is clean and ready. Once a mentor approves it, it gets passed to the maintainer for the final merge!",
   },
 ];
 
