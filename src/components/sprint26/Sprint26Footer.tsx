@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -32,31 +34,40 @@ const exploreLinks = [
 ];
 
 const Sprint26Footer = () => {
+  const handleScrollToTop = () => {
+    window?.scrollTo?.({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="w-full bg-black p-10 max-[512px]:p-5 flex flex-col items-center relative overflow-hidden">
       <div
         className="w-full bg-sprint26/10 rounded-[20px] relative
-      overflow-hidden pt-10 px-10 max-[845px]:px-6 max-[512px]:pt-6 flex flex-col pb-[50px] max-[512px]:pb-8"
+      overflow-hidden pt-[80px] px-20 max-[700px]:px-10 flex flex-col pb-[50px]"
       >
         <div className="absolute inset-0 bg-[url(/images/footer-boxes-bg.svg)] bg-center bg-no-repeat bg-cover opacity-35 z-[1]"></div>
 
-        <div className="flex gap-10 justify-between max-[845px]:flex-col w-full max-w-[2000px] z-[3] mx-auto">
+        <div className="flex gap-x-10 gap-y-5 justify-between max-[845px]:flex-col w-full max-w-[2000px] z-[3] mx-auto">
           <div className=" flex flex-col gap-5 pb-10 min-w-[260px] max-[845px]:min-w-0">
             <span className="font-pixel! uppercase bg-sprint26 text-black font-semibold rounded-full px-4 py-2.5 w-fit text-[14px]">
               Who we are
             </span>
-            <p className="font-semibold text-[28px] max-[512px]:text-[22px] text-white leading-tight">
+
+            <p className="font-semibold text-[23px] max-[512px]:text-[20px] text-white leading-tight">
               OpenSourceNest
               <br />a home for foss advocates
             </p>
-            <p className="text-white/90 text-[18px] max-w-[420px]">
+
+            <p className="text-white/90 text-[15px] max-w-[340px]">
               We run contribution sprints, mentorship, and events that keep open
               source talents thriving.
             </p>
           </div>
 
-          <div className="flex flex-col gap-5 pb-10 max-[845px]:pl-0 shrink-0 items-stretch">
-            <span className="font-pixel! uppercase bg-sprint26 text-black font-semibold rounded-full px-4 py-2.5 w-fit text-[14px]">
+          <div className="flex flex-col gap-3 pb-10 max-[845px]:pl-0 shrink-0 items-stretch">
+            <span
+              className="font-pixel! uppercase bg-sprint26 text-black font-semibold rounded-full px-4 py-2.5
+            w-fit text-[14px] mb-2"
+            >
               Explore
             </span>
 
@@ -64,27 +75,30 @@ const Sprint26Footer = () => {
               <Link
                 key={link.title}
                 href={link.url}
-                className="text-white text-[20px] font-medium"
+                className="text-white text-[17px] font-medium"
               >
                 {link.title}
               </Link>
             ))}
           </div>
 
-          <div className="flex flex-col gap-5 pb-10 min-w-[260px] max-[845px]:min-w-0">
-            <span className="font-pixel! uppercase bg-sprint26 text-black font-semibold rounded-full px-4 py-2.5 w-fit text-[14px]">
+          <div className="flex flex-col gap-3 pb-10 min-w-[260px] max-[845px]:min-w-0">
+            <span
+              className="font-pixel! uppercase bg-sprint26 text-black font-semibold rounded-full px-4 py-2.5
+            w-fit text-[14px] mb-2"
+            >
               Contact
             </span>
-            <p className="font-semibold text-[28px] max-[512px]:text-[22px] text-white leading-tight break-words">
+            <p className="font-semibold text-[23px] max-[512px]:text-[19px] text-white leading-tight break-words">
               hello@opensourcenest.dev
             </p>
-            <p className="text-white/90 text-[20px]">
+            <p className="text-white/90 text-[17px]">
               *we are maintainers too: async beats a meeting.
             </p>
 
             <Link
               href="/contact"
-              className="font-semibold text-[26px] text-white w-fit"
+              className="font-semibold text-[21px] text-white w-fit"
             >
               {"> "}
               <span className="underline">Partner with us</span>
@@ -106,9 +120,17 @@ const Sprint26Footer = () => {
           </div>
         </div>
 
+        <button
+          className="py-3 px-6 rounded-full border-2 border-primary3 font-semibold text-[14px]
+          mr-auto text-primary3 mb-[80px] mt-[-30px] max-[700px]:mt-[0px]"
+          onClick={handleScrollToTop}
+        >
+          GO TO TOP
+        </button>
+
         <div
-          className="mb-[-80px] mt-[30px] w-full"
-          style={{ transform: `scale(1.16)` }}
+          className="mb-[-80px] mt-[30px] w-full max-[700px]:hidden"
+          style={{ transform: `scale(1.19)` }}
         >
           <svg viewBox="0 0 1100 124" className="w-full" aria-hidden="true">
             <text

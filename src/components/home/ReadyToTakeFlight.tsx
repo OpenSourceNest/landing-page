@@ -9,18 +9,14 @@ const ReadyToTakeFlight = () => {
     if (newWindow) newWindow.opener = null;
   };
 
-  const handleScrollToTop = () => {
-    window?.scrollTo?.({ top: 0, behavior: "smooth" });
-  };
-
   return (
     <section
-      className="py-[40px] max-w-[90vw] mx-auto
-    max-[500px]:py-[20px] flex flex-col"
+      className="py-[40px] max-w-[100vw] mx-auto
+    max-[500px]:py-[20px] flex flex-col px-10"
     >
       <div
-        className="bg-primary3/70 py-[80px] px-[32px] flex flex-col
-      items-center justify-center text-center rounded-[6px] w-full"
+        className="bg-primary3/100 py-[80px] px-[32px] flex flex-col
+      items-center justify-center text-center rounded-[20px] w-full"
       >
         <h3 className="font-semibold text-[40px]">
           Ready to Take Flight with <span className="text-black">OSN?</span>
@@ -50,14 +46,6 @@ const ReadyToTakeFlight = () => {
           </Link>
         </div>
       </div>
-
-      <button
-        className="py-3 px-6 rounded-full border-2 border-primary3 font-semibold text-[14px]
-      mt-5 ml-auto text-primary3"
-        onClick={handleScrollToTop}
-      >
-        GO TO TOP
-      </button>
     </section>
   );
 };

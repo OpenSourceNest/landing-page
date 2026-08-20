@@ -9,7 +9,7 @@ const Sprint26Projects = ({
   projects: IGithubProjectResponse[];
 }) => {
   return (
-    <section className="section bg-black">
+    <section className="section bg-black mt-[150px]">
       <div className="constraint flex flex-col gap-[30px]">
         <div className="flex items-end justify-between gap-6 pb-5 pt-10 border-b border-sprint26 max-[845px]:flex-col max-[845px]:items-start">
           <div className="flex flex-col gap-3">
@@ -43,7 +43,10 @@ const Sprint26Projects = ({
                   <p className="font-pixel! uppercase font-bold text-[20px] max-[512px]:text-[16px] text-white">
                     {project.name}
                   </p>
-                  <span className="bg-sprint26 px-1.5 font-semibold rounded-xs text-black">
+                  <span
+                    className="bg-sprint26 px-1.5 font-semibold rounded-xs text-black"
+                    title={`${project.open_issues} issue${project.open_issues > 1 ? "s are" : " is"} open`}
+                  >
                     {project.open_issues}
                   </span>
                 </div>

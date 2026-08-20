@@ -1,7 +1,7 @@
 const Sprint26Benefits = () => {
   return (
-    <section className="section bg-black">
-      <div className="constraint flex flex-col gap-[30px]">
+    <section className="section bg-black mt-[150px]">
+      <div className="constraint flex flex-col gap-[10px]">
         <div className="flex flex-col gap-3 py-10">
           <p className="font-pixel! text-sprint26 text-[20px]">
             {">_ WHAT YOU WALK AWAY WITH"}
