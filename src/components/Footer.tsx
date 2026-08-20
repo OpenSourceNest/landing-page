@@ -33,19 +33,19 @@ const exploreLinks = [
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-black p-10  flex flex-col items-center relative overflow-hidden">
+    <footer className="w-full bg-black p-10 max-[512px]:p-5 flex flex-col items-center relative overflow-hidden">
       <div
         className="w-full bg-sprint26/0 rounded-[20px] relative
-      overflow-hidden pt-10 px-10 max-[845px]:px-6 flex flex-col pb-[50px]"
+      overflow-hidden pt-10 px-10 max-[845px]:px-6 max-[512px]:pt-6 flex flex-col pb-[50px] max-[512px]:pb-8"
       >
         <div className="absolute inset-0 bg-[url(/images/footer-boxes-bg.svg)] bg-center bg-no-repeat bg-cover opacity-35 z-[1]"></div>
 
-        <div className="flex gap-10 justify-between w-full max-w-[2000px] z-[3] mx-auto">
-          <div className=" flex flex-col gap-5 pb-10 min-w-[260px]">
+        <div className="flex gap-10 justify-between max-[845px]:flex-col w-full max-w-[2000px] z-[3] mx-auto">
+          <div className=" flex flex-col gap-5 pb-10 min-w-[260px] max-[845px]:min-w-0">
             <span className="font-pixel! uppercase bg-sprint26 text-black font-semibold rounded-full px-4 py-2.5 w-fit text-[14px]">
               Who we are
             </span>
-            <p className="font-semibold text-[28px] text-white leading-tight">
+            <p className="font-semibold text-[28px] max-[512px]:text-[22px] text-white leading-tight">
               OpenSourceNest
               <br />a home for foss advocates
             </p>
@@ -71,7 +71,7 @@ const Footer = () => {
             ))}
           </div>
 
-          <div className="flex flex-col gap-5 pb-10 min-w-[260px]">
+          <div className="flex flex-col gap-5 pb-10 min-w-[260px] max-[845px]:min-w-0">
             <span className="font-pixel! uppercase bg-sprint26 text-black font-semibold rounded-full px-4 py-2.5 w-fit text-[14px]">
               Contact
             </span>

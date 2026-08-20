@@ -18,7 +18,7 @@ const Sprint26Partners = () => {
           {sprint26Partners.map((partner) => (
             <div
               key={partner.audience}
-              className={`flex-1 rounded-[20px] flex flex-col gap-3 p-12 ${
+              className={`flex-1 rounded-[20px] flex flex-col gap-3 p-12 max-[512px]:p-6 ${
                 partner.highlighted
                   ? "bg-sprint26/10 border border-sprint26"
                   : "bg-[#0d0d0d] border border-[#282828]"
@@ -35,12 +35,15 @@ const Sprint26Partners = () => {
                     {partner.audience}
                   </p>
                 </div>
-                <p className="text-[#828282] text-[18px]">
+                <p className="text-[#828282] text-[18px] max-[512px]:text-[15px]">
                   {partner.description}
                 </p>
                 <ul className="flex flex-col gap-2">
                   {partner.perks.map((perk) => (
-                    <li key={perk} className="text-white text-[18px]">
+                    <li
+                      key={perk}
+                      className="text-white text-[18px] max-[512px]:text-[15px]"
+                    >
                       › {perk}
                     </li>
                   ))}
@@ -50,7 +53,7 @@ const Sprint26Partners = () => {
                 href={`mailto:hello@opensourcenest.dev?subject=${encodeURIComponent(
                   `Partnering with OSN — ${partner.audience}`,
                 )}`}
-                className={`font-pixel! uppercase font-semibold px-6 py-4 w-fit ${
+                className={`font-pixel! uppercase font-semibold px-6 py-4 max-[512px]:px-5 max-[512px]:py-3 w-fit ${
                   partner.highlighted
                     ? "bg-sprint26 text-black"
                     : "bg-black border border-[#828282] text-white"

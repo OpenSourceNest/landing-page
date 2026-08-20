@@ -10,17 +10,17 @@ const Sprint26Stats = ({ NumberOfProjects }: { NumberOfProjects: number }) => {
         {stats.map((stat, index) => (
           <div
             key={stat.label}
-            className={`flex-1 min-w-[160px] max-[650px]:min-w-0 flex flex-col gap-3 py-10 px-6 ${
+            className={`flex-1 min-w-[160px] max-[650px]:min-w-0 flex flex-col gap-3 py-10 px-6 max-[512px]:py-6 max-[512px]:px-4 ${
               index + 1 == stats.length
                 ? ""
                 : "border-r border-[#282828] max-[650px]:border-r-0 max-[650px]:border-b"
             }`}
           >
-            <p className="font-pixel! text-sprint26 font-bold text-[40px] leading-none max-[650px]:text-[40px] text-center">
+            <p className="font-pixel! text-sprint26 font-bold text-[40px] leading-none max-[650px]:text-[40px] max-[512px]:text-[32px] text-center">
               <AnimatedNumber value={stat.value} />
             </p>
 
-            <p className="text-[#828282] text-[18px] tracking-wide text-center">
+            <p className="text-[#828282] text-[18px] max-[512px]:text-[14px] tracking-wide text-center">
               {stat.label}
             </p>
           </div>

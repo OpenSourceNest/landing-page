@@ -36,11 +36,11 @@ const Sprint26Projects = ({
               href={project.url.replace("api.github.com/repos/", "github.com/")}
               target="_blank"
               key={project.name}
-              className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col gap-3 p-8"
+              className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col gap-3 p-8 max-[512px]:p-5"
             >
               <div className="flex flex-col gap-3 pb-5">
                 <div className="flex items-start justify-between gap-2.5">
-                  <p className="font-pixel! uppercase font-bold text-[20px] text-white">
+                  <p className="font-pixel! uppercase font-bold text-[20px] max-[512px]:text-[16px] text-white">
                     {project.name}
                   </p>
                   <span className="bg-sprint26 px-1.5 font-semibold rounded-xs text-black">
@@ -68,7 +68,7 @@ const Sprint26Projects = ({
             href={MAINTAINER_APPLICATION_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col items-center justify-center text-center gap-3 p-10"
+            className="bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-col items-center justify-center text-center gap-3 p-10 max-[512px]:p-6"
           >
             <p className="font-pixel! text-sprint26 font-bold text-[20px]">
               + YOUR REPO
