@@ -3,22 +3,28 @@ import {
   sprint26MaintainerSteps,
   Sprint26Step,
 } from "@/data/sprint26.data";
+import Reveal from "@/components/ui/Reveal";
 import Link from "next/link";
 
 const MAINTAINER_APPLICATION_URL = "https://forms.gle/i4qYyxYQRg8Q7MFG7";
 
 const StepRow = ({ step }: { step: Sprint26Step }) => (
-  <div className="border-b border-[#282828] first:border-t flex gap-6 max-[512px]:gap-3 items-start py-4">
-    <div className="bg-black border border-sprint263 flex items-center justify-center p-3 max-[512px]:p-2 w-14 max-[512px]:w-10 shrink-0">
+  <div className="border-b border-[#282828] first:border-t flex gap-4 max-[512px]:gap-2 items-start py-4">
+    <div
+      className="bg-black border border-sprint263 flex items-center justify-center p-3 max-[512px]:p-2
+    w-14 max-[512px]:w-10 shrink-0"
+      style={{ transform: `scale(0.8)` }}
+    >
       <p className="font-pixel! text-sprint26 font-bold text-[18px] max-[512px]:text-[16px]">
         {step.number}
       </p>
     </div>
-    <div className="flex flex-col gap-2.5">
-      <p className="font-semibold text-[24px] max-[512px]:text-[18px] text-white">
+
+    <div className="flex flex-col gap-2">
+      <p className="font-semibold text-[22px] max-[512px]:text-[16px] text-white">
         {step.title}
       </p>
-      <p className="text-[#828282] text-[20px] max-[512px]:text-[15px]">
+      <p className="text-[#828282] text-[18px] max-[512px]:text-[13px]">
         {step.description}
       </p>
     </div>
@@ -27,8 +33,8 @@ const StepRow = ({ step }: { step: Sprint26Step }) => (
 
 const Sprint26HowToJoin = () => {
   return (
-    <section id="how-to-join" className="section bg-black">
-      <div className="constraint flex flex-col gap-[30px]">
+    <section id="how-to-join" className="section bg-black mt-[150px]">
+      <Reveal className="constraint flex flex-col gap-[10px]">
         <div className="flex items-center justify-between gap-x-10 gap-y-0 max-[845px]:flex-col max-[845px]:items-start">
           <div className="flex flex-col gap-3 py-10">
             <p className="font-pixel! text-sprint26 text-[20px]">
@@ -41,10 +47,9 @@ const Sprint26HowToJoin = () => {
             </p>
           </div>
 
-          <p className="text-white/80 text-[22px] max-w-[440px] text-right max-[845px]:text-left">
+          <p className="text-white/80 text-[20px] max-w-[440px] text-right max-[845px]:text-left">
             Pick the lane that fits. Maintainers bring the backlog, contributors
-            bring the pull requests. Onboarding for both closes the day the
-            sprint starts.
+            bring the pull requests.
           </p>
         </div>
 
@@ -100,7 +105,7 @@ const Sprint26HowToJoin = () => {
             </button>
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };

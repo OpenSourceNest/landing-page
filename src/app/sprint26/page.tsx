@@ -12,7 +12,7 @@ export default async function Sprint26() {
   const projects = await getSprintProjects();
 
   return (
-    <div className="flex flex-col gap-5">
+    <div className="flex flex-col">
       <Sprint26Hero />
       <Sprint26Stats NumberOfProjects={projects.length} />
       <Sprint26HowToJoin />

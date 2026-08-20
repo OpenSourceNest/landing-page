@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Reveal from "@/components/ui/Reveal";
 
 const SPRINT26_URL = "https://opensourcenest.org/sprint26";
 const SHARE_TEXT =
@@ -23,8 +24,8 @@ const Sprint26Share = () => {
   };
 
   return (
-    <section className="section bg-black py-5">
-      <div className="constraint bg-[#0d0d0d] border-2 border-white flex gap-10 p-10 max-[1000px]:flex-col max-[512px]:p-6">
+    <section className="section bg-black py-5 mt-[150px]">
+      <Reveal className="constraint bg-[#0d0d0d] border-2 border-white flex gap-10 p-10 max-[1000px]:flex-col max-[512px]:p-6">
         <div className="flex-1 flex flex-col gap-5">
           <div className="flex flex-col gap-3">
             <p className="font-pixel! text-sprint26 text-[20px]">
@@ -70,7 +71,7 @@ const Sprint26Share = () => {
             <span>✓</span>
           </p>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };
