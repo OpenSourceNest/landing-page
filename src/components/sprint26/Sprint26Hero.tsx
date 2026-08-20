@@ -10,7 +10,7 @@ const Sprint26Hero = () => {
         backgroundPositionY: `-30px`,
       }}
     >
-      <div className="constraint flex flex-col items-center gap-[60px] py-[70px]">
+      <div className="constraint flex flex-col items-center gap-[60px] py-[70px] max-[512px]:gap-[36px] max-[512px]:py-[40px]">
         <div className="relative w-full">
           <p
             className="font-pixel! text-center font-bold leading-none tracking-tight max-[845px]:text-[56px] max-[512px]:text-[40px]"
@@ -30,7 +30,7 @@ const Sprint26Hero = () => {
         <div className="flex items-center justify-center gap-5 w-full max-[1150px]:flex-col">
           <div className="bg-white border border-[#242424] text-black flex flex-col gap-3 max-w-[560px] flex-1 min-w-[320px] max-[1150px]:order-last max-[400px]:min-w-0">
             <div
-              className="bg-gradient-to-b from-[#10af4b] from-[46%] to-[#0e975d] flex flex-col gap-3 px-10 py-8 text-white
+              className="bg-gradient-to-b from-[#10af4b] from-[46%] to-[#0e975d] flex flex-col gap-3 px-10 py-8 max-[512px]:px-6 max-[512px]:py-6 text-white
             shadow-two shadow-white"
             >
               <div className="flex flex-col gap-2">
