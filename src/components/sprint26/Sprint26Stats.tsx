@@ -1,4 +1,5 @@
 import AnimatedNumber from "@/components/ui/AnimatedNumber";
+import Reveal from "@/components/ui/Reveal";
 import { sprint26Stats } from "@/data/sprint26.data";
 
 const Sprint26Stats = ({ NumberOfProjects }: { NumberOfProjects: number }) => {
@@ -6,7 +7,11 @@ const Sprint26Stats = ({ NumberOfProjects }: { NumberOfProjects: number }) => {
 
   return (
     <section className="section bg-black">
-      <div className="constraint bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-wrap max-[650px]:flex-col">
+      <Reveal
+        mode="mount"
+        delay={0.15}
+        className="constraint bg-[#0d0d0d] border border-[#282828] rounded-[20px] flex flex-wrap max-[650px]:flex-col"
+      >
         {stats.map((stat, index) => (
           <div
             key={stat.label}
@@ -25,7 +30,7 @@ const Sprint26Stats = ({ NumberOfProjects }: { NumberOfProjects: number }) => {
             </p>
           </div>
         ))}
-      </div>
+      </Reveal>
     </section>
   );
 };

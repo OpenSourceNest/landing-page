@@ -1,10 +1,11 @@
 import { sprint26Partners } from "@/data/sprint26.data";
+import Reveal from "@/components/ui/Reveal";
 import Link from "next/link";
 
 const Sprint26Partners = () => {
   return (
     <section className="section bg-black pb-[100px] mt-[150px]">
-      <div className="constraint flex flex-col gap-[10px]">
+      <Reveal className="constraint flex flex-col gap-[10px]">
         <div className="flex flex-col gap-3 py-10">
           <p className="font-pixel! text-sprint26 text-[20px]">
             {">_ PARTNER WITH US"}
@@ -64,7 +65,7 @@ const Sprint26Partners = () => {
             </div>
           ))}
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };

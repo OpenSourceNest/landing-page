@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import Reveal from "@/components/ui/Reveal";
 
 const socialIcons = [
   {
@@ -40,7 +41,7 @@ const Sprint26Footer = () => {
 
   return (
     <footer className="w-full bg-black p-10 max-[512px]:p-5 flex flex-col items-center relative overflow-hidden">
-      <div
+      <Reveal
         className="w-full bg-sprint26/10 rounded-[20px] relative
       overflow-hidden pt-[80px] px-20 max-[700px]:px-10 flex flex-col pb-[50px]"
       >
@@ -150,7 +151,7 @@ const Sprint26Footer = () => {
             </text>
           </svg>
         </div>
-      </div>
+      </Reveal>
     </footer>
   );
 };

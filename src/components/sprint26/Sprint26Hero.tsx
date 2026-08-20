@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import DissolveGridParent from "../ui/DissolveGrid";
+import Reveal from "../ui/Reveal";
 
 const Sprint26Hero = () => {
   return (
@@ -10,7 +11,10 @@ const Sprint26Hero = () => {
         backgroundPositionY: `-30px`,
       }}
     >
-      <div className="constraint flex flex-col items-center gap-[60px] py-[70px] max-[512px]:gap-[36px] max-[512px]:py-[40px]">
+      <Reveal
+        mode="mount"
+        className="constraint flex flex-col items-center gap-[60px] py-[70px] max-[512px]:gap-[36px] max-[512px]:py-[40px]"
+      >
         <div className="relative w-full">
           <p
             className="font-pixel! text-center font-bold leading-none tracking-tight max-[845px]:text-[56px] max-[512px]:text-[40px]"
@@ -91,7 +95,7 @@ const Sprint26Hero = () => {
             className="w-full max-w-[500px] flex-1 min-w-[320px] h-auto object-contain max-[1150px]:order-first max-[400px]:min-w-0"
           />
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };

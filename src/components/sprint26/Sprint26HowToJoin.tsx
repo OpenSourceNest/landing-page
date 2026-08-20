@@ -3,6 +3,7 @@ import {
   sprint26MaintainerSteps,
   Sprint26Step,
 } from "@/data/sprint26.data";
+import Reveal from "@/components/ui/Reveal";
 import Link from "next/link";
 
 const MAINTAINER_APPLICATION_URL = "https://forms.gle/i4qYyxYQRg8Q7MFG7";
@@ -33,7 +34,7 @@ const StepRow = ({ step }: { step: Sprint26Step }) => (
 const Sprint26HowToJoin = () => {
   return (
     <section id="how-to-join" className="section bg-black mt-[150px]">
-      <div className="constraint flex flex-col gap-[10px]">
+      <Reveal className="constraint flex flex-col gap-[10px]">
         <div className="flex items-center justify-between gap-x-10 gap-y-0 max-[845px]:flex-col max-[845px]:items-start">
           <div className="flex flex-col gap-3 py-10">
             <p className="font-pixel! text-sprint26 text-[20px]">
@@ -104,7 +105,7 @@ const Sprint26HowToJoin = () => {
             </button>
           </div>
         </div>
-      </div>
+      </Reveal>
     </section>
   );
 };
