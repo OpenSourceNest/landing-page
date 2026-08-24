@@ -35,6 +35,7 @@ const exploreLinks = [
 
 const Footer = () => {
   const handleScrollToTop = () => {
+    console.log("Clicked");
     window?.scrollTo?.({ top: 0, behavior: "smooth" });
   };
 
@@ -122,7 +123,7 @@ const Footer = () => {
 
         <button
           className="py-3 px-6 rounded-full border-2 border-primary3 font-semibold text-[14px]
-          mr-auto text-primary3"
+          mr-auto text-primary3 z-[3]"
           onClick={handleScrollToTop}
         >
           GO TO TOP

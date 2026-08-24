@@ -123,7 +123,7 @@ const Sprint26Footer = () => {
 
         <button
           className="py-3 px-6 rounded-full border-2 border-primary3 font-semibold text-[14px]
-          mr-auto text-primary3 mb-[80px] mt-[-30px] max-[700px]:mt-[0px]"
+          mr-auto text-primary3 mb-[80px] mt-[-30px] max-[700px]:mt-[0px] z-[3]"
           onClick={handleScrollToTop}
         >
           GO TO TOP
