@@ -162,9 +162,27 @@ function DissolveGrid({
 }
 
 export default function DissolveGridParent() {
+  const defaultCells = Array.from({ length: 500 }, (_, i) => i);
   const [runId, setRunId] = useState(0);
-  const cells = Array.from({ length: 500 }, (_, i) => i);
+  const [cells, setCells] = useState(defaultCells);
   const [hidden, setHidden] = useState(false);
+
+  useEffect(() => {
+    const handleMobileLayout = () => {
+      if (window.innerWidth < 900) {
+        setCells(Array.from({ length: 100 }, (_, i) => i));
+      } else {
+        setCells(defaultCells);
+      }
+    };
+
+    handleMobileLayout();
+    window.addEventListener("resize", handleMobileLayout);
+
+    return () => {
+      window.removeEventListener("resize", handleMobileLayout);
+    };
+  }, []);
 
   return (
     <>
