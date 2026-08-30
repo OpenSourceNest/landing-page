@@ -1,4 +1,4 @@
-export const SearchQuery = encodeURIComponent("topic:oss");
+export const SearchQuery = encodeURIComponent("topic:osn-sprint-26");
 export const FetchProjectsURL = `https://api.github.com/search/repositories?q=${SearchQuery}&sort=updated&order=desc`;
 
 export async function getSprintProjects() {
@@ -9,11 +9,10 @@ export async function getSprintProjects() {
   };
 
   try {
-    // Search for repositories with the specific topic
-    const searchRes = await fetch(
-      FetchProjectsURL,
-      { headers, next: { revalidate: 3600 } }, // Re-fetch at most once per hour
-    );
+    const searchRes = await fetch(FetchProjectsURL, {
+      headers,
+      next: { revalidate: 3600 },
+    });
 
     if (!searchRes.ok) {
       throw new Error(`GitHub API responded with ${searchRes.status}`);
@@ -22,33 +21,42 @@ export async function getSprintProjects() {
     const searchData = await searchRes.json();
     const repos = searchData.items || [];
 
-    // Filter repos to ensure they have a CONTRIBUTING.md file
     const validatedRepos = await Promise.all(
       repos.map(async (repo: IGithubProjectResponse) => {
+        // Gate 1: has a CONTRIBUTING.md
         const contentRes = await fetch(
           `https://api.github.com/repos/${repo.full_name}/contents/CONTRIBUTING.md`,
           { headers, next: { revalidate: 3600 } },
         );
+        if (!contentRes.ok) return null;
 
-        if (!contentRes.ok) return null; // Skip if no contributing guide
+        // Gate 2: has at least one issue tagged osn-sprint-26
+        const issuesRes = await fetch(
+          `https://api.github.com/repos/${repo.full_name}/issues?labels=osn-sprint-26&state=open`,
+          { headers, next: { revalidate: 3600 } },
+        );
+        if (!issuesRes.ok) return null;
 
-        // Fetch the languages using the provided URL
+        const taggedIssues = await issuesRes.json();
+        if (!Array.isArray(taggedIssues) || taggedIssues.length === 0) {
+          return null; // No tagged issues yet — not actually participating
+        }
+
         const langRes = await fetch(repo.languages_url, {
           headers,
           next: { revalidate: 3600 },
         });
-
         const langData = await langRes.json();
         const languageList = Object.keys(langData);
 
         return {
           ...repo,
           all_languages: languageList,
+          open_sprint_issues: taggedIssues.length,
         };
       }),
     );
 
-    // Remove null values and return the clean array
     return (
       (validatedRepos?.filter(
         (repo) => repo !== null,
