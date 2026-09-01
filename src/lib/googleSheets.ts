@@ -18,7 +18,8 @@ const SHEET_TAB = process.env.SPRINT_SHEET_TAB || "Form Responses 1";
 function assertConfigured() {
   const missing = [
     !process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL && "GOOGLE_SERVICE_ACCOUNT_EMAIL",
-    !process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY && "GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY",
+    !process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY &&
+      "GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY",
     !process.env.SPRINT_SHEET_ID && "SPRINT_SHEET_ID",
   ].filter(Boolean);
 
@@ -56,13 +57,16 @@ export interface Submission {
   email: string;
   repo_url: string;
   full_name: string | null; // parsed "owner/repo" from repo_url
-  status: "pending" | "approved" | "denied";
+  status: "Pending" | "Approved" | "Denied";
 }
 
 function getAuthedClient() {
   const auth = new google.auth.JWT({
     email: process.env.GOOGLE_SERVICE_ACCOUNT_EMAIL,
-    key: (process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY || "").replace(/\\n/g, "\n"),
+    key: (process.env.GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY || "").replace(
+      /\\n/g,
+      "\n",
+    ),
     scopes: ["https://www.googleapis.com/auth/spreadsheets"],
   });
   return google.sheets({ version: "v4", auth });
@@ -82,7 +86,7 @@ function rowToSubmission(row: string[], rowIndex: number): Submission {
     email: get(COL.email),
     repo_url: get(COL.repo_url),
     full_name: parseFullName(get(COL.repo_url)),
-    status: status === "approved" || status === "denied" ? status : "pending",
+    status: status === "Approved" || status === "Denied" ? status : "Pending",
   };
 }
 
@@ -104,18 +108,18 @@ export async function getAllSubmissions(): Promise<Submission[]> {
 
 export async function getPendingSubmissions(): Promise<Submission[]> {
   const all = await getAllSubmissions();
-  return all.filter((s) => s.status === "pending");
+  return all.filter((s) => s.status === "Pending");
 }
 
 export async function getApprovedSubmissions(): Promise<Submission[]> {
   const all = await getAllSubmissions();
-  return all.filter((s) => s.status === "approved");
+  return all.filter((s) => s.status === "Approved");
 }
 
 /** Updates the status cell for a single row. rowIndex is the sheet row number (from Submission.rowIndex). */
 export async function setSubmissionStatus(
   rowIndex: number,
-  status: "approved" | "denied" | "pending",
+  status: "Approved" | "Denied" | "Pending",
 ): Promise<void> {
   assertConfigured();
   const sheets = getAuthedClient();
