@@ -79,7 +79,7 @@ function parseFullName(repoUrl: string): string | null {
 
 function rowToSubmission(row: string[], rowIndex: number): Submission {
   const get = (i: number) => row[i] ?? "";
-  const status = (get(COL.status) || "pending").toLowerCase();
+  const status = (get(COL.status) || "Pending").toLowerCase();
   return {
     rowIndex,
     timestamp: get(COL.timestamp),
