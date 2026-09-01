@@ -1,6 +1,17 @@
-export const SearchQuery = encodeURIComponent("topic:osn-sprint-26");
-export const FetchProjectsURL = `https://api.github.com/search/repositories?q=${SearchQuery}&sort=updated&order=desc`;
+import { getApprovedSubmissions } from "@/lib/googleSheets";
 
+export const SearchQuery = encodeURIComponent("topic:osn-sprint-26");
+
+// Full pipeline, in order:
+//   1. Read submissions from the Sheet, keep only status === "approved"
+//      (a human decision — see /admin/submissions)
+//   2. Confirm the repo still exists and has a CONTRIBUTING.md
+//   3. Confirm it has at least one OPEN issue tagged osn-sprint-26
+//   4. Only repos that pass all three ever reach the public board
+//
+// This replaces the earlier `topic:oss` search entirely — the seed list is
+// now "who submitted and was approved," not "who happens to be tagged oss
+// somewhere on GitHub."
 export async function getSprintProjects() {
   const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
   const headers = {
@@ -9,49 +20,45 @@ export async function getSprintProjects() {
   };
 
   try {
-    const searchRes = await fetch(FetchProjectsURL, {
-      headers,
-      next: { revalidate: 3600 },
-    });
-
-    if (!searchRes.ok) {
-      throw new Error(`GitHub API responded with ${searchRes.status}`);
-    }
-
-    const searchData = await searchRes.json();
-    const repos = searchData.items || [];
+    const approved = await getApprovedSubmissions();
 
     const validatedRepos = await Promise.all(
-      repos.map(async (repo: IGithubProjectResponse) => {
-        // Gate 1: has a CONTRIBUTING.md
+      approved.map(async ({ full_name }) => {
+        if (!full_name) return null; // couldn't parse a "owner/repo" from the submitted URL
+
+        // Repo still exists / is public / wasn't renamed since submission
+        const repoRes = await fetch(`https://api.github.com/repos/${full_name}`, {
+          headers,
+          next: { revalidate: 3600 },
+        });
+        if (!repoRes.ok) return null;
+        const repo = await repoRes.json();
+
+        // Gate: has a CONTRIBUTING.md at root
         const contentRes = await fetch(
-          `https://api.github.com/repos/${repo.full_name}/contents/CONTRIBUTING.md`,
+          `https://api.github.com/repos/${full_name}/contents/CONTRIBUTING.md`,
           { headers, next: { revalidate: 3600 } },
         );
         if (!contentRes.ok) return null;
 
-        // Gate 2: has at least one issue tagged osn-sprint-26
+        // Gate: has at least one OPEN issue tagged osn-sprint-26
         const issuesRes = await fetch(
-          `https://api.github.com/repos/${repo.full_name}/issues?labels=osn-sprint-26&state=open`,
+          `https://api.github.com/repos/${full_name}/issues?labels=osn-sprint-26&state=open`,
           { headers, next: { revalidate: 3600 } },
         );
         if (!issuesRes.ok) return null;
-
         const taggedIssues = await issuesRes.json();
-        if (!Array.isArray(taggedIssues) || taggedIssues.length === 0) {
-          return null; // No tagged issues yet — not actually participating
-        }
+        if (!Array.isArray(taggedIssues) || taggedIssues.length === 0) return null;
 
         const langRes = await fetch(repo.languages_url, {
           headers,
           next: { revalidate: 3600 },
         });
         const langData = await langRes.json();
-        const languageList = Object.keys(langData);
 
         return {
           ...repo,
-          all_languages: languageList,
+          all_languages: Object.keys(langData),
           open_sprint_issues: taggedIssues.length,
         };
       }),
@@ -190,4 +197,5 @@ export interface IGithubProjectResponse {
   };
 
   all_languages: string[];
+  open_sprint_issues: number;
 }
