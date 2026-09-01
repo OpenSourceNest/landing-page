@@ -15,9 +15,9 @@ export async function PATCH(
   const body = await request.json().catch(() => null);
   const status = body?.status;
 
-  if (status !== "approved" && status !== "denied" && status !== "pending") {
+  if (status !== "Approved" && status !== "Denied" && status !== "Pending") {
     return NextResponse.json(
-      { error: "status must be 'approved', 'denied', or 'pending'" },
+      { error: "status must be 'Approved', 'Denied', or 'Pending'" },
       { status: 400 },
     );
   }
@@ -30,7 +30,9 @@ export async function PATCH(
     return NextResponse.json(
       {
         error:
-          error instanceof Error ? error.message : "Failed to update submission",
+          error instanceof Error
+            ? error.message
+            : "Failed to update submission",
       },
       { status: 500 },
     );

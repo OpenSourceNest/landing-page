@@ -8,7 +8,7 @@ interface Submission {
   email: string;
   repo_url: string;
   full_name: string | null;
-  status: "pending" | "approved" | "denied";
+  status: "Pending" | "Approved" | "Denied";
 }
 
 function formatDate(timestamp: string): string {
@@ -53,7 +53,7 @@ export default function SubmissionsAdminPage() {
     load();
   }, [load]);
 
-  async function updateStatus(rowIndex: number, status: "approved" | "denied") {
+  async function updateStatus(rowIndex: number, status: "Approved" | "Denied") {
     setUpdating((prev) => new Set(prev).add(rowIndex));
     try {
       const res = await fetch(`/api/admin/submissions/${rowIndex}`, {
@@ -88,8 +88,8 @@ export default function SubmissionsAdminPage() {
     }
   }
 
-  const pending = submissions.filter((s) => s.status === "pending");
-  const decided = submissions.filter((s) => s.status !== "pending");
+  const pending = submissions.filter((s) => s.status === "Pending");
+  const decided = submissions.filter((s) => s.status !== "Pending");
 
   return (
     <main
@@ -144,8 +144,8 @@ export default function SubmissionsAdminPage() {
                   key={s.rowIndex}
                   submission={s}
                   isUpdating={updating.has(s.rowIndex)}
-                  onApprove={() => updateStatus(s.rowIndex, "approved")}
-                  onDeny={() => updateStatus(s.rowIndex, "denied")}
+                  onApprove={() => updateStatus(s.rowIndex, "Approved")}
+                  onDeny={() => updateStatus(s.rowIndex, "Denied")}
                 />
               ))
             )}
@@ -157,8 +157,8 @@ export default function SubmissionsAdminPage() {
                 key={s.rowIndex}
                 submission={s}
                 isUpdating={updating.has(s.rowIndex)}
-                onApprove={() => updateStatus(s.rowIndex, "approved")}
-                onDeny={() => updateStatus(s.rowIndex, "denied")}
+                onApprove={() => updateStatus(s.rowIndex, "Approved")}
+                onDeny={() => updateStatus(s.rowIndex, "Denied")}
               />
             ))}
           </Section>
@@ -197,9 +197,9 @@ function SubmissionRow({
   onDeny: () => void;
 }) {
   const statusColors: Record<Submission["status"], string> = {
-    pending: "#b58900",
-    approved: "#2e7d32",
-    denied: "#c62828",
+    Pending: "#B58900",
+    Approved: "#2e7d32",
+    Denied: "#C62828",
   };
 
   const isUrlShaped = /^https?:\/\//i.test(submission.repo_url || "");
@@ -292,14 +292,14 @@ function SubmissionRow({
       <div style={{ display: "flex", gap: "0.5rem", flexShrink: 0 }}>
         <button
           onClick={onApprove}
-          disabled={isUpdating || submission.status === "approved"}
+          disabled={isUpdating || submission.status === "Approved"}
           style={buttonStyle("#2e7d32")}
         >
           Approve
         </button>
         <button
           onClick={onDeny}
-          disabled={isUpdating || submission.status === "denied"}
+          disabled={isUpdating || submission.status === "Denied"}
           style={buttonStyle("#c62828")}
         >
           Deny
