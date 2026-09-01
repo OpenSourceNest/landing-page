@@ -29,7 +29,7 @@ export async function getSprintProjects() {
         // Repo still exists / is public / wasn't renamed since submission
         const repoRes = await fetch(`https://api.github.com/repos/${full_name}`, {
           headers,
-          next: { revalidate: 3600 },
+          next: { revalidate: 60 },
         });
         if (!repoRes.ok) return null;
         const repo = await repoRes.json();
@@ -37,14 +37,14 @@ export async function getSprintProjects() {
         // Gate: has a CONTRIBUTING.md at root
         const contentRes = await fetch(
           `https://api.github.com/repos/${full_name}/contents/CONTRIBUTING.md`,
-          { headers, next: { revalidate: 3600 } },
+          { headers, next: { revalidate: 60 } },
         );
         if (!contentRes.ok) return null;
 
         // Gate: has at least one OPEN issue tagged osn-sprint-26
         const issuesRes = await fetch(
           `https://api.github.com/repos/${full_name}/issues?labels=osn-sprint-26&state=open`,
-          { headers, next: { revalidate: 3600 } },
+          { headers, next: { revalidate: 60 } },
         );
         if (!issuesRes.ok) return null;
         const taggedIssues = await issuesRes.json();
@@ -52,7 +52,7 @@ export async function getSprintProjects() {
 
         const langRes = await fetch(repo.languages_url, {
           headers,
-          next: { revalidate: 3600 },
+          next: { revalidate: 60 },
         });
         const langData = await langRes.json();
 
