@@ -7,8 +7,8 @@ export async function GET() {
     const submissions = await getAllSubmissions();
     // Newest first, and pending submissions surfaced ahead of already-decided ones
     const sorted = submissions.sort((a, b) => {
-      if (a.status === "pending" && b.status !== "pending") return -1;
-      if (a.status !== "pending" && b.status === "pending") return 1;
+      if (a.status === "Pending" && b.status !== "Pending") return -1;
+      if (a.status !== "Pending" && b.status === "Pending") return 1;
       return new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime();
     });
     return NextResponse.json({ submissions: sorted });
