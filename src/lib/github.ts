@@ -41,14 +41,19 @@ export async function getSprintProjects() {
         );
         if (!contentRes.ok) return null;
 
-        // Gate: has at least one OPEN issue tagged osn-sprint-26
+        // Gate: has the osn-sprint-26 repo topic OR at least one OPEN issue tagged osn-sprint-26
+        const hasTopic =
+          Array.isArray(repo.topics) && repo.topics.includes("osn-sprint-26");
+
         const issuesRes = await fetch(
           `https://api.github.com/repos/${full_name}/issues?labels=osn-sprint-26&state=open`,
           { headers, next: { revalidate: 60 } },
         );
-        if (!issuesRes.ok) return null;
-        const taggedIssues = await issuesRes.json();
-        if (!Array.isArray(taggedIssues) || taggedIssues.length === 0) return null;
+        const taggedIssues = issuesRes.ok ? await issuesRes.json() : [];
+        const hasTaggedIssue =
+          Array.isArray(taggedIssues) && taggedIssues.length > 0;
+
+        if (!hasTopic && !hasTaggedIssue) return null;
 
         const langRes = await fetch(repo.languages_url, {
           headers,

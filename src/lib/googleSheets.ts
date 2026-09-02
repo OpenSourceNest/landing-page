@@ -79,14 +79,16 @@ function parseFullName(repoUrl: string): string | null {
 
 function rowToSubmission(row: string[], rowIndex: number): Submission {
   const get = (i: number) => row[i] ?? "";
-  const status = (get(COL.status) || "Pending").toLowerCase();
+  const raw = (get(COL.status) || "").trim().toLowerCase();
+  const status: Submission["status"] =
+    raw === "approved" ? "Approved" : raw === "denied" ? "Denied" : "Pending";
   return {
     rowIndex,
     timestamp: get(COL.timestamp),
     email: get(COL.email),
     repo_url: get(COL.repo_url),
     full_name: parseFullName(get(COL.repo_url)),
-    status: status === "Approved" || status === "Denied" ? status : "Pending",
+    status,
   };
 }
 
