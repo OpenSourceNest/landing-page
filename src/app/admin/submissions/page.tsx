@@ -112,12 +112,12 @@ export default function SubmissionsAdminPage() {
       {error && (
         <div
           role="alert"
+          className="bg-red-400"
           style={{
             display: "flex",
             alignItems: "center",
             justifyContent: "space-between",
             gap: "1rem",
-            background: "#fee",
             border: "1px solid #f99",
             padding: "0.75rem",
             borderRadius: 6,
