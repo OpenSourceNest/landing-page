@@ -29,7 +29,7 @@ const Sprint26Benefits = () => {
                 guided community steps in.
               </p>
               <p className="font-pixel! text-white font-bold text-[50px] max-[512px]:text-[36px]">
-                -84%
+                +%
               </p>
             </div>
 
