@@ -6,8 +6,8 @@ export type Sprint26Stat = {
 export const sprint26Stats = (NumberOfProjects: number): Sprint26Stat[] => [
   { value: 4, label: "WEEKS OF SPRINT" },
   { value: 500, label: "EAGER CONTRIBUTORS" },
-  { value: 20, label: "ACTIVE MENTORS" },
-  { value: NumberOfProjects, label: "MERGED PRs" },
+  { value: 12, label: "ACTIVE MENTORS" },
+  { value: 1, label: "Goal" },
 ];
 
 export type Sprint26Step = {
