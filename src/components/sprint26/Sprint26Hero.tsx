@@ -61,8 +61,8 @@ const Sprint26Hero = () => {
               </p>
 
               <p className="text-[16px] font-semibold max-[512px]:text-[14px]">
-                <time dateTime="2026-08-31">August 31</time> –{" "}
-                <time dateTime="2026-09-28">September 28, 2026</time>
+                <time dateTime="2026-09-17">September 17</time> –{" "}
+                <time dateTime="2026-10-15">October 15, 2026</time>
               </p>
 
               <div className="flex items-center gap-2 pt-10">
