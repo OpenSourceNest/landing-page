@@ -10,7 +10,7 @@ const Sprint26Projects = ({
   projects: IGithubProjectResponse[];
 }) => {
   return (
-    <section className="section bg-black mt-[150px]">
+    <section id="projects" className="section bg-black mt-[150px]">
       <Reveal className="constraint flex flex-col gap-[30px]">
         <div className="flex items-end justify-between gap-6 pb-5 pt-10 border-b border-sprint26 max-[845px]:flex-col max-[845px]:items-start">
           <div className="flex flex-col gap-3">
