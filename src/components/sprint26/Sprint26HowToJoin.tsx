@@ -100,9 +100,12 @@ const Sprint26HowToJoin = () => {
                 <StepRow key={step.number} step={step} />
               ))}
             </div>
-            <button className="font-pixel! uppercase bg-black border border-[#a7ffc9] text-white font-semibold px-8 py-5 mt-8 w-fit cursor-pointer">
+            <Link
+              href="#projects"
+              className="font-pixel! uppercase bg-black border border-[#a7ffc9] text-white font-semibold px-8 py-5 mt-8 w-fit"
+            >
               Start Matching
-            </button>
+            </Link>
           </div>
         </div>
       </Reveal>
